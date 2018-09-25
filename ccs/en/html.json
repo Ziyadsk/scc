@@ -1,0 +1,824 @@
+{
+
+	"div":{
+		"Tag":"<div>",
+		"Description":"The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.",
+		"Usage": "<div>[Element or text here ]</div>"
+	},
+	"a":{
+		"Tag":"<a>",
+		"Description":"The <a> (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.",
+		"Usage":"<a href='[URL]'>click here</a>",
+		"Attribute(s)": {
+			"href": "Contains a URL or a URL fragment that the hyperlink points to.",
+			"ping": "Contains a space-separated list of URLs to which, when the hyperlink is followed, POST requests with the body PING will be sent by the browser (in the background). Typically used for tracking.",
+			"target": "\n _self -> Load the URL into the same browsing context as the current one. This is the default behavior. \n _blank ->  Load the URL into a new browsing context. This is usually a tab, but users can configure browsers to use new windows instead \n _parent -> : Load the URL into the parent browsing context of the current one. If there is no parent, this behaves the same way as _self \n _top ->  Load the URL into the top-level browsing context (that is, the highest browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this behaves the same way as _self."
+		}
+	},
+
+	"button":{
+		"Tag":"<button>",
+		"Description":"The <button> represents a clickable button, which can be used in forms, or anywhere in a document that needs simple, standard button functionality. By default, HTML buttons are typically presented in a style similar to that of the host platform the user agent is running on, but you can change the appearance of the button using CSS.",
+		"Example Usage":"<p><button>Default button</button></p>",
+		"Attribute(s)": {
+			"name": "The name of the button, which is submitted with the form data.",
+			"type": "The type of the button. Possible values are:\n\t submit: The button submits the form data to the server. This is the default if the attribute is not specified, or if the attribute is dynamically changed to an empty or invalid value. \n\t reset: The button resets all the controls to their initial values. \n\t  button: The button has no default behavior. It can have client-side scripts associated with the element's events, which are triggered when the events occur",
+			"value": "The initial value of the button. It defines the value associated with the button which is submitted with the form data. This value is passed to the server in params when the form is submitted."
+		}
+	},
+	
+	"abbr":{
+		"Tag":"<abbr>",
+		"Description":"The HTML Abbreviation element (<abbr>) represents an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation. If present, title must contain this full description and nothing else.",
+		"Example Usage":"<p>Ashok's joke made me <abbr title='Laugh Out Loud'>LOL</abbr> big time.</p>"
+
+	},
+	"article":{
+		"Tag":"<article>",
+		"Description":"The <article> represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry.",
+		"Example Usage":"<article class='film_review'></article>"
+	},
+
+	"aside":{
+		"Tag":"<aside>",
+		"Description":"The <aside> represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.",
+		"Example Usage":"<aside class='aside_class'></aside>"
+	},
+
+	"audio": {
+		"Tag":"<audio>",
+		"Description": "The <audio> is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the <source> element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a MediaStream.",
+		"Example Usage":"<audio controls> \n\t <source src='myAudio.mp3' type='audio/mp3'> \n\t <source src='myAudio.ogg' type='audio/ogg'>\n\t <p>Your browser doesnt support HTML5 audio. Here is a <a href='myAudio.mp4'>link to the audio</a> instead.</p>\n</audio>"
+	},
+
+	"b":{
+		"Tag":"<b>",
+		"Description":"The HTML Bring Attention To element (<b>) is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. This was formerly known as the Boldface element, and most browsers still draw the text in boldface. However, you should not use <b> for styling text; instead, you should use the CSS font-weight property to create boldface text, or the <strong> element to indicate that text is of special importance.",
+		"Example Usage":"<p> \n This article describes several <b class='keywords'>text-level</b> elements.It explains their usage in an <b class='keywords'>HTML</b> document.\n</p>"
+	},
+
+	"blockquote":{
+		"Tag":"<blockquote>",
+		"Description":"The <blockquote> (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <cite> element.",
+		"Example Usage":"<blockquote cite='https://tools.ietf.org/html/rfc1149'>\n\t<p>Avian carriers can provide high delay, lowthroughput, and low altitude service</p>\n</blockquote>"
+	},
+
+	"body":{
+		"Tag":"<body>",
+		"Description":"The <body> represents the content of an HTML document. There can be only one <body> element in a document.",
+		"Example Usage":"<html><head><title>Document title</title></head><body><p>This is a paragraph</p></body></html>",
+		"Attribute(s)":{
+			"alink": "Color of text for hyperlinks when selected. This method is non-conforming, use CSS color property in conjunction with the :active pseudo-class instead.",
+			"background" :"URI of a image to use as a background. This method is non-conforming, use CSS background property on the element instead.",
+			"bgcolor" : "Background color for the document. This method is non-conforming, use CSS background-color property on the element instead.",
+			"bottommargin" : "The margin of the bottom of the body. This method is non-conforming, use CSS margin-bottom property on the element instead", 
+			"leftmargin" : "The margin of the left of the body. This method is non-conforming, use CSS margin-left property on the element instead.",
+			"link" : "Color of text for unvisited hypertext links. This method is non-conforming, use CSS color property in conjunction with the :link pseudo-class instead.",
+			"onafterprint": "Function to call after the user has printed the document.",
+			"onbeforeprint" : "Function to call when the user requests printing of the document.",
+			"onbeforeunload" : "Function to call when the document is about to be unloaded.",
+			"onblur" : "Function to call when the document loses focus.",
+			"onerror" : "Function to call when the document fails to load properly.",
+			"onfocus" : "Function to call when the document receives focus.",
+			"onhashchange" : "Function to call when the fragment identifier part (starting with the hash ('#') character) of the document's current address has changed.",
+			"onlanguagechange" : "Function to call when the preferred languages changed.",
+			"onload" : "Function to call when the document has finished loading.",
+			"onmessage" : "Function to call when the document has received a message.",
+			"onoffline" : "Function to call when network communication has failed.",
+			"ononline": "Function to call when network communication has been restored.",
+			"onpopstate" : "Function to call when the user has navigated session history.",
+			"onredo" : "Function to call when the user has moved forward in undo transaction history.",
+			"onresize": "Function to call when the document has been resized.",
+			"onstorage" : "Function to call when the storage area has changed.",
+			"onundo":  "Function to call when the user has moved backward in undo transaction history .",
+			"onunload": "Function to call when the document is going away.",
+			"rightmargin":"The margin of the right of the body. This method is non-conforming, use CSS margin-right property on the element instead.",
+			"text": "Foreground color of text. This method is non-conforming, use CSS color property on the element instead",
+			"topmargin" : "The margin of the top of the body. This method is non-conforming, use CSS margin-top property on the element instead.",
+			"vlink" : "Color of text for visited hypertext links. This method is non-conforming, use CSS color property in conjunction with the :visited pseudo-class instead."
+
+		}
+	},
+	"br":{
+		"Tag":"<br>",
+		"Description":"The <br> produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.",
+		"Example Usage":"Mozilla<br>\n331 E. Evelyn Avenue<br>\nMountain View, CA<br>94041<br>\nUSA<br>"
+	},
+
+	"caption":{
+		"Tag":"<caption>",
+		"Description":"The HTML Table Caption element (<caption>) specifies the caption (or title) of a table, and if used is always the first child of a <table>. Its styling and physical position relative to the table may be changed using the CSS caption-side and text-align properties.",
+		"Example Usage":"<table>\n<caption>Example Caption</caption>\n<tr>\n<th>Login</th>\n<th>Email</th>\n</tr>\n<tr>\n\t<td>user1</td>\n\t<td>user1@sample.com</td>\n</tr>\n<tr>\n\t<td>user2</td>\n\t<td>user2@sample.com</td>\n</tr>\n</table>"
+	},
+
+	"cite":{
+		"Tag":"<cite>",
+		"Description":"The HTML Citation element (<cite>) is used to describe a reference to a cited creative work, and must include either the title or author or the URL of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.",
+		"Example Usage":"<p>More information can be found in <cite>[ISO-0000]</cite>.</p>"
+	},
+
+	"col":{
+		"Tag":"<col>",
+		"Description":"The <col> defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a <colgroup> element."
+	},
+
+	"data":{
+		"Tag":"<data>",
+		"Description":"The <data> links a given content with a machine-readable translation. If the content is time- or date-related, the <time> element must be used.",
+		"Example Usage":"\n<p>New Products</p>\n\t<ul>\n\t<li><data value='398'>Mini Ketchup</data></li>\n\t<li><data value='399'>Jumbo Ketchup</data></li>\n\t<li><data value='400'>Mega Jumbo Ketchup</data></li>\n</ul>"
+	},
+
+	"datalist":{
+		"Tag":"<datalist>",
+		"Description":"The <datalist> contains a set of <option> elements that represent the values available for other controls.",
+		"Example Usage":"<label for='myBrowser'>Choose a browser from this list:</label>\n<input list='browsers' id='myBrowser' name='myBrowser' />\n\t<datalist id='browsers'>\n\t<option value='Chrome'>\n\t<option value='Firefox'>\n\t<option value='Internet Explorer'>\n\t<option value='Opera'>\n\t<option value='Safari'>\n\t<option value='Microsoft Edge'>\n\t</datalist>"
+	},
+	
+	"dd":{
+		"Tag":"<dd>",
+		"Description":"The <dd> provides the details about or the definition of the preceding term (<dt>) in a description list (<dl>).",
+		"Example Usage":"<p>The HTML description list elements:</p>\n<dl>\n\t<dt><code>dl</code></dt>\n\t<dd>Contains a description or definition list, which lists out terms and their descriptions.</dd>\n\t<dt><code>dt</code></dt>\n\t<dd>Specifies one term whose description is provided in the next <code>dd</code> block.</dd>\n\t<dt><code>dd</code></dt>\n\t<dd>The description or definition for the term or terms in the preceding <code>dt</code> element or elements.</dd>\n\t</dl>"
+	},
+	"del":{
+		"Tag":"<del>",
+		"Description":"The <del> represents a range of text that has been deleted from a document. This can be used when rendering 'track changes' or source code diff information, for example. The <ins> element can be used for the opposite purpose: to indicate text that has been added to the document.",
+		"Example Usage":"<p>\n\t<del>This text has been deleted</del>,here is the rest of the paragraph.</p><del>\n\t<p>This paragraph has been deleted.</p>\n\t</del>"
+	},
+	"dfn":{
+		"Tag":"<dfn>",
+		"Description":"The HTML Definition element (<dfn>) is used to indicate the term being defined within the context of a definition phrase or sentence. The <p> element, the <dt>/<dd> pairing, or the <section> element which is the nearest ancestor of the <dfn> is considered to be the definition of the term.",
+		"Example Usage":"The HTML Definition element (<dfn>) is used to indicate the term being defined within the context of a definition phrase or sentence. The <p> element, the <dt>/<dd> pairing, or the <section> element which is the nearest ancestor of the <dfn> is considered to be the definition of the term."
+
+	},
+	"dl":{
+		"Tag":"<dl>",
+		"Description":"The <dl>element represents a description list.The element encloses a list of groups of terms (specified using the <dt> element) and descriptions (provided by <dd> elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).",
+		"Example Usage":"\n<dl>\n<dt>Firefox</dt>\n\t<dd>\n\tA free, open source, cross-platform,graphical web browser developed by theMozilla Corporation and hundreds ofvolunteers.\n\t</dd>\n<!-- Other terms and descriptions -->\n</dl>"
+	},
+	"dt":{
+		"Tag":"<dt>",
+		"Description":"The <dt> specifies a term in a description or definition list, and as such must be used inside a <dl> element. It is usually followed by a <dd> element; however, multiple <dt> elements in a row indicate several terms that are all defined by the immediate next <dd> element.The subsequent <dd> (Description Details) element provides the definition or other related text associated with the term specified using <dt>.",
+		"Example Usage":"<dl>\n<dt>Denim (semigloss finish)</dt>\n<dd>Ceiling</dd>\n<dt>Denim (eggshell finish)</dt>\n<dt>Evening Sky (eggshell finish)</dt>\n<dd>Layer these on the walls using the sponging technique for texture</dd>\n<dt>Pearlescent Dream (eggshell finish)</dt>\n<dd>Trim, including baseboards, crown molding, door and window frames, and window sills</dd>\n</dl>"
+	},
+
+	"em":{
+		"Tag":"<em>",
+		"Description":"The <em> marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis.",
+		"Example Usage":"\n<p>\n In HTML 5, what was previously called<em>block-level</em> content is now called<em>flow</em> content.\n</p>"
+	},
+
+	"embed":{
+		"Tag":"<embed>",
+		"Description":"The <embed> embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.",
+		"Example Usage":"<embed type='video/quicktime' src='movie.mov' width='640' height='480'>"
+	},
+
+	"fieldset":{
+		"Tag":"<fieldset>",
+		"Description":"The <fieldset> is used to group several controls as well as labels (<label>) within a web form.",
+		"Example Usage":"\n<form action='#'>\n<fieldset>\n\t<legend>Simple fieldset</legend>\n\t<input type='radio' id='radio'>\n\t<label for='radio'>Spirit of radio</label>\n</fieldset>\n</form>"
+	},
+
+	"figcaption":{
+		"Tag":"<figcaption>",
+		"Description":"The <figcaption> represents a caption or legend for the rest of the contents its parent <figure> element, if any."
+	},
+
+	"figure":{
+		"Tag":"<figure>",
+		"Description":"The <figure> represents self-contained content, frequently with a caption (<figcaption>), and is typically referenced as a single unit.",
+		"Example Usage":"\n<figure>\n\t<figcaption>\n<cite>Edsger Dijkstra:</cite>\n</figcaption>\n\t<blockquote>If debugging is the process of removing software bugs,then programming must be the process of putting them in.</blockquote>\n</figure>"
+	},
+
+	"footer":{
+		"Tag":"<footer>",
+		"Description":"The<footer> represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.",
+		"Example Usage":"<footer>Some copyright info or perhaps some authorinfo for an &lt;article&gt;?</footer> "
+	},
+
+	"form":{
+		"Tag":"<form>",
+		"Description":"The <form> represents a document section that contains interactive controls for submitting information to a web server.",
+		"Example Usage":"<!-- Simple form which will send a GET request -->\n<form action='' method='get'>\n<label for='GET-name'>Name:</label>\n<input id='GET-name' type='text' name='name'>\n<input type='submit' value='Save'>\n</form>\n<!-- Simple form which will send a POST request -->\n<form action='' method='post'>\n<label for='POST-name'>Name:</label>\n<input id='POST-name' type='text' name='name'>\n<input type='submit' value='Save'>\n</form>",
+		"Attribute(s)":{
+			"accept" : "A comma-separated list of content types that the server accepts.Usage note: This attribute has been removed in HTML5 and should no longer be used. Instead, use the accept attribute of the specific <input> element.",
+			"accept-charset":"A space- or comma-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string 'UNKNOWN', indicates the same encoding as that of the document containing the form element.In previous versions of HTML, the different character encodings could be delimited by spaces or commas. In HTML5, only spaces are allowed as delimiters.",
+			"action":"The URI of a program that processes the form information. This value can be overridden by a formaction attribute on a <button> or <input> element.",
+			"autocapitalize":"This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value for textual form control descendants should be automatically capitalized as it is entered/edited by the user. If the autocapitalize attribute is specified on an individual form control descendant, it trumps the form-wide autocapitalize setting. The non-deprecated values are available in iOS 5 and later. The default value is sentences. Possible values are:\n >>none: Completely disables automatic capitalizationsentences: Automatically capitalize the first letter of sentences.words: Automatically capitalize the first letter of words.characters: Automatically capitalize all characters.on: Deprecated since iOS 5.off: Deprecated since iOS 5.",
+			"autocomplete [HTML5]":"Indicates whether input elements can by default have their values automatically completed by the browser. This setting can be overridden by an autocomplete attribute on an element belonging to the form. Possible values are:off: The user must explicitly enter a value into each field for every use, or the document provides its own auto-completion method; the browser does not automatically complete entries.on: The browser can automatically complete values based on values that the user has previously entered in the form.For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+) setting the autocomplete attribute will not prevent a browser's password manager from asking the user if they want to store login fields (username and password), if the user permits the storage the browser will autofill the login the next time the user visits the page. See The autocomplete attribute and login fields.Note: If you set autocomplete to off in a form because the document provides its own auto-completion, then you should also set autocomplete to off for each of the form's input elements that the document can auto-complete. For details, see the note regarding Google Chrome in the Browser Compatibility chart.",
+			"enctype":"When the value of the method attribute is post, enctype is the MIME type of content that is used to submit the form to the server.\n Possible values are:\n >> application/x-www-form-urlencoded: The default value if the attribute is not specified.\n >> multipart/form-data: The value used for an <input> element with the type attribute set to 'file'.\n >> text/plain (HTML5)\n This value can be overridden by a formenctype attribute on a <button> or <input> element.",
+			"method":"The HTTP method that the browser uses to submit the form. Possible values are:\n >> post: Corresponds to the HTTP POST method ; form data are included in the body of the form and sent to the server.\n >> get: Corresponds to the HTTP GET method; form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.\n This value can be overridden by a formmethod attribute on a <button> or <input> element.",
+			"name":"The name of the form. In HTML 4, its use is deprecated (id should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5.",
+			"novalidate HTML5 " : " This Boolean attribute indicates that the form is not to be validated when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a formnovalidate attribute on a <button> or <input> element belonging to the form.",
+			"target":"A name or keyword indicating where to display the response that is received after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a browsing context (for example, tab, window, or inline frame). The following keywords have special meanings:\n>> _self: Load the response into the same HTML 4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.\n >> _blank: Load the response into a new unnamed HTML 4 window or HTML5 browsing context.\n >> _parent: Load the response into the HTML 4 frameset parent of the current frame, or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as _self.\n >> _top: HTML 4: Load the response into the full original window, and cancel all other frames. HTML5: Load the response into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as _self. \n >>iframename : The response is displayed in a named <iframe>\n HTML5: This value can be overridden by a formtarget attribute on a <button> or <input> element."
+		}
+	},
+
+	"head":{
+		"Tag":"<head>",
+		"Description":"The <head> provides general information (metadata) about the document, including its title and links to its scripts and style sheets.",
+		"Usage Exemple":"<html>\n<head>\n<title>Document title</title>\n</head>\n</html>"
+	} ,
+
+	"header":{
+		"Tag":"<header>",
+		"Description":"The <header> represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on.",
+		"Usage Exemple":"<header>\n<h1>Main Page Title</h1>\n<img src='mdn-logo-sm.png' alt='MDN logo'>\n</header> "
+	},
+
+	"hr":{
+		"Tag":"<hr>",
+		"Description":"The <hr> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section); historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.",
+		"Exemple Usage": "<p>\nThis is the first paragraph of text.\n</p>\n<hr>\n<p>  This is the second paragraph of text.\n</p>"
+	},
+
+	"hr":{
+		"Tag":"<hr>",
+		"Description":"The <hr> represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section); historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.",
+		"Exemple Usage": "<p>\nThis is the first paragraph of text.\n</p>\n<hr>\n<p>  This is the second paragraph of text.\n</p>",
+		"Attribute(s)":{
+			"align":"Sets the alignment of the rule on the page. If no value is specified, the default value is left",
+			"color":"Sets the color of the rule through color name or hexadecimal value.",
+			"noshade":"Sets the rule to have no shading.",
+			"size":"Sets the height, in pixels, of the rule.",
+			"width":"Sets the length of the rule on the page through a pixel or percentage value."
+		}
+	},
+	"html":{
+		"Tag":"<html>",
+		"Description":"The <html> represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.",
+		"Exemple Usage":"<!DOCTYPE html>\n<html lang='en'>\n<head>...</head>\n<body>...</body>\n</html>"
+	},
+
+	"i":{
+		"Tag":"<i>",
+		"Description":"The <i> represents a range of text that is set off from the normal text for some reason. Some examples include technical terms, foreign language phrases, or fictional character thoughts. It is typically displayed in italic type.",
+		"Usage Example":"\n<p>The Latin phrase <i class='latin'>Veni, vidi, vici</i> is oftenmentioned in music, art, and literature.</p>"
+	},
+	"iframe":{
+		"Tag":"<iframe>",
+		"Description":"The <iframe> represents a nested browsing context, effectively embedding another HTML page into the current page. You can include any number of <iframe> elements within a document, each of which embeds another document inside <body> of a page.",
+		"Usage Example":"<iframe src='https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html' title='iframe example 1' width='400' height='300'>\n<p>Your browser does not support iframes.</p>\n</iframe>",
+		"Attribute(s)":{
+			"allowfullscreen":"This attribute can be set to true if the frame is allowed to be placed into full screen mode by calling its requestFullscreen() method. If this isn't set, the element can't be placed into full screen mode.",
+			"allowpaymentrequest":"This attribute can be set to true if the contents of a cross-origin <iframe> should be allowed to invoke the Payment Request API.",
+			"height":"Indicates the height of the frame in CSS pixels; prior to HTML 5, this value was specified in device pixels or as a percentage. Percentage values are no longer allowed.",
+			"name":"A name for the embedded browsing context (or frame). This can be used as the value of the target attribute of an <a>, <form> or <base> element, or the formtarget attribute of an <input> or <button> element. It can also be used as the value of the windowName parameter in the window.open() method.",
+			"referrerpolicy": "A string indicating which referrer to use when fetching the resource:\n >> 'no-referrer' meaning that the Referer header will not be sent.\n >> 'no-referrer-when-downgrade' meaning that no Referer: header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.\n >> 'origin' meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.'origin-when-cross-origin' meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.\n  >> 'unsafe-url': meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins",
+			"sandbox":"If specified as an empty string, this attribute enables extra restrictions on the content that can appear in the inline frame. The value of the attribute can either be an empty string (all the restrictions are applied), or a space-separated list of tokens that lift particular restrictions. Valid tokens are:\n \n >> allow-forms: Allows the embedded browsing context to submit forms. If this keyword is not used, this operation is not allowed.\n >> allow-modals: Allows the embedded browsing context to open modal windows.\n >> allow-orientation-lock: Allows the embedded browsing context to disable the ability to lock the screen orientation.\n >> allow-pointer-lock: Allows the embedded browsing context to use the Pointer Lock API.\n >> allow-popups: Allows popups (like from window.open, target='_blank', showModalDialog). If this keyword is not used, that functionality will silently fail.\n >> allow-popups-to-escape-sandbox: Allows a sandboxed document to open new windows without forcing the sandboxing flags upon them. This will allow, for example, a third-party advertisement to be safely sandboxed without forcing the same restrictions upon a landing page.\n >> allow-presentation: Allows embedders to have control over whether an iframe can start a presentation session.\n >> allow-same-origin: Allows the content to be treated as being from its normal origin. If this keyword is not used, the embedded content is treated as being from a unique origin.\n >> allow-scripts: Allows the embedded browsing context to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.\n >> allow-top-navigation: Allows the embedded browsing context to navigate (load) content to the top-level browsing context. If this keyword is not used, this operation is not allowed.\n >> allow-top-navigation-by-user-activation: Allows the embedded browsing context to navigate (load) content to the top-level browsing context only when initiated by a user gesture. If this keyword is not used, this operation is not allowed.\n Notes about sandboxing:\n> When the embedded document has the same origin as the main page, it is strongly discouraged to use both allow-scripts and allow-same-origin at the same time, as that allows the embedded document to programmatically remove the sandbox attribute. Although it is accepted, this case is no more secure than not using the sandbox attribute.> Sandboxing in general is only of minimal help if the attacker can arrange for the potentially hostile content to be displayed in the user's browser outside a sandboxed iframe. It is recommended that such content should be served from a separate dedicated domain, to limit the potential damage.> The sandbox attribute is not supported in Internet Explorer 9 and earlier versions.",
+			"src":"The URL of the page to embed. Use 'about:blank' to embed an empty page that conforms to the same-origin policy.",
+			"srcdoc":"The content of the page that the embedded context is to contain. This attribute is expected to generally be used together with the sandbox attribute. If a browser supports the srcdoc attribute, it will override the content specified in the src attribute (if present). If a browser does not support the srcdoc attribute, it will show the file specified in the src attribute instead (if present). Note that if the content of the attribute contains a script tag then a closing script tag is required for the script to run, even if nothing else comes after the script.",
+			"width":"Indicates the width of the frame. Beginning in HTML 5, this is specified in CSS pixels. Previously, it was specified in either device pixels or as a percentage. See Window.devicePixelRatio for an explanation of the difference between CSS pixels and device pixels."
+		}
+	},
+
+	"img":{
+		"Tag":"<img/>",
+		"Description":"The <img> embeds an image into the document.",
+		"Usage Example":"<img src='https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png' alt='MDN logo — a dinosaur logo with the text MDN'>",
+		"Attribute(s)":{
+			"alt":"This attribute defines an alternative text description of the image.\n Note: Browsers do not always display the image referenced by the element. This is the case for non-graphical browsers (including those used by people with visual impairments), if the user chooses not to display images, or if the browser cannot display the image because it is invalid or an unsupported type. In these cases, the browser may replace the image with the text defined in this element's alt attribute. You should, for these reasons and others, provide a useful value for alt whenever possible.\n > Note: Omitting this attribute altogether indicates that the image is a key part of the content, and no textual equivalent is available. Setting this attribute to an empty string (alt='') indicates that this image is not a key part of the content (decorative), and that non-visual browsers may omit it from rendering.",
+			"crossorigin":"This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the <canvas> element without being 'tainted.' The allowed values are:\n >> anonymous : A cross-origin request (i.e., with Origin: HTTP header) is performed, but no credential is sent (i.e., no cookie, X.509 certificate, or HTTP Basic authentication). If the server does not give credentials to the origin site (by not setting the Access-Control-Allow-Origin HTTP header), the image will be tainted and its usage restricted.\n >> use-credentials : A cross-origin request (i.e., with the Origin HTTP header) performed along with credentials sent (i.e., a cookie, certificate, or HTTP Basic authentication). If the server does not give credentials to the origin site (through the Access-Control-Allow-Credentials HTTP header), the image will be tainted and its usage restricted.\n If the attribute is not present, the resource is fetched without a CORS request (i.e., without sending the Origin HTTP header), preventing its non-tainted usage in <canvas> elements. If invalid, it is handled as if the anonymous value was used. See CORS settings attributes for additional information.",
+			"decoding":"Provides an image decoding hint to the browser. The allowed values are:\n >> sync : Decode the image synchronously for atomic presentation with other content.\n >> async : Decode the image asynchronously to reduce delay in presenting other content.\n >> auto : Default mode, which indicates no preference for the decoding mode. The browser decides what is best for the user.",
+			"height":"The intrinsic height of the image in pixels.",
+			"ismap": "This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.Note: This attribute is allowed only if the <img> element is a descendant of an <a> element with a valid href attribute.",
+			"referrerpolicy":"A string indicating which referrer to use when fetching the resource:\n >> no-referrer: The Referer header will not be sent.\n >> no-referrer-when-downgrade: No Referer header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior if no policy is otherwise specified.\n >> origin: The Referer header will include the page of origin's scheme, the host, and the port.\n >> origin-when-cross-origin: Navigating to other origins will limit the included referral data to the scheme, the host and the port, while navigating from the same origin will include the referrer's full path.",
+			"unsafe-url": "The Referer header will include the origin and the path, but not the fragment, password, or username. This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.",
+			"sizes":"A list of one or more strings separated by commas indicating a set of source sizes. Each source size consists of:\n >> a media condition. This must be omitted for the last item.\n >> a source size value.\n Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the srcset attribute, when those sources are described using width ('w') descriptors. The selected source size affects the intrinsic size of the image (the image’s display size if no CSS styling is applied). If the srcset attribute is absent, or contains no values with a width (w) descriptor, then the sizes attribute has no effect.",
+
+			"src":"The image URL. This attribute is mandatory for the <img> element. On browsers supporting srcset, src is treated like a candidate image with a pixel density descriptor 1x unless an image with this pixel density descriptor is already defined in srcset, or unless srcset contains 'w' descriptors.",
+			"srcset":"A list of one or more strings separated by commas indicating a set of possible image sources for the user agent to use. Each string is composed of:\n >> a URL to an image,\n >>optionally, whitespace followed by one of:\n >>> A width descriptor, or a positive integer directly followed by 'w'. The width descriptor is divided by the source size given in the sizes attribute to calculate the effective pixel density.\n >>>A pixel density descriptor, which is a positive floating point number directly followed by 'x'.\n If no descriptor is specified, the source is assigned the default descriptor: 1x.\n It is incorrect to mix width descriptors and pixel density descriptors in the same srcset attribute. Duplicate descriptors (for instance, two sources in the same srcset which are both described with '2x') are also invalid.\nThe user agent selects any one of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or bandwidth conditions. See our Responsive images tutorial for an example.",
+			"width":"The intrinsic width of the image in pixels.",
+			"usemap":"The partial URL (starting with '#') of an image map associated with the element.Note: You cannot use this attribute if the <img> element is a descendant of an <a> or <button> element."
+
+		}
+	},
+	"input":{
+		"Tag":"<input/>",
+		"Description":"The <input> is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.",
+		"Type Examples":"\n >> button: A push button with no default behavior.\n >> checkbox: A check box allowing single values to be selected/deselected.\n >> color: HTML5 A control for specifying a color. A color picker's UI has no required features other than accepting simple colors as text (more info).\n >> date: HTML5 A control for entering a date (year, month, and day, with no time).\n >> datetime-local: HTML5 A control for entering a date and time, with no time zone.\n >> email: HTML5 A field for editing an e-mail address.\n >> file: A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.\n >> hidden: A control that is not displayed but whose value is submitted to the server.\n >> image: A graphical submit button. You must use the src attribute to define the source of the image and the alt attribute to define alternative text.You can use the height and width attributes to define the size of the image in pixels.\n >> month: HTML5 A control for entering a month and year, with no time zone.\n >> number: HTML5 A control for entering a number.\n >> password: A single-line text field whose value is obscured. Use the maxlength and minlength attributes to specify the maximum length of the value that can be entered.\nNote: Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Firefox now implements multiple mechanisms to warn against insecure login forms — see Insecure passwords. Other browsers are also implementing similar mechanisms.\n >> radio: A radio button, allowing a single value to be selected out of multiple choices.\n >> range: HTML5 A control for entering a number whose exact value is not important.\n >> reset: A button that resets the contents of the form to default values.\n >> search: HTML5 A single-line text field for entering search strings. Line-breaks are automatically removed from the input value.\n >> submit: A button that submits the form.\n >> tel: HTML5 A control for entering a telephone number.\n >> text: A single-line text field. Line-breaks are automatically removed from the input value.\n >> time: HTML5 A control for entering a time value with no time zone.\n >> url: HTML5 A field for entering a URL.\n >> week: HTML5 A control for entering a date consisting of a week-year number and a week number with no time zone.",
+		"Attribute(s)":{
+			"accept":"If the value of the type attribute is file, this attribute indicates the types of files that the server accepts — otherwise it's ignored. The value must be comma-separated unique “content type specifiers”:\n\n >> A case-insensitive file extension starting with the STOP character (U+002E). (e.g. .jpg, .png, .doc).\n >> A valid MIME type with no extensions.\n >> audio/* representing sound files. HTML5\n >> video/* representing video files. \n >> image/* representing image files.",
+			"autocomplete":"This attribute indicates if the input can be automatically completed by the browser, usually by remembering previous values the user has entered.",
+			"autofocus" : "This Boolean attribute specifies that the input should have focus when the page loads, unless the user overrides it (e.g. by typing in a different control). Only one element in a document can have the autofocus attribute. It cannot be applied if the type attribute is hidden, because hidden inputs cannot be focused. Note that the input may be focused before the DOMContentLoaded event fires.",
+			"capture": "If the value of the type attribute is file, this Boolean attribute indicates that capture of media directly from the device's sensors using a media capture mechanism is preferred, such as a webcam or microphone.",
+			"checked":"If the value of the type attribute is radio or checkbox, this Boolean attribute pre-checks the control before the user interacts with it.Unlike other browsers, Firefox by default persists the dynamic checked state of an <input> across page loads. Use the autocomplete attribute to control this feature.",
+			"disabled":"This Boolean attribute prevents the user from interacting with the input. In particular, the click event is not dispatched on disabled controls, and disabled controls aren't submitted with their form . Unlike other browsers, Firefox will by default persist the dynamic disabled state of an <input> across page loads. Use the autocomplete attribute to control this feature.",
+			"form" :"The form element that the input element is associated with (its form owner). The value of the attribute must be an id of a <form> element in the same document. If this attribute isn't used, the <input> element is associated with its nearest ancestor <form> element, if any. This attribute lets you to place <input> elements anywhere within a document, not just as descendants of form elements. An input can be associated with at most one form.",
+			"formaction":"The URL that processes the data submitted by the input element, if it is a submit button or image. This attribute overrides the action attribute of the element's form owner.",
+			"formenctype":"If the input element is a submit button or image, this attribute specifies the content encoding that is used to submit the form data to the server. Possible values:\n >> application/x-www-form-urlencoded: The default value if the attribute is not specified.\n>> multipart/form-data: Use this value if you are using an <input> element with the type attribute set to file.\n >> text/plain: This encoding is mostly for debugging.This attribute overrides the enctype attribute of the element's form owner.",
+			"formmethod":"If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values:\n >> post: The data from the form is included in the body of the form and is sent to the server.\n >> get: The data from the form are appended to the form attribute URL, with a '?' as a separator, and the resulting URL is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.\n This attribute overrides the method attribute of the element's form owner.",
+			"formnovalidate":"If the input element is a submit button or image, this Boolean attribute specifies that the form shouldn't be validated before submission. This attribute overrides the novalidate attribute of the element's form owner.",
+			"formtarget HTML5":"If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received by submitting the form. This is a name of, or keyword for, a browsing context (e.g. tab, window, or inline frame). This attribute overrides the target attribute of the elements's form owner. The following keywords have special meanings:\n >> _self: Load the response into the same browsing context as the current one. This is the default if the attribute is not specified.\n >> _blank: Load the response into a new unnamed browsing context.\n >> _parent: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as _self.\n >> _top: Load the response into the top-level browsing context (i.e. the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as _self.",
+			"height":"If the value of the type attribute is image, defines the height of the image displayed for the button in pixels.",
+			"inputmode":"A hint to browsers for which virtual keyboard to display. This attribute applies when the the type attribute is text, password, email, or url. Possible values:\n\n >>none: No virtual keyboard should be displayed.\n >>text: Text input in the user's locale.\n >>decimal: Fractional numeric input.\n >>numeric: Numeric input.\n >>tel: Telephone input, including asterisk and pound key. Prefer <input type='tel'>.\n >>search: A virtual keyboard optimized for search input.\n >>email: Email input. Prefer <input type='email'>.\n >>url: URL input. Prefer <input type='url'>.",
+			"list":"Points to a <datalist> of predefined options to suggest to the user. The value must be the id of a <datalist> element in the same document. Browsers display only valid options for the input. This attribute is ignored when the type attribute is hidden, checkbox, radio, file, or a button type.",
+			"max" :"The maximum (numeric or date-time) value for the input. Must not be less than its minimum (min attribute) value.",
+			"maxlength":"If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the maximum number of characters (in UTF-16 code units) that the user can enter. For other control types, it is ignored.",
+			"min" :"The minimum (numeric or date-time) value for this input, which must not be greater than its maximum (max attribute) value.",
+			"minlength" :"If the value of the type attribute is text, email, search, password, tel, or url, this attribute specifies the minimum number of characters (in UTF-16 code points) that the user can enter. For other control types, it is ignored",
+			"multiple":"This Boolean attribute indicates whether the user can enter more than one value. This attribute only applies when the type attribute is set to email or file.",
+			"name":"The name of the control, which is submitted with the control's value as part of the form data. If no name is specified or it is empty, the control's value is not submitted with the form.",
+			"pattern":"A regular expression that the control's value is checked against. The pattern must match the entire value. Use the title attribute to describe the pattern to help the user. This attribute only applies when the value of the type attribute is text, search, tel, url, email, or password. The regular expression language is the same as the JavaScript RegExp algorithm, with the 'u' parameter that makes it treat the pattern as a sequence of unicode code points. The pattern is not surrounded by forward slashes.",
+			"placeholder" :"A hint to the user of what can be entered in the control, typically in the form of an example of the type of information that should be entered. The placeholder text must not contain carriage returns or line-feeds.\nNote: Before using placeholder, please see the section Labels and placeholders to ensure that you use them correctly if at all. Placeholders can be confusing and can disrupt certain operations in unexpected ways.",
+			"readonly":"This Boolean attribute prevents the user from modifying the value of the input. It is ignored if the value of the type attribute is hidden, range, color, checkbox, radio, file, or a button type (such as button or submit).",
+			"required":"This attribute specifies that the user must fill in a value before submitting a form. It cannot be used when the type attribute is hidden, image, or a button type (submit, reset, or button). The :optional and :required CSS pseudo-classes will be applied to the field as appropriate.",
+			"size":"The initial size of the control. Starting in HTML5, this attribute applies only when the type attribute is set to text, search, tel, url, email, or password, otherwise it is ignored. The size must be an integer greater than zero. The default value is 20. \n HTML5 states 'the user agent should ensure that at least that many characters are visible , but different characters have different widths in certain fonts. In some browsers, a certain string with x characters will not be entirely visible even if size is defined as x.",
+			"spellcheck":"Setting the value of this attribute to true indicates that the element needs to have its spelling and grammar checked. The value default indicates that the element is to act according to a default behavior, possibly based on the parent element's own spellcheck value. The value false indicates that the element should not be checked.",
+			"src":"If the value of the type attribute is image, this attribute specifies the URL of the image file to display on the graphical submit button.",
+			"step":"Works with the min and max attributes to limit the increments at which a numeric or date-time value can be set. It can be the string any or a positive floating point number. If this attribute is not set to any, the control accepts only values at multiples of the step value greater than the minimum.",
+			"tabindex element-specific": "The position of the element in the tabbing navigation order for the current document.'value': The initial value of the control. This attribute is optional except when the value of the type attribute is radio or checkbox.When reloading the page, Firefox and IE will ignore the value specified in the HTML source, if the value was changed before the reload.",
+			"width":"If the value of the type attribute is image, this attribute defines the width of the image displayed for the button in pixels."
+
+		}
+	},
+	
+
+	"ins":{
+		"Tag":"<ins>",
+		"Description":"The <ins> represents a range of text that has been added to a document",
+		"Usage Example":"<ins>This text has been inserted</ins>"
+	},
+
+	"kbd":{
+		"Tag":"<kbd>",
+		"Description":"The HTML Keyboard Input element (<kbd>) represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the user agent defaults to rendering the contents of a <kbd> element using its default monospace font, although this is not mandated by the HTML standard.",
+		"Usage Example":"<p>Use the command <kbd>help mycommand</kbd> to view documentation for the command 'mycommand'.</p>"
+	},
+
+	"li":{
+		"Tag":"<li>",
+		"Description":"The <li> is used to represent an item in a list. It must be contained in a parent element: an ordered list (<ol>), an unordered list (<ul>), or a menu (<menu>). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter",
+		"Usage Example":"<ol>\n<li>first item</li>\n<li>second item</li>\n<li>third item</li>\n</ol>"
+	},
+
+	"link":{
+		"Tag":"<link/>",
+		"Description":"The <link> specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets.",
+		"Usage Example":"<link href='main.css' rel='stylesheet'>",
+		"Attribute(s)":{
+			"as":"This attribute is only used when rel='preload' has been set on the <link> element. It specifies the type of content being loaded by the <link>, which is necessary for content prioritization, request matching, application of correct content security policy, and setting of correct Accept request header.",
+			"crossorigin":"This enumerated attribute indicates whether CORS must be used when fetching the resource. CORS-enabled images can be reused in the <canvas> element without being tainted. The allowed values are: \n >> 'anonymous' A cross-origin request (i.e. with an Origin HTTP header) is performed, but no credential is sent (i.e. no cookie, X.509 certificate, or HTTP Basic authentication). If the server does not give credentials to the origin site (by not setting the Access-Control-Allow-Origin HTTP header) the image will be tainted and its usage restricted.\n >> 'use-credentials' A cross-origin request (i.e. with an Origin HTTP header) is performed along with a credential sent (i.e. a cookie, certificate, and/or HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through Access-Control-Allow-Credentials HTTP header), the resource will be tainted and its usage restricted.\nIf the attribute is not present, the resource is fetched without a CORS request (i.e. without sending the Origin HTTP header), preventing its non-tainted usage. If invalid, it is handled as if the enumerated keyword anonymous was used. See CORS settings attributes for additional information.",
+			"href":"This attribute specifies the URL of the linked resource. A URL can be absolute or relative.",
+			"hreflang":"This attribute indicates the language of the linked resource. It is purely advisory. Allowed values are determined by BCP47. Use this attribute only if the href attribute is present.",
+			"integrity":"Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you’re telling the browser to fetch. The browser can use this to verify that the fetched resource has been delivered free of unexpected manipulation. See Subresource Integrity.",
+			"media":"This attribute specifies the media that the linked resource applies to. Its value must be a media type / media query. This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.",
+			"referrerpolicy":"A string indicating which referrer to use when fetching the resource:\n >> 'no-referrer' means that the Referer header will not be sent.\n >> 'no-referrer-when-downgrade' means that no Referer header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.\n >> 'origin' means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.\n >> 'origin-when-cross-origin' means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.\n >> 'unsafe-url' means that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.",
+			"rel":"This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of the link types values.",
+			"sizes":"This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the rel contains a value of icon or a non-standard type such as Apple's apple-touch-icon. It may have the following values:\n >> any, meaning that the icon can be scaled to any size as it is in a vector format, like image/svg+xml.\n >> a white-space separated list of sizes, each in the format <width in pixels>x<height in pixels> or <width in pixels>X<height in pixels>. Each of these sizes must be contained in the resource.",
+			"title":"The title attribute has special semantics on the <link> element. When used on a <link rel='stylesheet'> it defines a preferred or an alternate stylesheet. Incorrectly using it may cause the stylesheet to be ignored.",
+			"type":"This attribute is used to define the type of the content linked to. The value of the attribute should be a MIME type such as text/html, text/css, and so on. The common use of this attribute is to define the type of stylesheet linked, e.g. text/css, although this is not so important any more as that is literally the only stylesheet type available. It is also used on rel='preload' link types, to make sure the browser only downloads file types that it supports."
+
+		}
+
+	},
+
+	"main":{
+		"Tag":"<main>",
+		"Description":"The <main> represents the dominant content of the <body> of a document, portion of a document or application. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.",
+		"Usage Example":"<main>\n <h1>Apples</h1>\n<p>The apple is the pomaceous fruit of the apple tree.</p>\n<article>\n<h2>Red Delicious</h2>\n<p>These bright red apples are the most common found in manysupermarkets.</p>\n</article>\n</main>"
+	},
+
+	"map":{
+		"Tag":"<map>",
+		"Description":"The <map> is used with <area> elements to define an image map (a clickable link area).",
+		"Usage Example":"<map name='primary'>\n<area shape='circle' coords='75,75,75' href='left.html'>\n<area shape='circle' coords='275,75,75' href='right.html'>\n</map>\n<img usemap='#primary' src='https://placehold.it/350x150' alt='350 x 150 pic'>"
+	},
+
+	"mark":{
+		"Tag":"<mark>",
+		"Description":"The HTML Mark Text element (<mark>) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.",
+		"Usage Example":"<blockquote>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s ultimate weapon,the DEATH STAR, an armored space station with enough power to destroy an entire planet.\n</blockquote>"
+	},
+
+	"menu":{
+		"Tag":"<menu>",
+		"Description":"The <menu> represents a group of commands that a user can perform or activate. This includes both list menus, which might appear across the top of a screen, as well as context menus, such as those that might appear underneath a button after it has been clicked.",
+		"Usage Example":"<!-- A <div> element with a context menu -->\n<div contextmenu='popup-menu'>Right-click to see the adjusted context menu\n</div>\n<menu type='context' id='popup-menu'>\n<menuitem>Action</menuitem>\n<menuitem>Another action</menuitem>\n <hr>\n<menuitem>Separated action</menuitem>\n</menu>", 
+		"Attribute(s)":{
+			"label":"The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a <menu> in the context menu state.",
+			"type":"This attribute indicates the kind of menu being declared, and can be one of two values.\n >> context : Indicates the popup menu state, which represents a group of commands activated through another element. This might be as a button menu referenced by a menu attribute of a <button> element, or as context menu for an element with a contextmenu attribute. This value is the default if the attribute is missing and the parent element is also a <menu> element.\n >> toolbar: Indicates the toolbar state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of <li> elements, or, if the element has no <li> element children, flow content describing available commands. This value is the default if the attribute is missing."
+
+		}
+	},
+	"meter":{
+		"Tag":"<meter>",
+		"Description":"The <meter> represents either a scalar value within a known range or a fractional value.",
+		"Usage Example":"<p>Heat the oven to <meter min='200' max='500' value='350'>350 degrees</meter>.</p>",
+		"Attribute(s)":{
+			"value":"The current numeric value. This must be between the minimum and maximum values (min attribute and max attribute) if they are specified. If unspecified or malformed, the value is 0. If specified, but not within the range given by the min attribute and max attribute, the value is equal to the nearest end of the range.\n Usage note: Unless the value attribute is between 0 and 1 (inclusive), the min and max attributes should define the range so that the value attribute's value is within it.",
+			"min":"The lower numeric bound of the measured range. This must be less than the maximum value (max attribute), if specified. If unspecified, the minimum value is 0.",
+			"max":"The upper numeric bound of the measured range. This must be greater than the minimum value (min attribute), if specified. If unspecified, the maximum value is 1.",
+			"low":"The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (min attribute), and it also must be less than the high value and maximum value (high attribute and max attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the low value is equal to the minimum value.",
+			"high":"The lower numeric bound of the high end of the measured range. This must be less than the maximum value (max attribute), and it also must be greater than the low value and minimum value (low attribute and min attribute, respectively), if any are specified. If unspecified, or if greater than the maximum value, the high value is equal to the maximum value.",
+			"optimum":"This attribute indicates the optimal numeric value. It must be within the range (as defined by the min attribute and max attribute). When used with the low attribute and high attribute, it gives an indication where along the range is considered preferable. For example, if it is between the min attribute and the low attribute, then the lower range is considered preferred.",
+			"form":"This attribute associates the element with a form element that has ownership of the meter element. For example, a meter might be displaying a range corresponding to an input element of type number. This attribute is only used if the meter element is being used as a form-associated element; even then, it may be omitted if the element appears as a descendant of a form element."
+		}
+	},
+
+	"nav":{
+		"Tag":"<nav>",
+		"Description":"The <nav> represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.",
+		"Usage Example":"<nav class='menu'>\n<ul>\n\t<li><a href='#'>Home</a></li>\n\t<li><a href='#'>About</a></li>\n\t<li><a href='#''>Contact</a></li>\n</ul>\n</nav>"
+	},
+
+	"noscript":{
+		"Tag":"<noscript>",
+		"Description":"The <noscript> defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.",
+		"Usage Example":"<noscript>\n <!-- anchor linking to external file -->\n<a href='https://www.mozilla.com/'>External Link</a>\n</noscript>"
+	},
+
+	"object":{
+		"Tag":"<object>",
+		"Description":"The <object> represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.",
+		"Usage Example":"<!-- Embed a flash movie -->\n<object data='movie.swf' type='application/x-shockwave-flash'></object>\n<!-- Embed a flash movie with parameters -->\n<object data='movie.swf' type='application/x-shockwave-flash'>\n<param name='foo' value='bar'>\n</object> ",
+		"Attribute(s)":{
+			"form":"The form element, if any, that the object element is associated with (its form owner). The value of the attribute must be an ID of a <form> element in the same document.",
+			"height":"The height of the displayed resource, in CSS pixels. -- (Absolute values only. NO percentages)",
+			"name":"The name of valid browsing context (HTML5), or the name of the control (HTML 4).",
+			"type":"The content type of the resource specified by data. At least one of data and type must be defined.",
+			"typemustmatch":"This Boolean attribute indicates if the type attribute and the actual content type of the resource must match to be used.",
+			"usemap":"A hash-name reference to a <map> element; that is a '#' followed by the value of a name of a map element.",
+			"width":"The width of the display resource, in CSS pixels. -- (Absolute values only. NO percentages)"
+		}
+
+	},
+	"ol":{
+		"Tag":"<ol>",
+		"Description":"The <ol> represents an ordered list of items, typically rendered as a numbered list.",
+		"Usage Example":"\n<ol type='i'>\n\t<li>foo</li>\n\t<li>bar</li>\n\t<li>spam</li>\n</ol>",
+		"Attribute(s)":{
+			"compact":"This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.\n,Note: Do not use this attribute, as it has been deprecated: the <ol> element should be styled using CSS. To give an effect similar to the compact attribute, the CSS property line-height can be used with a value of 80%.",
+			"reversed" :"This Boolean attribute specifies that the items of the list are specified in reversed order.",
+			"start":"This integer attribute specifies the start value for numbering the individual list items. Although the ordering type of list elements might be Roman numerals, such as XXXI, or letters, the value of start is always represented as a number. To start numbering elements from the letter 'C', use <ol start='3'>.\nNote: This attribute was deprecated in HTML4, but reintroduced in HTML5.",
+			"type":"Indicates the numbering type:\n'a' indicates lowercase letters,\n'A' indicates uppercase letters,\n'i' indicates lowercase Roman numerals,\n'I' indicates uppercase Roman numerals,\nand '1' indicates numbers (default).\nThe type set is used for the entire list unless a different type attribute is used within an enclosed <li> element.\nNote: This attribute was deprecated in HTML4, but reintroduced in HTML5. Unless the value of the list number matters (e.g. in legal or technical documents where items are to be referenced by their number/letter), the CSS list-style-type property should be used instead."
+
+		}
+	},
+
+	"optgroup":{
+		"Tag":"<optgroup>",
+		"Description":"The <optgroup> creates a grouping of options within a <select> element.",
+		"Usage Example":"\n<select>\n<optgroup label='Group 1'>\n<option>Option 1.1</option>\n</optgroup> \n<optgroup label='Group 2'>\n<option>Option 2.1</option>\n<option>Option 2.2</option>\n</optgroup>\n<optgroup label='Group 3' disabled>\n<option>Option 3.1</option>\n<option>Option 3.2</option>\n<option>Option 3.3</option>\n</optgroup>\n</select>",
+		"Attribute(s)":{
+			"disabled":"If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.",
+			"label":"The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used."
+
+		}
+	},
+
+
+	"option":{
+		"Tag":"<option>",
+		"Description":"The <option> is used to define an item contained in a <select>, an <optgroup>, or a <datalist> element. As such, <option> can represent menu items in popups and other lists of items in an HTML document.",
+		"Usage Example":"See <select> for examples.",
+		"Attribute(s)":{
+			"disabled":"If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled <optgroup> element.",
+			"label":"This attribute is text for the label indicating the meaning of the option. If the label attribute isn't defined, its value is that of the element text content.",
+			"selected":"If present, this Boolean attribute indicates that the option is initially selected. If the <option> element is the descendant of a <select> element whose multiple attribute is not set, only one single <option> of this <select> element may have the selected attribute.",
+			"value":"The content of this attribute represents the value to be submitted with the form, should this option be selected. If this attribute is omitted, the value is taken from the text content of the option element."
+
+		}
+	},
+
+	"output":{
+		"Tag":"<output>",
+		"Description":"The HTML Output element (<output>) is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.",
+		"Usage Example":"<form oninput='result.value=parseInt(a.value)+parseInt(b.value)'>\n<input type='range' name='b' value='50 /> +\n<input type='number' name='a' value='10' /> =\n<output name='result'>60</output>\n</form>",
+		"Attribute(s)":{
+			"for":"A space-separated list of other elements’ ids, indicating that those elements contributed input values to (or otherwise affected) the calculation.",
+			"form":"The form element that this element is associated with (its 'form owner'). The value of the attribute must be an id of a form element in the same document. If this attribute is not specified, the output element must be a descendant of a form element. This attribute enables you to place output elements anywhere within a document, not just as descendants of their form elements.",
+			"name":"The name of the element, exposed in the HTMLFormElement API."
+		}
+	},
+	
+	"p":{
+		"Tag":"<p>",
+		"Description":"The <p> represents a paragraph of text. Paragraphs are usually represented in visual media as blocks of text that are separated from adjacent blocks by vertical blank space and/or first-line indentation. Paragraphs are block-level elements.",
+		"Usage": "<p> SOME TEXT HERE </p>"
+	},
+
+	"param":{
+		"Tag":"<param>",
+		"Description":"The <param> defines parameters for an <object> element.",
+		"Usage": "Please see the <object> page for examples on <param>.",
+		"Attribute(s)":{
+			"name":"Name of the parameter.",
+			"type":"Only used if the valuetype is set to 'ref'. Specifies the MIME type of values found at the URI specified by value.",
+			"value":"Specifies the value of the parameter.",
+			"valuetype":"Specifies the type of the value attribute. Possible values are:\n>> data: Default value. The value is passed to the object's implementation as a string.\n >> ref: The value is a URI to a resource where run-time values are stored.",
+			"object": "An ID of another <object> in the same document."
+		}
+	},
+
+	"picture":{
+		"Tag":"<picture>",
+		"Description":"The <picture> serves as a container for zero or more <source> elements and one <img> element to provide versions of an image for different display device scenarios. The browser will consider each of the child <source> elements and select one corresponding to the best match found; if no matches are found among the <source> elements, the file specified by the <img> element's src attribute is selected. The selected image is then presented in the space occupied by the <img> element.",
+		"Usage": "\n<picture>\n\t<source srcset=\"mdn-logo-wide.png\" media='(min-width: 600px)''>\n\t<img src=\"mdn-logo-narrow.png\" alt=\"MDN\">\n</picture>"
+	},
+	"pre":{
+		"Tag":"<pre>",
+		"Description":"The <pre> represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional (monospace') font. Whitespace inside this element is displayed as written.",
+		"Usage": "<pre>\nbody {\ncolor:red;\n}\n</pre>",
+		"Attribute(s)":{
+			"cols":"Contains the preferred count of characters that a line should have. It was a non-standard synonym of width. To achieve such an effect, use CSS width instead.",
+			"width":"Contains the preferred count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS width instead.",
+			"wrap":"Is a hint indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS white-space instead."
+		}
+	},
+
+
+	"progress":{
+		"Tag":"<progress>",
+		"Description":"The <progress> displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+		"Usage Example": "<progress value='70' max='100'>70 %</progress>",
+		"Attribute(s)":{
+			"max":"This attribute describes how much work the task indicated by the progress element requires. The max attribute, if present, must have a value greater than zero and be a valid floating point number. The default value is 1.",
+			"value":"This attribute specifies how much of the task that has been completed. It must be a valid floating point number between 0 and max, or between 0 and 1 if max is omitted. If there is no value attribute, the progress bar is indeterminate; this indicates that an activity is ongoing with no indication of how long it is expected to take."
+		}
+	},
+	"q":{
+		"Tag":"<q>",
+		"Description":"The <q> indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the <blockquote> element.",
+		"Usage": "<p>According to Mozilla's website,<q cite='https://www.mozilla.org/en-US/about/history/details/'>Firefox 1.0 was released in 2004 and became a big success.</q></p>"
+	},
+	"s":{
+		"Tag":"<s>",
+		"Description":"The <s> renders text with a strikethrough, or a line through it. Use the <s> element to represent things that are no longer relevant or no longer accurate. However, <s> is not appropriate when indicating document edits; for that, use the <del> and <ins> elements, as appropriate.",
+		"Usage": "<s>Today's Special: Salmon</s> SOLD OUT<br>\n <span style='text-decoration:line-through;''>Today's Special:Salmon</span>\n SOLD OUT"
+	},
+	"samp":{
+		"Tag":"<samp>",
+		"Description":"The HTML Sample Element (<samp>) is used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as Courier or Lucida Console).",
+		"Usage": "<p>When the process is complete, the utility will output the text<samp>Scan complete. Found <em>N</em> results.</samp>\n You can then proceed to the next step.</p>"
+	},
+
+	"script":{
+		"Tag":"<script>",
+		"Description":"The <script> is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. The <script> element can also be used with other languages, such as WebGL's GLSL shader programming language.",
+		"Usage": "<!-- HTML4 and (x)HTML -->\n<script type='text/javascript' src='javascript.js'></script>\n<!-- HTML5 -->\n<script src='javascript.js'></script>",
+		"Attribute(s)":{
+			"async" :"This is a Boolean attribute indicating that the browser should, if possible, execute the script asynchronously.This attribute must not be used if the src attribute is absent (i.e. for inline scripts). If it is included in this case it will have no effect.\nBrowsers usually assume the worst case scenario and load scripts synchronously, (i.e. async=false) during HTML parsing.Dynamically inserted scripts (using document.createElement) execute asynchronously by default, so to turn on synchronous execution (i.e. scripts execute in the order they were inserted) set async=false.\nSee Browser compatibility for notes on browser support. See also Async scripts for asm.js.",
+			"crossorigin":"Normal script elements pass minimal information to the window.onerror for scripts which do not pass the standard CORS checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See CORS settings attributes for a more descriptive explanation of its valid arguments.",
+			"defer":"This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing DOMContentLoaded.Scripts with the defer attribute will prevent the DOMContentLoaded event from firing until the script has loaded and finished evaluating.\nThis attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect.\nTo achieve a similar effect for dynamically inserted scripts use async=false instead. Scripts with the defer attribute will execute in the order in which they appear in the document.",
+			"integrity":"This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See Subresource Integrity.",
+			"nomodule":"This Boolean attribute is set to indicate that the script should not be executed in browsers that support ES2015 modules — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.",
+			"nonce":"A cryptographic nonce (number used once) to whitelist inline scripts in a script-src Content-Security-Policy. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.",
+			"src":"This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.If a script element has a src attribute specified, it should not have a script embedded inside its tags.",
+			"text":"Like the textContent attribute, this attribute sets the text content of the element. Unlike the textContent attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.",
+			"type":"This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:\n>> Omitted or a JavaScript MIME type: For HTML5-compliant browsers this indicates the script is JavaScript. HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the src attribute) code. JavaScript MIME types are listed in the specification.\n >> module HTML5 For HTML5-compliant browsers the code is treated as a JavaScript module. The processing of the script contents is not affected by the charset and defer attributes. For information on using module, see ES6 in Depth: Modules. Code may behave differently when the module keyword is used.\n >> Any other value: The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The src attribute will be ignored."
+		}
+	},
+
+	"section":{
+		"Tag":"<section>",
+		"Description":"The <section> represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document. Typically, but not always, sections have a heading.",
+		"Usage": "<section>\n<h1>Heading</h1>\n<p>Bunch of awesome content</p>\n</section>"
+	},
+
+	"s":{
+		"Tag":"<s>",
+		"Description":"The <s> renders text with a strikethrough, or a line through it. Use the <s> element to represent things that are no longer relevant or no longer accurate. However, <s> is not appropriate when indicating document edits; for that, use the <del> and <ins> elements, as appropriate.",
+		"Usage": "<s>Today's Special: Salmon</s> SOLD OUT<br>\n <span style='text-decoration:line-through;'>Today's Special:Salmon</span>\n SOLD OUT"
+	},
+
+	"select":{
+		"Tag":"<select>",
+		"Description":"The <select> represents a control that provides a menu of options",
+		"Usage": "<!-- The second value will be selected initially -->\n<select name='text'> <!--Supplement an id here instead of using 'text'-->\n\t<option value='first'>First Value</option> \n\t<option value='second' selected>Second Value</option>\n\t<option value='third'>Third Value</option>\n</select>",
+		"Attribute(s)":{
+			"autocomplete":"A DOMString providing a hint for a user agent's autocomplete feature. See The HTML autocomplete attribute for a complete list of values and details on how to use autocomplete.",
+			"autofocus":"This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form element in a document can have the autofocus attribute.",
+			"disabled":"This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example fieldset; if there is no containing element with the disabled attribute set, then the control is enabled.",
+			"form":"This attribute lets you specify the form element to which the select element is associated (that is, its 'form owner'). If this attribute is specified, its value must be the same as the id of a form element in the same document. This enables you to place select elements anywhere within a document, not just as descendants of their form elements.",
+			"multiple":"This Boolean attribute indicates that multiple options can be selected in the list. If it is not specified, then only one option can be selected at a time. When multiple is specified, most browsers will show a scrolling list box instead of a single line dropdown.",
+			"name":"This attribute is used to specify the name of the control.",
+			"required" : "A Boolean attribute indicating that an option with a non-empty string value must be selected.",
+			"size":"If the control is presented as a scrolling list box (e.g. when multiple is specified), this attribute represents the number of rows in the list that should be visible at one time. Browsers are not required to present a select element as a scrolled list box. The default value is 0."
+		}
+
+	},
+
+	"slot":{
+		"Tag":"<slot>",
+		"Description":"The <slot>—part of the Web Components technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.",
+		"Usage": "<template id='element-details-template'>\n<style>\ndetails {font-family: 'Open Sans Light', Helvetica, Arial, sans-serif }\n.name {font-weight: bold; color: #217ac0; font-size: 120% }\nh4 {\nmargin: 10px 0 -8px 0;\nbackground: #217ac0; \ncolor: white;\npadding: 2px 6px;\nborder: 1px solid #cee9f9; \nborder-radius: 4px;\n}\n.attributes { margin-left: 22px; font-size: 90% }\n.attributes p { margin-left: 16px; font-style: italic }\n</style>\n<details>\n<summary>\n<code class='name'>&lt;<slot name='element-name'>NEED NAME</slot>&gt;</code>\n<i class='desc'><slot name='description'>NEED DESCRIPTION</slot></i>\n</summary>\n<div class='attributes'>\n<h4>Attributes</h4>\n<slot name='attributes'><p>None</p></slot>\n</div>\n</details>\n<hr>\n</template>\n"
+	},
+	"small":{
+		"Tag":"<small>",
+		"Description":"The <small> element makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size. In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.",
+		"Usage": "<p>This is the first sentence. <small>This whole sentence is in small letters.</small></p>"
+	},
+	"source":{
+		"Tag":"<source>",
+		"Description":"The <source> specifies multiple media resources for the <picture>, the <audio> element, or the <video> element. It is an empty element. It is commonly used to serve the same media content in multiple formats supported by different browsers.",
+		"Usage": "<video controls>\n<source src='foo.webm' type='video/webm'>\n<source src='foo.ogg' type='video/ogg'> \n<source src='foo.mov' type='video/quicktime'>\nI'm sorry; your browser doesn't support HTML5 video.\n</video>",
+		"Attribute(s)":{
+			"sizes":"Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in srcset to use.The sizes attribute has an effect only when the <source> element is the direct child of a <picture> element.",
+			"src":"Required for <audio> and <video>, address of the media resource. The value of this attribute is ignored when the <source> element is placed inside a <picture> element.",
+			"srcset":"A list of one or more strings separated by commas indicating a set of possible images represented by the source for the browser to use. Each string is composed of:\n >> one URL to an image,\n >> a width descriptor, that is a positive integer directly followed by 'w'. The default value, if missing, is the infinity.\n >> a pixel density descriptor, that is a positive floating number directly followed by 'x'. The default value, if missing, is 1x.\n Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor.\nThe browser chooses the most adequate image to display at a given point of time.\nThe srcset attribute has an effect only when the <source> element is the direct child of a <picture> element.",
+			"type":"The MIME-type of the resource, optionally with a codecs parameter. See RFC 4281 for information about how to specify codecs.",
+			"media":"Media query of the resource's intended media; this should be used only in a <picture> element.If the type attribute isn't specified, the media's type is retrieved from the server and checked to see if the user agent can handle it; if it can't be rendered, the next <source> is checked. If the type attribute is specified, it's compared against the types the user agent can present, and if it's not recognized, the server doesn't even get queried; instead, the next <source> element is checked at once."
+
+		}
+	},
+	"span":{
+		"Tag":"<span>",
+		"Description":"The <span> is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element.",
+		"Usage": "<p><span>Some text</span></p>"
+	},
+	"strong":{
+		"Tag":"<strong>",
+		"Description":"The <strong> element is for content that is of strong importance, including things of great seriousness or urgency (such as warnings). This could be a sentence that is of great importance to the whole page, or you could merely try to point out that some words are of greater importance compared to nearby content.Typically this element is rendered by default using a bold font weight. However, it should not be used simply to apply bold styling; use the CSS font-weight property for that purpose. Use the <b> element to draw attention to certain text without indicating a higher level of importance. Use the <em> element to mark text that has stress emphasis.",
+		"Usage": "<p>Before proceeding, <strong>make sure you put on your safety goggles</strong>.</p>"
+
+	},
+	"style":{
+		"Tag":"<style>",
+		"Description":"The <style> contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the <style> element",
+		"Usage": "<!doctype html>\n<html>\n<head>\n<style>\np {\ncolor: red;\n}\n</style>\n </head>\n<body>\n<p>This is my paragraph.</p>\n</body>\n</html>",
+		"Attribute(s)":{
+			"type":"This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to text/css if it is not specified — there is very little reason to include this in modern web documents.",
+			"media":"This attribute defines which media the style should be applied to. Its value is a media query, which defaults to all if the attribute is missing.nonce\nA cryptographic nonce (number used once) used to whitelist inline styles in a style-src Content-Security-Policy. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.",
+			"title":"This attribute specifies alternative style sheet sets."
+
+		}
+	},
+	"sub":{
+		"Tag":"<sub>",
+		"Description":"The HTML Subscript element (<sub>) specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text.",
+		"Usage": "<p>According to the computations by Nakamura, Johnson, andMason<sub>1</sub> this will result in the complete annihilationof both particles.</p>"
+	},
+	"summary":{
+		"Tag":"<summary>",
+		"Description":"The HTML Disclosure Summary element (<summary>) element specifies a summary, caption, or legend for a <details> element's disclosure box. Clicking the <summary> element toggles the state of the parent <details> element open and closed.",
+		"Usage": "<details open>\n<summary>Overview</summary>\n<ol>\n<li>Cash on hand: $500.00</li>\n<li>Current invoice: $75.30</li>\n<li>Due date: 5/6/19</li>\n</ol>\n</details>"
+	},
+	"sup":{
+		"Tag":"<sup>",
+		"Description":"The HTML Superscript element (<sup>) specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text.",
+		"Usage": "<p>One of the most common equations in all of physics is<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.<p>"
+	},
+
+
+	"table":{
+		"Tag":"<table>",
+		"Description":"The <table> represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.",
+		"Usage": "<table>\n<tr>\n<td>John</td>\n<td>Doe</td>\n</tr>\n<tr>\n<td>Jane</td>\n<td>Doe</td>\n</tr>\n</table>",
+		"Attribute(s)":{
+			"align":"This enumerated attribute indicates how the table must be aligned inside the containing document. It may have the following values:\n >> left: the table is displayed on the left side of the document;\n >> center: the table is displayed in the center of the document. \n >> right: the table is displayed on the right side of the document.\t - Usage Note:\nDo not use this attribute, as it has been deprecated. The <table> element should be styled using CSS. Set margin-left and margin-right to auto or margin to 0 auto to achieve an effect that is similar to the align attribute.Prior to Firefox 4, Firefox also supported the middle, absmiddle, and abscenter values as synonyms of center, in quirks mode only.",
+			"bgcolor":"This attribute defines the background color of a table. It consists of a 6-digit hexadecimal code as defined in sRGB and is prefixed by '#'.\n Usage note: Do not use this attribute, as it has been deprecated. The <table> element should be styled using CSS. Use the background-color property in CSS to create an effect that is similar to the bgcolor attribute. ", 
+			"border":"This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, the frame attribute is set to void.\nUsage note: Do not use this attribute, as it has been deprecated. The <table> element should be styled using CSS. To create an effect similar to the border attribute, the border, border-color, border-width and border-style CSS properties should be used.",
+			"cellpadding":"This attribute defines the space between the content of a cell and its border, displayed or not. If the cellpadding's length is defined in pixels, this pixel-sized space will be applied to all four sides of the cell's content. If the length is defined using a percentage value, the content will be centered and the total vertical space (top and bottom) will represent this value. The same is true for the total horizontal space (left and right).\n\t - Usage note: Do not use this attribute, as it has been deprecated. The <table> element should be styled using CSS. To create an effect similar to the cellpadding attribut, apply the border-collapse property to the <table> element, with its value set to collapse, and the padding property to the <td> element.",
+			"cellspacing":"This attribute defines the size of the space between two cells in a percentage value or pixels. The attribute is applied both horizontally and vertically, to the space between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.\n \t - Usage note: Do not use this attribute, as it has been deprecated. The <table> element should be styled using CSS. To create an effect similar to the cellspacing attribute, apply the border-spacing property to the <table> element. Border-spacing does not have any effect if border-collapse is set to collapse.",
+		
+			"summary":"This attribute defines an alternative text that summarizes the content of the table. Typically, it allows visually impaired people who are browsing the web with a Braille screen, to acquire information about the table. If the information added by this attribute is also useful to people who are not visually impaired, consider using the <caption> instead. The summary attribute is not mandatory and may be omitted when a <caption> element fulfills its role.\n \t - Usage Note: Do not use this attribute, as it has been deprecated. Instead, choose one of these methods to add a description of a table:\n >> Use prose around the table (this method is less semantic).\n >> Add a description in the table's <caption> element.\n >> Add a description in a <details> element, inside the table's <caption> element.\n >> Include the <table> element in a <figure> element and add the description in prose next to it.\n >> Include the <table> element in a <figure> element and add the description in prose inside a <figcaption> element.\n >> Adjust the table so that a description is not needed (e.g. use <th> and <thead> elements).",
+			"width":"This attribute defines the width of the table. The width may be defined by pixels or a percentage value. A percentage value will be defined by the width of the container in which the table is placed.\nUsage Note: Do not use this attribute, as it has been deprecated. The rules should be defined and styled using CSS. Use the width property instead."
+		}
+	},
+	"tbody":{
+		"Tag":"<tbody>",
+		"Description":"The HTML Table Body element (<tbody>) encapsulates a set of table row (<tr> elements, indicating that they comprise the body of the table (<table>).The <tbody> element, along with its cousins <thead> and <tfoot>, provide useful semantic information that can be used when rendering for either screen or printer as well as for accessibility purposes.",
+		"Usage": "<table>\n<thead>\n<tr>\n<th>Student ID</th>\n<th>Name</th>\n<th>Major</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3741255</td>\n<td>Jones, Martha</td>\n<td>Computer Science</td>\n</tr>\n<tr>\n<td>3971244</td>\n<td>Nim, Victor</td>\n<td>Russian Literature</td>\n</tr>\n<tr>\n<td>4100332</td>\n<td>Petrov, Alexandra</td>\n<td>Astrophysics</td>\n</tr>\n</tbody>\n</table>"
+	},
+	"td":{
+		"Tag":"<td>",
+		"Description":"The <td> defines a cell of a table that contains data. It participates in the table model.",
+		"Usage": "See <table> for examples on <td>."
+	},
+
+	"template":{
+		"Tag":"<template>",
+		"Description":"The <template> is a mechanism for holding client-side content that is not to be rendered when a page is loaded but may subsequently be instantiated during runtime using JavaScript.Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the <template>element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however",
+		"Usage": "\n<table id='producttable'>\n<thead>\n<tr>\n<td>UPC_Code</td>\n<td>Product_Name</td>\n</tr>\n</thead>\n\n<tbody>\n<!-- existing data could optionally be included here -->\n</tbody>\n</table>\n<template id='productrow'>\n<tr>\n<td class='record'></td>\n<td></td>\n</tr>\n</template> "
+	},
+
+	"textarea":{
+		"Tag":"<textarea>",
+		"Description":"The <textarea> represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.",
+		"Usage": "<textarea name='textarea' rows='10' cols='50'>Write something here</textarea>.",
+		"Atrribute(s)":{
+			"autocapitalize":"This is a non-standard attribute supported by WebKit on iOS (therefore nearly all browsers running on iOS, including Safari, Firefox, and Chrome), which controls whether and how the text value should be automatically capitalized as it is entered/edited by the user. The non-deprecated values are available in iOS 5 and later. Possible values are:\n>> none: Completely disables automatic capitalization.\n >> sentences: Automatically capitalize the first letter of sentences.\n >> words: Automatically capitalize the first letter of words.\n >> characters: Automatically capitalize all characters.",
+			"autocomplete":"This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:\n \t >> off: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.\n \t >> on: The browser can automatically complete the value based on values that the user has entered during previous uses.\n If the autocomplete attribute is not specified on a <textarea> element, then the browser uses the autocomplete attribute value of the <textarea> element's form owner. The form owner is either the <form> element that this <textarea> element is a descendant of or the form element whose id is specified by the form attribute of the input element. For more information, see the autocomplete attribute in <form>",
+			"autofocus":"This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.",
+			"cols":"The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is 20.",
+			"disabled":"This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example <fieldset>; if there is no containing element when the disabled attribute is set, the control is enabled.",
+			"form":"The form element that the <textarea> element is associated with (its 'form owner'). The value of the attribute must be the id of a form element in the same document. If this attribute is not specified, the <textarea> element must be a descendant of a form element. This attribute enables you to place <textarea> elements anywhere within a document, not just as descendants of form elements.",
+			"maxlength":"The maximum number of characters (unicode code points) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.",
+			"minlength":"The minimum number of characters (unicode code points) required that the user should enter.",
+			"name":"The name of the control.",
+			"placeholder":"A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint. \nNote: Placeholders should only be used to show an example of the type of data that should be entered into a form; they are not a substitute for a proper <label> element tied to the input. See Labels and placeholders in <input>: The Input (Form Input) element for a full explanation.",
+			"readonly":"This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the disabled attribute, the readonly attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.",
+			"required":"This attribute specifies that the user must fill in a value before submitting a form.",
+			"rows":"The number of visible text lines for the control.",
+			"spellcheck":"Specifies whether the <textarea> is subject to spell checking by the underlying browser/OS. the value can be:\n >> true: Indicates that the element needs to have its spelling and grammar checked.\n >> default : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own spellcheck value.\n >> false : Indicates that the element should not be spell checked.",
+			"wrap":"Indicates how the control wraps text. Possible values are:\n >> hard: The browser automatically inserts line breaks (CR+LF) so that each line has no more than the width of the control; the cols attribute must also be specified for this to take effect.\n>> soft: The browser ensures that all line breaks in the value consist of a CR+LF pair, but does not insert any additional line breaks.\n >> off : Like soft but changes appearance to white-space: pre so line segments exceeding cols are not wrapped and the <textarea> becomes horizontally scrollable.\n If this attribute is not specified, soft is its default value."
+		}
+	},
+
+	"tfoot":{
+		"Tag":"<tfoot>",
+		"Description":"The <tfoot> defines a table footer of a table that contains data. It participates in the table model.",
+		"Usage": "Please see the <table> page for examples on <tfoot>"
+	},
+	"th":{
+		"Tag":"<th>",
+		"Description":"The <th> defines a cell as header of a group of table cells. The exact nature of this group is defined by the scope and headers attributes.",
+		"Usage": "See <table> for examples on <th>.>",
+		"Attribute(s)":{
+			"abbr":"This attribute contains a short abbreviated description of the cell's content. Some user-agents, such as speech readers, may present this description before the content itself.",
+			"bgcolor":"This attribute defines the background color of each cell in a column. It consists of a 6-digit hexadecimal code as defined in sRGB and is prefixed by '#'.\nNote: Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: The <th> element should be styled using CSS. To create a similar effect use the background-color property in CSS instead.",
+			"colspan":"This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is 1. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).",
+			"headers":"This attribute contains a list of space-separated strings, each corresponding to the id attribute of the <th> elements that apply to this element.",
+			"rowspan":"This attribute contains a non-negative integer value that indicates for how many rows the cell extends. Its default value is 1; if its value is set to 0, it extends until the end of the table section (<thead>, <tbody>, <tfoot>, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.",
+			"scope":"This enumerated attribute defines the cells that the header (defined in the <th>) element relates to. It may have the following values:\n >> row: The header relates to all cells of the row it belongs to.\n >> col: The header relates to all cells of the column it belongs to.\n >> rowgroup: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the dir attribute in the <table> element.\n >> colgroup: The header belongs to a colgroup and relates to all of its cells.\n >> auto"
+
+		}
+	},
+	"thead":{
+		"Tag":"<thead>",
+		"Description":"The <thead> defines a set of rows defining the head of the columns of the table.",
+		"Usage": "See <table> for examples on <thead>."
+	},
+	"time":{
+		"Tag":"<time>",
+		"Description":"The <time> represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.\n It may represent one of the following:\n A time on a 24-hour clock.\n A precise date in the Gregorian calendar (with optional time and timezone information).\n A valid time duration.",
+		"Usage": "<p>The concert starts at <time>20:00</time>.</p>",
+		"Attribute(s)":{
+			"datetime":"This attribute indicates the time and/or date of the element and must be in one of the formats described below."
+		}
+	},
+	"title":{
+		"Tag":"<title>",
+		"Description":"The HTML Title element (<title>) defines the document's title that is shown in a browser's title bar or a page's tab. It only contains text and tags within the element are ignored.\nThe <title> element is always used within a page's <head> block.",
+		"Usage": "<title>Awesome page title</title>"
+	},
+
+	"tr":{
+		"Tag":"<tr>",
+		"Description":"The <tr> defines a row of cells in a table. The row's cells can then be established using a mix of <td> (data cell) and <th> (header cell) elements.",
+		"Usage": "See <table> for examples on <tr>."
+	},
+	"track":{
+		"Tag":"<track>",
+		"Description":"The <track> is used as a child of the media elements <audio> and <video>. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in WebVTT format (.vtt files) — Web Video Text Tracks or Timed Text Markup Language (TTML).",
+		"Usage": "<video controls poster='/images/sample.gif'>\n<source src='sample.mp4' type='video/mp4'>\n<source src='sample.ogv' type='video/ogv'>\n<track kind='captions' src='sampleCaptions.vtt' srclang='en'>\n<track kind='descriptions' src='sampleDescriptions.vtt' srclang='en'>\n<track kind='chapters' src='sampleChapters.vtt' srclang='en'>\n<track kind='subtitles' src='sampleSubtitles_de.vtt' srclang='de'>\n<track kind='subtitles' src='sampleSubtitles_en.vtt' srclang='en'>\n<track kind='subtitles' src='sampleSubtitles_ja.vtt' srclang='ja'>\n<track kind='subtitles' src='sampleSubtitles_oz.vtt' srclang='oz'>\n<track kind='metadata' src='keyStage1.vtt' srclang='en' label='Key Stage 1'>\n<track kind='metadata' src='keyStage2.vtt' srclang='en'label='Key Stage 2'>\n<track kind='metadata' src='keyStage3.vtt' srclang='en'label='Key Stage 3'>\n<!-- Fallback -->\n...\n</video>",
+		"Attribute(s)":{
+			"default":"This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one track element per media element.",
+			"kind":"How the text track is meant to be used. If omitted the default kind is subtitles. If the attribute is not present, it will use the subtitles. If the attribute contains an invalid value, it will use metadata. (Versions of Chrome earlier than 52 treated an invalid value as subtitles.) The following keywords are allowed:\n >> subtitles\n\t >>> Subtitles provide translation of content that cannot be understood by the viewer. For example dialogue or text that is not English in an English language film.\n\t >>> Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.\n >> captions\n\t >>> Closed captions provide a transcription and possibly a translation of audio.\n\t >>> It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).\n\t >>> Suitable for users who are deaf or when the sound is muted.\n >> descriptions\n\t >>> Textual description of the video content.\n\t >>> Suitable for users who are blind or where the video cannot be seen.\n >> chapters\n\t >>> Chapter titles are intended to be used when the user is navigating the media resource.\n >> metadata\n\t >>> Tracks used by scripts. Not visible to the user.",
+			"label":"A user-readable title of the text track which is used by the browser when listing available text tracks.",
+			"src":"Address of the track (.vtt file). Must be a valid URL. This attribute must be defined.",
+			"srclang":"Language of the track text data. It must be a valid BCP 47 language tag. If the kind attribute is set to subtitles, then srclang must be defined."
+
+		}
+	},
+	"u":{
+		"Tag":"<u>",
+		"Description":"The HTML Unarticulated Annotation element (<u>) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.",
+		"Usage": "<p>This paragraph includes a <u class='spelling'>wrnogly</u>spelled word.</p>"
+	},
+
+	"ul":{
+		"Tag":"<ul>",
+		"Description":"The<ul> represents an unordered list of items, typically rendered as a bulleted list.",
+		"Usage": "\n<ul>\n\t<li>first item</li>\n\t<li>second item</li>\n\t<li>third item</li>\n\t</ul></p>",
+		"Attribute(s)":{
+			"compact":"This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.\nUsage note: Do not use this attribute, as it has been deprecated: the <ul> element should be styled using CSS. To give a similar effect as the compact attribute, the CSS property line-height can be used with a value of 80%.",
+			"type":"Used to set the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:\n\t >> circle,\n\t >> disc,\n\t >> square.\nA fourth bullet type has been defined in the WebTV interface, but not all browsers support it: triangle.\nIf not present and if no CSS list-style-type property does apply to the element, the user agent decide to use a kind of bullets depending on the nesting level of the list."
+		}
+
+	},
+
+	"var":{
+		"Tag":"<var>",
+		"Description":"The HTML Variable element (<var>) represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.",
+		"Usage":"<p>A simple equation: <var>x</var> = <var>y</var> + 2 </p>"
+	},
+
+	"video":{
+		"Tag":"<video>",
+		"Description":"The HTML Video element (<video>) embeds a media player which supports video playback into the document. You can use <video> for audio content as well, but the <audio> element may provide a more appropriate user experience.",
+		"Usage":"<video controls>\n  <source src='myVideo.mp4' type='video/mp4'>\n<source src='myVideo.webm' type='video/webm'>\n <p>Your browser doesn't support HTML5 video. Here isa <a href='myVideo.mp4'>link to the video</a> instead.</p>\n</video>",
+		"Attribute(s)":{
+			"autoPlay":"A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.Note: Sites that automatically play audio (or video with an audio track) can be an unpleasant experience for users, so it should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control.\nTo disable video autoplay, autoplay='false' will not work; the video will autoplay if the attribute is there in the <video> tag at all. To remove autoplay the attribute needs to be removed altogether.",
+			"buffered":"An attribute you can read to determine the time ranges of the buffered media. This attribute contains a TimeRanges object.",
+			"controls":"If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.",
+			"crossorigin":"This enumerated attribute indicates whether to use CORS to fetch the related image. CORS-enabled resources can be reused in the <canvas> element without being tainted. The allowed values are:\n\t >> anonymous: Sends a cross-origin request without a credential. In other words, it sends the Origin: HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the Access-Control-Allow-Origin: HTTP header), the image will be tainted, and its usage restricted.\n\t >> use-credentials:Sends a cross-origin request with a credential. In other words, it sends the Origin: HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through Access-Control-Allow-Credentials: HTTP header), the image will be tainted and its usage restricted.\nWhen not present, the resource is fetched without a CORS request (i.e. without sending the Origin: HTTP header), preventing its non-tainted used in <canvas> elements. If invalid, it is handled as if the enumerated keyword anonymous was used. See CORS settings attributes for additional information.",
+			"height":"The height of the video's display area, in CSS pixels (absolute values only; no percentages.)'loop':A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.",
+			"muted":"A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is false, meaning that the audio will be played when the video is played.",
+			"preload":"This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:\n\t >> none: Indicates that the video should not be preloaded.\n\t >> metadata: Indicates that only video metadata (e.g. length) is fetched.\n\t >> auto: Indicates that the whole video file can be downloaded, even if the user is not expected to use it.\n\t >> empty string: Synonym of the auto value.\nIf not set, its default value is browser-defined (i.e. each browser may have its own default value). The spec advises it to be set to metadata.\n\t >> poster:A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.",
+			"src":"The URL of the video to embed. This is optional; you may instead use the <source> element within the video block to specify the video to embed.",
+			"width":"The width of the video's display area, in CSS pixels (absolute values only; no percentages).",
+			"playsinline":"A Boolean attribute indicating that the video is to be played 'inline', that is within the element's playback area. Note that the absence of this attribute does not imply that the video will always be played in fullscreen."
+		}
+	},
+	"wbr":
+	{
+		"Tag":"<wbr>",
+		"Description":"The <wbr> represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.",
+		"Usage":"<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>"
+	}
+
+
+
+}

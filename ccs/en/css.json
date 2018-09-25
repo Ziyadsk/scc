@@ -1,0 +1,907 @@
+{
+	"align-content":{
+		"Description": "Specifies the alignment between the lines inside a flexible container when the items do not use all available space",
+		"Usage":"div {\nwidth: 70px;\nheight: 300px;\nborder: 1px solid #c3c3c3;\ndisplay: -webkit-flex;\ndisplay: flex;\n-webkit-flex-wrap: wrap;\nflex-wrap: wrap;\n-webkit-align-content: center;\nalign-content: center;\n}"
+	},
+	"align-items":{
+		"Description":"Specifies the alignment for items inside a flexible container",
+		"Usage":"div {\ndisplay: -webkit-flex; /* Safari */\n-webkit-align-items: center; /* Safari 7.0+ */\ndisplay: flex;\nalign-items: center;\n}"
+	},
+	"align-self":{
+		"Description":"Specifies the alignment for selected items inside a flexible container",
+		"Usage":"#myBlueDiv {\n-webkit-align-self: center; /* Safari 7.0+ */\nalign-self: center;\n}"
+			},
+			"all":{
+				"Description":"Resets all properties (except unicode-bidi and direction)",
+				"Usage":"div {\nbackground-color: yellow;\ncolor: red;\nall: initial;\n}"
+			},
+			"animation":{
+				"Description":"A shorthand property for all the animation-* properties",
+				"Usage":"The animation property is a shorthand property for:\n- animation-name\n- animation-duration\n- animation-timing-function\n- animation-delay\n- animation-iteration-count\n- animation-direction\n- animation-fill-mode\n- animation-play-state"
+			},
+			"animation-delay":{
+				"Description":"Specifies a delay for the start of an animation in seconds(s) or milliseconds(ms)",
+				"Usage":"div {\nanimation-delay: 2s;\n}"
+			},
+			"animation-direction":{
+				"Description":"Specifies whether an animation should be played forwards, backwards or in alternate cycles",
+				"Usage":"div {\nanimation-direction: alternate;\n}",
+				"Possible Values":"\n- normal : Default value.The animation is played as normal (forwards) \n- reverse : The animation is played in reverse direction (backwards) \n- alternate : The animation is played forwards first, then bakwards \n- alternate-reverse : The animation is played backwards first, then forwards \n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element.Read about inherit"
+			},
+			"animation-duration":{
+				"Description":"Specifies how long an animation should take to complete one cycle",
+				"Usage":"div {\nanimation-duration: 3s;\n}"
+			},
+			"animation-fill-mode":{
+				"Description":"Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)",
+				"Usage":"div {\nanimation-fill-mode: forwards;\n}",
+				"Possible Values":"\nnone Default value. Animation will not apply any styles to the element before or after it is executing\nforwards The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)\nbackwards The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period\nboth : The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions\n - initial : Sets this property to its default value. Read about initial \n inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"animation-iteration-count":{
+				"Description":"Specifies the number of times an animation should be played",
+				"Usage":"div {\nanimation-iteration-count: 2;\n}"
+			},
+			"animation-name":{
+				"Description":"Specifies a name for the @keyframes animation",
+				"Usage":"div {\nanimation-name: mymove;\n}"
+			},
+			"animation-play-state":{
+				"Description":"Specifies whether the animation is running or paused",
+				"Usage":"div {\nanimation-play-state: paused;\n}"
+			},
+			"animation-timing-function":{
+				"Description":"Specifies the speed curve of an animation",
+				"Usage":"div {\nanimation-timing-function: linear;\n}",
+				"Possible Values":"\n- linear The animation has the same speed from start to end\n- ease : Default value. The animation has a slow start, then fast, before it ends slowly \n-ease-in : The animation has a slow start \n-ease-out : The animation has a slow end\n-ease-in-out : The animation has both a slow start and a slow end\n- step-start : Equivalent to steps(1, start)\n- step-end Equivalent to steps(1, end)\n-steps(int,start|end) : Specifies a stepping function, with two parameters. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, is either the value 'start' or 'end', and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value 'end'\n- cubic-bezier(n,n,n,n) : Define your own values in the cubic-bezier function\n- >> Possible values are numeric values from 0 to 1\n- initial Sets this property to its default value. Read about initial\n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"backface-visibility":{
+				"Description":"Defines whether or not the back face of an element should be visible when facing the user",
+				"Usage":"#div1 {\nbackface-visibility: hidden;\n}",
+				"Possible Values":"visible | hidden | inherit | initial "
+			},
+			"background":{
+				"Description":"A shorthand property for all the background-* properties",
+				"Usage":"The background property is a shorthand property for:\nbackground-color\nbackground-image\nbackground-position\nbackground-size\nbackground-repeat\nbackground-origin\nbackground-clip\nbackground-attachment"
+			},
+			"background-attachment":{
+				"Description":"Sets whether a background image scrolls with the rest of the page, or is fixed",
+				"Usage":"body{background-image: url('img_tree.gif');\nbackground-repeat: no-repeat;\nbackground-attachment: fixed;\n}",
+				"Possible Values":"\n- scroll : The background image will scroll with the page. This is default\n- fixed : The background image will not scroll with the page\n- local : The background image will scroll with the element's contents\n- initial : Sets this property to its default value. Read about initial\n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"background-blend-mode":{
+				"Description":"Specifies the blending mode of each background layer (color/image)",
+				"Usage":"div { width: 400px;\nheight: 400px;\nbackground-repeat: no-repeat, repeat;\nbackground-image: url('img_tree.gif'), url('paper.gif');\nbackground-blend-mode: lighten;\n}",
+				"Possible Values":"\n- normal This is default. Sets the blending mode to normal \n- multiply Sets the blending mode to multiply \n- screen Sets the blending mode to screen \n- overlay Sets the blending mode to overlay \n- darken Sets the blending mode to darken \n- lighten Sets the blending mode to lighten \n- color-dodge Sets the blending mode to color-dodge \n- saturation Sets the blending mode to saturation \n- color Sets the blending mode to color \n- luminosity Sets the blending mode to luminosity"
+			},
+			"background-clip":{
+				"Description":"Defines how far the background (color or image) should extend within an element",
+				"Usage":"div {\nborder: 10px dotted black;\npadding: 15px;\nbackground: lightblue;\nbackground-clip: padding-box;\n}",
+				"Possible Values":"\n- border-box Default value.The background extends behind the border \n- padding-box The background extends to the inside edge of the border \n- content-box The background extends to the edge of the content box \n- initial Sets this property to its default value. \n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"background-color":{
+				"Description":"Specifies the background color of an element",
+				"Usage":"body {background-color: coral;}",
+				"Possible Values":"\n- color : Specifies the background color. Look at CSS Color Values for a complete list of possible color values.\n- transparent : Specifies that the background color should be transparent.This is default \n- initial : Sets this property to its default value.Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"background-image":{
+				"Description":"Specifies one or more background images for an element",
+				"Usage":"body {\nbackground-image: url('paper.gif');\nbackground-color: #cccccc;\n}",
+				"Possible Values":"\n- url('URL') : The URL to the image. To specify more than one image, separate the URLs with a comma\n- none No background image will be displayed. This is default\n- linear-gradient() Sets a linear gradient as the background image. Define at least two colors (top to bottom)\n- radial-gradient() : Sets a radial gradient as the background image. Define at least two colors (center to edges)\n- repeating-linear-gradient() : Repeats a linear gradient\n- repeating-radial-gradient() : Repeats a radial gradient\n- initial Sets this property to its default value. Read about initial\n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+
+			"background-origin":{
+				"Description":"Specifies the origin position of a background image",
+				"Usage":"#example1 {\nborder: 10px double black;\npadding: 25px;\nbackground: url(paper.gif);\nbackground-repeat: no-repeat;\nbackground-origin: content-box;\n}",
+				"Possible Values":"\n- padding-box Default value. The background image starts from the upper left corner of the padding edge \n- border-box The background image starts from the upper left corner of the border \n- content-box The background image starts from the upper left corner of the content\n- initial Sets this property to its default value. Read about initial\n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"background-position":{
+				"Description":"Specifies the position of a background image",
+				"Usage":"body {\nbackground-image: url('w3css.gif');\nbackground-repeat: no-repeat;\nbackground-attachment: fixed;\nbackground-position: center; \n}",
+				"Possible Values":"\n-left top | left center |left bottom |right top |right center |right bottom |center top |center center |center bottom : If you only specify one keyword, the other value will be 'center' \n- x% y% : The first value is the horizontal position and the second value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If you only specify one value, the other value will be 50%. . Default value is: 0% 0% \n- xpos ypos : The first value is the horizontal position and the second value is the vertical. The top left corner is 0 0. Units can be pixels (0px 0px) or any other CSS units. If you only specify one value, the other value will be 50%. You can mix % and positions\n- initial : Sets this property to its default value. Read about initial\n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"background-repeat":{
+				"Description":"Sets if/how a background image will be repeated",
+				"Usage":"body {\nbackground-image: url('paper.gif');\nbackground-repeat: repeat-y;\n}",
+				"Possible Values":"\n- repeat : The background image is repeated both vertically and horizontally.  The last image will be clipped if it does not fit. This is default \n- repeat-x : The background image is repeated only horizontally \n- repeat-y : The background image is repeated only vertically \n- no-repeat : The background-image is not repeated. The image will only be shown once \n- space : The background-image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images \n- round : The background-image is repeated and squished or stretched to fill the space (no gaps) \n- initial Sets this property to its default value. Read about initial \n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"background-size":{
+				"Description":"Specifies the size of the background images",
+				"Usage":"#example1 {\nbackground: url(mountain.jpg);\nbackground-repeat: no-repeat;\nbackground-size: auto;\n}",
+				"Possible Values":"\n- auto : Default value. The background image is displayed in its original size \n- length : Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to 'auto'.Read about length units \n- percentage : Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to 'auto' \n- cover : Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges \n- contain : Resize the background image to make sure the image is fully visible\n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border":{
+				"Description":"A shorthand property for border-width, border-style and border-color",
+				"Usage":"#example1 {\nbackground: url(mountain.jpg);\nbackground-repeat: no-repeat;\nbackground-size: auto;\n}",
+				"Possible Values":"\n- border-width : Specifies the width of the border. Default value is 'medium' \n- border-style : Specifies the style of the border. Default value is 'none'\n- border-color : Specifies the color of the border. Default value is the color of the text\n- initial : Sets this property to its default value. Read about initial\n- inherit"
+			},
+			"border-bottom":{
+				"Description":"A shorthand property for border-bottom-width, border-bottom-style and border-bottom-color",
+				"Usage":"h1 {\nborder-bottom: 5px solid red;\n}",
+				"Possible Values":"\n- border-bottom-width Required. Specifies the width of the bottom border. Default value is 'medium'\n- border-bottom-style : Required. Specifies the style of the bottom border. Default value is 'none'\n- border-bottom-color : Optional. Specifies the color of the bottom border. Default value is the color of the text\n- initial : Sets this property to its default value. Read about initial\n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border-collapse":{
+				"Description":"Sets whether table borders should collapse into a single border or be separated",
+				"Usage":"#table1 {\nborder-collapse: separate;\n}",
+				"Possible Values":"\n- separate Borders are separated; each cell will display its own borders. This is default. \n-collapse : Borders are collapsed into a single border when possible (border-spacing and empty-cells properties have no effect) \n-initial : Sets this property to its default value. Read about initial i\n-nherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border-color":{
+				"Description":"Sets the color of the four borders",
+				"Usage":"div \n{border-color: coral;}"
+			},
+			"border-image":{
+				"Description":"A shorthand property for all the border-image-* properties",
+				"Usage":"#borderimg { \nborder-image: url(border.png) 30 round;\n}",
+				"Possible Values":"\n - border-image-source The path to the image to be used as a border\n- border-image-slice : How to slice the border image \n- border-image-width : The width of the border image \n- border-image-outset : The amount by which the border image area extends beyond the border box \n- border-image-repeat : Whether the border image should be repeated, rounded or stretched \n- initial : Sets this property to its default value. Read about initial \n- inherit"
+			},
+			"border-image-outset":{
+				"Description":"Specifies the amount by which the border image area extends beyond the border box",
+				"Usage":"#borderimg {\nborder-image-source: url(border.png);\nborder-image-outset: 10px;\n}",
+				"Possible Values":"length|number|initial|inherit;"
+			},
+			"border-image-repeat":{
+				"Description":"Specifies whether the border image should be repeated, rounded or stretched",
+				"Usage":"#borderimg {\nborder-image-source: url(border.png);\nborder-image-repeat: repeat;\n}",
+				"Possible Values":"\n- stretch Default value. The image is stretched to fill the area \n- repeat The image is tiled (repeated) to fill the area \n- round The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the image is rescaled so it fits \n- space The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles"
+			},
+			"border-image-slice":{
+				"Description":"Specifies how to slice the border image",
+				"Usage":"#borderimg { \nborder-image-slice: 30%;\n}",
+				"Possible Values":"\n- number The number(s) represent pixels for raster images or coordinates for vector images \n- % : Percentages are relative to the height or width of the image \n- fill : Causes the middle part of the image to be displayed \n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border-image-source":{
+				"Description":"Specifies the path to the image to be used as a border",
+				"Usage":"#borderimg {\nborder-image-source: url(border.png);\n}",
+				"Possible Values":"\n- none No image will be used\n- image The path to the image to be used as a border\n- initial Sets this property to its default value. Read about initial\n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"border-image-width":{
+				"Description":"Specifies the width of the border image",
+				"Usage":"#borderimg {\nborder-image-source: url(border.png);\nborder-image-width: 10px;\n}",
+				"Possible Values":"\n- length A length unit (px) specifying the size of the border-width\n- number : Default value 1. Represents multiples of the corresponding border-width \n- % : Refers to the size of the border image area: the width of the area for horizontal offsets, the height for vertical offsets \n- auto : If specified, the width is the intrinsic width or height of the corresponding image slice \n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border-left":{
+				"Description":"A shorthand property for all the border-left-* properties",
+				"Usage":"h1 {border-left: 5px solid red;}",
+				"Possible Values":"Same as border-right, border-bottom, border-top ." 
+			},
+			"border-radius":{
+				"Description":"A shorthand property for the four border-*-radius properties",
+				"Usage":"#example1 {\nborder: 2px solid red;\nborder-radius: 25px;\n}",
+				"Possible Values":"\n-length : Defines the shape of the corners. Default value is 0. Read about length units \n- % : Defines the shape of the corners in % \n- initial Sets this property to its default value. Read about initial \n- inherit Inherits this property from its parent element. Read about inherit." 
+			},
+			"border-right":{
+				"Description":"A shorthand property for all the border-right-* properties",
+				"Usage":"h1 {\nborder-right: 5px solid red;\n}",
+				"Possible Values":"Same as border-left, border-bottom, border-top ."
+			},
+			"border-spacing":{
+				"Description":"Sets the distance between the borders of adjacent cells",
+				"Usage":"#table1 {\nborder-collapse: separate;\nborder-spacing: 15px;}",
+				"Possible Values":"length|initial|inherit;"
+			},
+			"border-style":{
+				"Description":"Sets the style of the four borders",
+				"Usage":"div {border-style: dotted;}",
+				"Possible Values":"\n- none : Default value. Specifies no border \n- hidden : The same as 'none', except in border conflict resolution for table elements \n- dotted : Specifies a dotted border \n- dashed : Specifies a dashed border \n- solid : Specifies a solid border \n- double : Specifies a double border \n- groove : Specifies a 3D grooved border. The effect depends on the border-color value \n- ridge : Specifies a 3D ridged border. The effect depends on the border-color value \n- inset : Specifies a 3D inset border. The effect depends on the border-color value \n- outset : Specifies a 3D outset border. The effect depends on the border-color value \n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"border-top":{
+				"Description":"A shorthand property for border-top-width, border-top-style and border-top-color",
+				"Usage":"h1 {\nborder-top: 5px solid red;\n}",
+				"Possible Values":"Same as border-left, border-bottom, border-right ."	
+			},
+			"border-width":{
+				"Description":"Sets the width of the four borders",
+				"Usage":"div {border-width: thin;}",
+				"Possible Values":"\n - medium : Specifies a medium border. This is default \n - thin : Specifies a thin border \n - thick : Specifies a thick border \n - length : Allows you to define the thickness of the border. Read about length units \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit"	
+			},
+			"bottom":{
+				"Description":"Sets the elements position, from the bottom of its parent element",
+				"Usage":"div.absolute {\nposition: absolute;\nbottom: 10px;\nwidth: 50%;\nborder: 3px solid #8AC007;\n}",
+				"Possible Values":"\n - auto : Lets the browser calculate the bottom edge position. This is default \n - length : Sets the bottom edge position in px, cm, etc. Negative values are allowed. Read about length units \n - % :Sets the bottom edge position in % of containing element. Negative values are allowed \n - initial :Sets this property to its default value. Read about initial \n - inherit :Inherits this property from its parent element. Read about inherit"
+			},
+			"box-shadow":{
+				"Description":"Attaches one or more shadows to an element",
+				"Usage":"#example1 {\nbox-shadow: 5px 10px;\n}\n}",
+				"Possible Values":"\n - none Default value. No shadow is displayed \n - h-offset : [Required]. The horizontal offset of the shadow.A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box \n - v-offset : [Required]. The vertical offset of the shadow. A positive value puts the shadow below the box, a negative value puts the shadow above the box \n - blur : [Optional] The blur radius. The higher the number, the more blurred the shadow will be \n - spread : [Optional] The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow \n - color : [Optional] The color of the shadow. The default value is the text color. Look at CSS Color Values for a complete list of possible color values.\n -- Note: In Safari (on PC) the color parameter is required. If you do not specify the color, the shadow is not displayed at all. \n - inset : [Optional]. Changes the shadow from an outer shadow (outset) to an inner shadow \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"box-sizing":{
+				"Description":"Defines how the width and height of an element are calculated: should they include padding and borders, or not",
+				"Usage":"#example1 {\nbox-sizing: border-box;\n}",
+				"Possible Values":"\n - content-box Default. The width and height properties (and min/max properties) includes only the content. Border and padding are not included \n - border-box : The width and height properties (and min/max properties) includes content, padding and border\n - initial : Sets this property to its default value. Read about initial\n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"caption-side":{
+				"Description":"Specifies the placement of a table caption",
+				"Usage":"#example2 {\ncaption-side: top;}",
+				"Possible Values":"top|bottom|initial|inherit"
+			},
+			"caret-color":{
+				"Description":"Specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable",
+				"Usage":"input { \ncaret-color: red;\n}",
+				"Possible Values":"caret-color: auto|color;"
+			},
+			"clip":{
+				"Description":"Clips an absolutely positioned element",
+				"Usage":"img {\nposition: absolute;\nclip: rect(0px,60px,200px,0px);\n}",
+				"Possible Values":"\n-auto : No clipping will be applied.This is default\n-shape : Clips an element. The only valid value is: rect (top, right, bottom, left)"
+			},
+			"clear":{
+				"Description":"Specifies on which sides of an element floating elements are not allowed to float",
+				"Usage":"img {\nfloat: left;\n}\np.clear {\nclear: both;\n}",
+				"Possible Values":"clear: none|left|right|both|initial|inherit;"
+			},
+			"color":{
+				"Description":"Sets the color of text",
+				"Usage":"body {\ncolor: red;\n}",
+				"Possible Values": "color|initial|inherit"
+			},
+			"column-count":{
+				"Description": "Specifies the number of columns an element should be divided into",
+				"Usage":"div {\n-webkit-column-count: 3; /* Chrome, Safari, Opera */\n-moz-column-count: 3; /* Firefox */\ncolumn-count: 3;\n}",
+				"Possible Values":"\n- number The optimal number of columns into which the content of the element will be flowed \n- auto : Default value. The number of columns will be determined by other properties, like e.g. 'column-width' "
+			},
+			"column-fill":{
+				"Description": "Specifies how to fill columns, balanced or not",
+				"Usage":"newspaper1 {\n-moz-column-fill: auto; /* Firefox */\ncolumn-fill: auto;\n}",
+				"Possible Values":"\n- balance Default value. Fills each column with about the same amount of content, but will not allow the columns to be taller than the height (so, columns might be shorter than the height as the browser distributes the content evenly horizontally)\n - auto : Fills each column until it reaches the height, and do this until it runs out of content (so, this value will not necessarily fill all the columns nor fill them evenly)\n - initial : Sets this property to its default value. Read about initial\n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"column-gap":{
+				"Description": "Specifies the gap between the columns",
+				"Usage":"div {\n-webkit-column-gap: 40px; /* Chrome, Safari, Opera */\n-moz-column-gap: 40px; /* Firefox */\ncolumn-gap: 40px;\n}",
+				"Possible Values":"\n- length A specified length that will set the gap between the columns \n - normal Default value. Specifies a normal gap between the columns. W3C suggests a value of 1em"
+			},
+			"column-rule":{
+				"Description": "A shorthand property for all the column-rule-* properties",
+				"Usage":"div {\n-webkit-column-rule: 4px double #ff00ff; /* Chrome, Safari, Opera */\n-moz-column-rule: 4px double #ff00ff; /* Firefox */\n  column-rule: 4px double #ff00ff;\n}",
+				"Possible Values":"\n- column-rule-width : Sets the width of the rule between columns. Default value is medium\n- column-rule-style : Sets the style of the rule between columns. Default value is none\n- column-rule-color : Sets the color of the rule between columns. Default value is the color of the element\n- initial : Sets this property to its default value. Read about initial\n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"column-span":{
+				"Description": "Specifies how many columns an element should span across",
+				"Usage":"h2 {\n-webkit-column-span: all; /* Chrome, Safari, Opera */\ncolumn-span: all;\n}",
+				"Possible Values":"1|all|initial|inherit"
+			},
+			"column-width":{
+				"Description": "Specifies the column width",
+				"Usage":"div {\n-webkit-column-width: 100px; /* Chrome, Safari, Opera */\n-moz-column-width: 100px; /* Firefox */\ncolumn-width: 100px;\n}",
+				"Possible Values":"\n - auto : Default value. The column width will be determined by the browser \n length : A length that specifies the width of the columns. The number of columns will be the minimum number of columns needed to show all the content across the element. Read about length units"
+			},
+			"columns":{
+				"Description": "A shorthand property for column-width and column-count",
+				"Usage":"div {\n-webkit-columns: 100px 3; /* Chrome, Safari, Opera */\n-moz-columns: 100px 3; /* Firefox */\ncolumns: 100px 3;\n}",
+				"Possible Values":"\n -auto : Default value. Sets both the column-width and column-count to 'auto'\n- column-width : Defines the minimum width for each column\n- column-count : Defines the maximum number of columns"
+			},
+			"content":{
+				"Description": "Used with the :before and :after pseudo-elements, to insert generated content",
+				"Usage":"a::after {\ncontent: ' (' attr(href) ')';\n}",
+				"Possible Values":"\n - normal : Default value. Sets the content, if specified, to normal, which default is 'none' (which is nothing) \n- none : Sets the content, if specified, to nothing \n- counter : Sets the content as a counter \n- attr(attribute) : Sets the content as one of the selector's attribute \n- string : Sets the content to the text you specify \n- open-quote : Sets the content to be an opening quote \n- close-quote : Sets the content to be a closing quote \n- no-open-quote : Removes the opening quote from the content, if specified \n- no-close-quote : Removes the closing quote from the content, if specified \n- url(url) : Sets the content to be some kind of media (an image, a sound, a video, etc.) \n- initial : Sets this property to its default value. Read about initial \n- inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"counter-increment":{
+				"Description": "Increases or decreases the value of one or more CSS counters",
+				"Usage":"body {\n/* Set 'my-sec-counter' to 0 */\ncounter-reset: my-sec-counter;\n}\nh2::before {\n/* Increment 'my-sec-counter' by 1 */\n\ncounter-increment: my-sec-counter;\ncontent: 'Section' counter(my-sec-counter) '. ';\n}",
+				"Possible Values":"\n- none Default value. No counters will be incremented\n- id number : The id defines which counter to increment. The number sets how much the counter will increment on each occurrence of the selector.The default increment is 1. Negative values are allowed.If id refers to a counter that has not been initialized by counter-reset,the default initial value is 0"
+			},
+			"counter-resett":{
+				"Description": "Creates or resets one or more CSS counters",
+				"Usage":"body {\n/* Set 'my-sec-counter' to 0 */\ncounter-reset: my-sec-counter;\n}\nh2::before {\n\n/* Increment 'my-sec-counter' by 1 */\ncounter-increment: my-sec-counter;\ncontent: 'Section' counter(my-sec-counter) '. ';\n}",
+				"Possible Values":"\n - none : Default value. No counters will be reset\n- id number : The id defines which counter to reset. The number sets the value the counter is reset to on each occurrence of the selector. The default number value is 0"
+			},
+			"cursor":{
+				"Description":"Specifies the mouse cursor to be displayed when pointing over an element",
+				"Usage":".no-drop {cursor: no-drop;}\n.none {cursor: none;}\n.not-allowed {cursor: not-allowed;}\n.pointer {cursor: pointer;}",
+				"Possible Values":"\n - alias : The cursor indicates an alias of something is to be created \n- all-scroll : The cursor indicates that something can be scrolled in any direction \n- auto : Default. The browser sets a cursor \n- cell : he cursor indicates that a cell (or set of cells) may be selected \n- context-menu : The cursor indicates that a context-menu is available \n- col-resize : The cursor indicates that the column can be resized horizontally \n- copy : The cursor indicates something is to be copied \n- crosshair  : The cursor render as a crosshair \n- default The default cursor \n- e-resize : The cursor indicates that an edge of a box is to be moved right (east) \n- ew-resize : Indicates a bidirectional resize cursor \n- grab The cursor indicates that something can be grabbed \n- grabbing : The cursor indicates that something can be grabbed \n- help : The cursor indicates that help is available \n- move : The cursor indicates something is to be moved \n- n-resize : The cursor indicates that an edge of a box is to be moved up (north) \n- ne-resize : The cursor indicates that an edge of a box is to be moved up and right (north/east) \n- nesw-resize : Indicates a bidirectional resize cursor \n- ns-resize Indicates a bidirectional resize cursor \n- nw-resize The cursor indicates that an edge of a box is to be moved up and left (north/west) \n- nwse-resize : Indicates a bidirectional resize cursor \n- no-drop : The cursor indicates that the dragged item cannot be dropped here \n- none : No cursor is rendered for the element \n- not-allowed : The cursor indicates that the requested action will not be executed \n- pointer : The cursor is a pointer and indicates a link \n- progress : The cursor indicates that the program is busy (in progress) \n- row-resize : The cursor indicates that the row can be resized vertically \n- s-resize : The cursor indicates that an edge of a box is to be moved down (south) \n- se-resize : The cursor indicates that an edge of a box is to be moved down and right (south/east) \n- sw-resize : The cursor indicates that an edge of a box is to be moved down and left (south/west) \n- text : The cursor indicates text that may be selected \n- URL A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used \n- vertical-text : The cursor indicates vertical-text that may be selected \n- w-resize : The cursor indicates that an edge of a box is to be moved left (west) \n- wait The cursor indicates that the program is busy \n- zoom-in The cursor indicates that something can be zoomed in \n- zoom-out The cursor indicates that something can be zoomed out \n- initial Sets this property to its default value. Read about initial \n- inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"direction":{
+				"Description": "Specifies the text direction/writing direction",
+				"Usage":"p.rtl {\ndirection: rtl;\n}",
+				"Possible Values":"\n : ltr Text direction goes from left-to-right.This is default \n - rtl : Text direction goes from right-to-left"
+			},
+			"display":{
+				"Description": "Specifies how a certain HTML element should be displayed",
+				"Usage":"p.ex1 {display: none;}\np.ex2 {display: inline;}\np.ex3 {display: block;}\np.ex4 {display: inline-block;}",
+				"Possible Values":"\n - inline Displays an element as an inline element (like <span>). Any height and width properties will have no effect \n - block : Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width \n - contents : Makes the container disappear, making the child elements children of the element the next level up in the DOM \n - flex : Displays an element as a block-level flex container \n - grid : Displays an element as a block-level grid container \n - inline-block : Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values \n - inline-flex : Displays an element as an inline-level flex container \n - inline-grid : Displays an element as an inline-level grid container \n - inline-table : The element is displayed as an inline-level table \n - list-item : Let the element behave like a <li> element \n - run-in : Displays an element as either block or inline, depending on context \n - table : Let the element behave like a <table> element \n - table-caption : Let the element behave like a <caption> element \n - table-column-group : Let the element behave like a <colgroup> element \n - table-header-group : Let the element behave like a <thead> element \n - table-footer-group : Let the element behave like a <tfoot> element \n - table-row-group : Let the element behave like a <tbody> element \n - table-cell Let the element behave like a <td> element \n - table-column : Let the element behave like a <col> element \n - table-row : Let the element behave like a <tr> element \n - none : The element is completely removed \n - initial Sets this property to its default value. Read about initial \n - inherit Inherits this property from its parent element. Read about inherit"
+			},
+			"empty-cells":{
+				"Description": "Specifies whether or not to display borders and background on empty cells in a table",
+				"Usage":"table {\nempty-cells: hide;\n}",
+				"Possible Values":"show|hide|initial|inherit"
+			},
+			"filter":{
+				"Description":"Defines effects (e.g. blurring or color shifting) on an element before the element is displayed",
+				"Usage":"img {\n-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */\nfilter: grayscale(100%);\n}",
+				"Possible Values":"none Default value. Specifies no effects \n\n - blur(px) : Applies a blur effect to the image. A larger value will create more blur. If no value is specified, 0 is used. \n - brightness(%) : Adjusts the brightness of the image. \n 0% will make the image completely black.\n 100% (1) is default and represents the original image.\n Values over 100% will provide brighter results. \n contrast(%) Adjusts the contrast of the image.\n 0% will make the image completely black.\n 100% (1) is default and represents the original image.\n Values over 100% will provide results with less contrast.\n drop-shadow(h-shadow v-shadow blur spread color) Applies a drop shadow effect to the image. \n - >>> Possible values:\n -- h-shadow - Required. Specifies a pixel value for the horizontal shadow. Negative values place the shadow to the left of the image.\n -- v-shadow - Required. Specifies a pixel value for the vertical shadow. Negative values place the shadow above the image.\n -- blur - Optional. This is the third value, and must be in pixels. Adds a blur effect to the shadow. A larger value will create more blur (the shadow becomes bigger and lighter). Negative values are not allowed. If no value is specified, 0 is used (the shadow's edge is sharp).\n -- spread - Optional. This is the fourth value, and must be in pixels. Positive values will cause the shadow to expand and grow bigger, and negative values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as the element). Note: Chrome, Safari and Opera, and maybe other browsers, do not support this 4th length; it will not render if added.\n -- color - Optional. Adds a color to the shadow. If not specified, the color depends on the browser (often black).\n An example of creating a red shadow, which is 8px big both horizontally and vertically, with a blur effect of 10px:\n - filter: drop-shadow(8px 8px 10px red);\n Tip: This filter is similar to the box-shadow property. \n - grayscale(%) : Converts the image to grayscale. \n 0% (0) is default and represents the original image.\n 100% will make the image completely gray (used for black and white images). \n - hue-rotate(deg) : Applies a hue rotation on the image. The value defines the number of degrees around the color circle the image samples will be adjusted. 0deg is default, and represents the original image.\n - invert(%) : Inverts the samples in the image. \n 0% (0) is default and represents the original image.\n 100% will make the image completely inverted.\n - opacity(%) : Sets the opacity level for the image. The opacity-level describes the transparency-level, where:\n 0% is completely transparent.\n 100% (1) is default and represents the original image (no transparency).Tip: This filter is similar to the opacity property. \n - saturate(%) : Saturates the image. \n 0% (0) will make the image completely un-saturated.\n100% is default and represents the original image.\nValues over 100% provides super-saturated results. \n - sepia(%) : Converts the image to sepia. \n 0% (0) is default and represents the original image. \n 100% will make the image completely sepia.\n - url() : The url() function takes the location of an XML file that specifies an SVG filter, and may include an anchor to a specific filter element.Example:\n exmaple : filter: url(svg-url#element-id) \n - initial Sets this property to its default value.\n -inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"flex":{
+				"Description": "A shorthand property for the flex-grow, flex-shrink, and the flex-basis properties",
+				"Usage":"#main div {-webkit-flex: 1; /* Safari 6.1+ */-ms-flex: 1; /* IE 10 */ flex: 1;}",
+				"Possible Values":"\n - flex-grow :A number specifying how much the item will grow relative to the rest of the flexible items\n - flex-shrink : A number specifying how much the item will shrink relative to the rest of the flexible items\n - flex-basis : The length of the item. Legal values: 'auto', 'inherit', or a number followed by '%', 'px', 'em' or any other length unit\n - auto : Same as 1 1 auto.\n - initial : Same as 0 1 auto. Read about initial\n - none : Same as 0 0 auto.\n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"flex-basis":{
+				"Description": "Specifies whether or not to display borders and background on empty cells in a table",
+				"Usage":"div:nth-of-type(2) {\n-webkit-flex-basis: 100px; /* Safari 6.1+ */\nflex-basis: 100px;}",
+				"Possible Values":"\n- number : A length unit, or percentage, specifying the initial length of the flexible item(s) \n- auto : Default value. The length is equal to the length of the flexible item. If the item has no length specified, the length will be according to its content"
+			},
+			"flex-direction":{
+				"Description": "Specifies the direction of the flexible items",
+				"Usage":"div {\ndisplay: -webkit-flex; /* Safari */\n -webkit-flex-direction: row-reverse; /* Safari 6.1+ */\n  display: flex;\n  flex-direction: row-reverse; \n}",
+				"Possible Values":"\n - row : Default value. The flexible items are displayed horizontally, as a row \n - row-reverse Same as row, but in reverse order \n - column The flexible items are displayed vertically, as a column \n - column-reverse Same as column, but in reverse order"
+			},
+			"flex-flow":{
+				"Description" : "A shorthand property for the flex-direction and the flex-wrap properties",
+				"Usage":"div {\ndisplay: -webkit-flex; /* Safari */\n-webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */\ndisplay: flex;\nflex-flow: row-reverse wrap;\n}",
+				"Possbile Values":"\n- flex-direction\nPossible values:\n > row\n > row-reverse\n > column\n > column-reverse\n > initial\n > inherit\n * Specifying the direction of the flexible items\n- flex-wrap Possible values:\n > nowrap\n > wrap\n > wrap-reverse\n > initial\n > inherit\n Default value is 'nowrap'.\n* Specifying whether the flexible items should wrap or not"	
+				},
+			"flex-grow":{
+				"Description": "Specifies how much the item will grow relative to the rest",
+				"Usage":"div:nth-of-type(1) {flex-grow: 1;}\ndiv:nth-of-type(2) {flex-grow: 3;}",
+				"Possible Values":"number|initial|inherit"
+			},
+			"flex-shrink":{
+				"Description": "Specifies how the item will shrink relative to the rest",
+				"Usage":"div:nth-of-type(2) {\nflex-shrink: 3;\n}",
+				"Possible Values":"number|initial|inherit"
+			},
+			"flex-wrap":{
+				"Description": "Specifies whether the flexible items should wrap or not",
+				"Usage":"div {\n display: -webkit-flex; /* Safari */\n-webkit-flex-wrap: wrap; /* Safari 6.1+ */\ndisplay: flex;   \nflex-wrap: wrap;}",
+				"Possible Values":"\n- nowrap : Default value. Specifies that the flexible items will not wrap \n - wrap : Specifies that the flexible items will wrap if necessary \n - wrap-reverse : Specifies that the flexible items will wrap,if necessary, in reverse order \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"float":{
+				"Description": "Specifies whether or not a box should float",
+				"Usage":"img {\nfloat: right;\n}",
+				"Possible Values":"float: none|left|right|initial|inherit"
+			},
+			"font":{
+				"Description": "A shorthand property for the font-style, font-variant, font-weight, font-size/line-height, and the font-family properties",
+				"Usage":"p.a {\nfont: 15px arial, sans-serif;\n}",
+				"Possible Values":"\n - font-style Specifies the font style.Default value is 'normal'\n - font-variant : Specifies the font variant. Default value is 'normal'\n - font-weight : Specifies the font weight. Default value is 'normal'\n - font-size/line-height : Specifies the font size and the line-height. Default value is 'normal'\n - font-family : Specifies the font family. Default value depends on the browser\n - caption : Uses the font that are used by captioned controls (like buttons, drop-downs, etc.)\n - icon : Uses the font that are used by icon labels\n - menu : Uses the fonts that are used by dropdown menus\n - message-box : Uses the fonts that are used by dialog boxes\n - small-caption : A smaller version of the caption font\n - status-bar : Uses the fonts that are used by the status bar\n - initial : Sets this property to its default value. Read about initial\n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"@font-face":{
+				"Description": "A rule that allows websites to download and use fonts other than the 'web-safe' fonts",
+				"Usage":"@font-face {\nfont-family: myFirstFont;\nsrc: url(sansation_light.woff);\n}",
+				"Possible Values":"font-family : Required. Defines the name of the font.\n - src : Required. Defines the URL(s) where the font should be downloaded from\n - font-stretch : Optional. Defines how the font should be stretched. Default value is 'normal'\n font-style : Optional. Defines how the font should be styled.Default value is 'normal'\n font-weight : Optional. Defines the boldness of the font. Default value is 'normal'\n unicode-range : Optional. Defines the range of unicode characters the font supports. Default value is 'U+0-10FFFF'"
+
+			},
+			"font-family":{
+				"Description": "Specifies the font family for text", 
+				"Usage":"p.a {\nfont-family: 'Times New Roman', Times, serif;\n}",
+				"Possible Values":"family-name|generic-family|initial|inherit"
+			},
+			"font-kerning":{
+				"Description": "Controls the usage of the kerning information (how letters are spaced)", 
+				"Usage":"div {\nfont-kerning: normal;\n}",
+				"Possible Values":"auto|normal|none;"
+			},
+			"font-size":{
+				"Description": "Specifies the font size of text", 
+				"Usage":"div.a {\nfont-size: 15px;}",
+				"Possible Values":"\n - medium Sets the font-size to a medium size.This is default \n - xx-small : Sets the font-size to an xx-small size \n - x-small : Sets the font-size to an extra small size \n - small : Sets the font-size to a small size \n - large : Sets the font-size to a large size \n - x-large : Sets the font-size to an extra large size \n - xx-large : Sets the font-size to an xx-large size \n - smaller : Sets the font-size to a smaller size than the parent element \n - larger : Sets the font-size to a larger size than the parent element \n - length :Sets the font-size to a fixed size in px, cm, etc. Read about length units \n - % Sets the font-size to a percent of  the parent element's font size \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit;"
+			},
+			"font-stretch":{
+				"Description": "Selects a normal, condensed, or expanded face from a font family", 
+				"Usage":"div {\nfont-stretch: expanded;\n}",
+				"Possible Values":"ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|initial|inherit;"
+			},
+			"font-style":{
+				"Description": "Specifies the font style for text", 
+				"Usage":"p.b {\n font-style: italic;\n}",
+				"Possible Values":"normal|italic|oblique|initial|inherit;"
+			},
+			"font-variant":{
+				"Description": "Specifies whether or not a text should be displayed in a small-caps font", 
+				"Usage":"p.small {\nfont-variant: small-caps;\n}",
+				"Possible Values":"normal|small-caps|initial|inherit;"
+			},
+			"font-weight":{
+				"Description": "Specifies the weight of a font", 
+				"Usage":"p.thick {\nfont-weight: bold;\n}",
+				"Possible Values":"normal|bold|bolder|lighter|number|initial|inherit;"
+			},
+
+			"grid":{
+				"Description": "A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties", 
+				"Usage":".grid-container {\ndisplay: grid;\ngrid: 150px / auto auto auto;\n}",
+				"Possible Values":"\n - none : Default value. No specific sizing of the columns or rows \n - grid-template rows / grid-template-columns : Specifies the size(s) of the columns and rows \n - grid-template-areas : Specifies the grid layout using named items \n -  grid-template rows / grid-auto-columns : Specifies the size (height) of the rows, and the auto size of the columns \n - grid-auto-rows / grid-template-columns : Specifies the auto size of the rows, and sets the grid-template-columns property \n -  grid-template rows / grid-auto-flow grid-auto-columns : Specifies the size (height) of the rows, and how to place auto-placed items, and the auto size of the columns \n -  grid-auto flow grid-auto-rows / grid-template-columns : Specifies how to place auto-placed items, and the auto size of the rows, and sets the grid-template-columns property \n -  initial : Sets this property to its default value. Read about initial \n -  inherit : Inherits this property from its parent element. Read about inherit"
+			},
+
+			"grid-area":{
+				"Description": "Either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties", 
+				"Usage":".item1 {\ngrid-area: 2 / 1 / span 2 / span 3;\n}",
+				"Possible Values":"\n - grid-row-start Specifies on which row to start displaying the item.\n - grid-column-start : Specifies on which column to start displaying the item.\n - grid-row-end : Specifies on which row-line to stop displaying the item, or how many rows to span.\n - grid-column-end : Specifies on which column-line to stop displaying the item, or how many columns to span.\n - itemname : Specifies a name for the grid item"
+			},
+			"grid-auto-columns":{
+				"Description": "Specifies a default column size", 
+				"Usage":".grid-container {\ndisplay: grid;\ngrid-auto-columns: 50px;\n}",
+				"Possible Values":"\n - auto : Default value. The size of the columns is determined by the size of the container \n - max-content Sets the size of each column to depend on the largest item in the column \n - min-content Sets the size of each column to depend on the largest item in the column \n - length : Sets the size of the columns, by using a legal length value. Read about length units"
+			},
+			"grid-auto-flow":{
+				"Description": "Specifies how auto-placed items are inserted in the grid", 
+				"Usage":".grid-container {\ndisplay: grid;\ngrid-auto-flow: column;\n}",
+				"Possible Values":"\n - row : Default value. Insert auto-placed items by filling each row \n - column : Insert auto-placed items by filling each column \n - row dense :  Insert auto-placed items by filling each row, and fill any holes in the grid \n - column dense Insert auto-placed items by filling each column, and fill any holes in the grid"
+			},
+			"font-auto-rows":{
+				"Description": "Specifies a default row size", 
+				"Usage":".grid-container {\ndisplay: grid;\ngrid-auto-rows: 150px;\n}",
+				"Possible Values":"\n - auto : Default value. The size of the rows is determined by the size of the largest item in the row \n - max-content Sets the size of each row to depend on the largest item in the row \n - min-content Sets the size of each row to depend on the largest item in the row \n - length Sets the size of the rows, by using a legal length value. Read about length units"
+			},
+			"grid-column":{
+				"Description": "A shorthand property for the grid-column-start and the grid-column-end properties", 
+				"Usage":".item1 {\ngrid-column: 1 / span 2;\n}",
+				"Possible Values":"normal|bold|bolder|lighter|number|initial|inherit;"
+			},
+			"grid-column-gap":{
+				"Description": "Specifies the size of the gap between columns", 
+				"Usage":".grid-container {\ngrid-column-gap: 50px;\n}"
+			},
+			"grid-gap":{
+				"Description": "A shorthand property for the grid-row-gap and grid-column-gap properties grid-row", 
+				"Usage":".grid-container {\ngrid-gap: 50px;\n}",
+				"Possible Values":"\n - grid-row-gap : Sets the size of the gap between the rows in a grid layout. 0 is the default value\n - grid-column-gap : Sets the size of the gap between the columns in a grid layout. 0 is the default value"
+			},
+			"grid-row":{
+				"Description": "A shorthand property for the grid-row-start and the grid-row-end properties", 
+				"Usage":".item1 {\ngrid-row: 1 / span 2;\n}",
+				"Possible Values":"\n - grid-row-start : Specifies on which row to start displaying the item.\n grid-row-end : Specifies on which row-line to stop displaying the item, or how many rows to span."
+			},
+			"grid-row-gap":{
+				"Description": "Specifies the size of the gap between rows", 
+				"Usage":".grid-container {\ngrid-row-gap: 50px;\n}",
+				"Possible Values":"\n - length : Any legal length value, like px or %. 0 is the default value"
+			},
+			"grid-template":{
+				"Description": "A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties", 
+				"Usage":".grid-container {\ndisplay: grid;grid-template: 150px / auto auto auto;}",
+				"Possible Values":"\n - none Default value. No specific sizing of the columns or rows \n - grid-template rows / grid-template-columns Specifies the size(s) of the columns and rows \n - grid-template-areas : Specifies the grid layout using named items \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element."
+			},
+			"grid-template-areas":{
+				"Description": "Specifies how to display columns and rows, using named grid items", 
+				"Usage":".item1 {\ngrid-area: myArea;\n}\n.grid-container {\ndisplay: grid;\ngrid-template-areas: 'myArea myArea . . .';\n}",
+				"Possible Values":"grid-template-areas: none|itemnames;"
+			},
+			"grid-template-columns":{
+				"Description": "Specifies the size of the columns, and how many columns in a grid layout", 
+				"Usage":".grid-container {\ndisplay: grid;\ngrid-template-columns: auto auto auto auto;\n}",
+				"Possible Values":"none : Default value. Columns are created if needed \n - auto : The size of the columns is determined by the size of the container and on the size of the content of the items in the column \n - max-content : Sets the size of each column to depend on the largest item in the column \n - min-content : Sets the size of each column to depend on the largest item in the column \n - length : Sets the size of the columns, by using a legal length value. Read about length units \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element"
+			},
+			"grid-template-rows":{
+				"Description": "Specifies the size of the rows in a grid layout", 
+				"Usage":"grid-container {\ndisplay: grid;grid-template-rows: 100px 300px;}",
+				"Possible Values":"\n - none : No size is set. Rows are created if needed \n - auto : The size of the rows is determined by the size of the container, and on the size of the content of the items in the row \n - max-content : Sets the size of each row to depend on the largest item in the row \n - min-content : Sets the size of each row to depend on the largest item in the row \n - length : Sets the size of the rows, by using a legal length value. Read about length units"
+
+			},
+			"hanging-punctuation":{
+				"Description": "Specifies whether a punctuation character may be placed outside the line box", 
+				"Usage":"p {\nhanging-punctuation: first;\n}",
+				"Possible Values":"\n - none : No punctuation mark may be placed outside the line box at the start or at the end of a full line of text\n - first :Punctuation may hang outside the start edge of the first line\n - last : Punctuation may hang outside the end edge of the last line\n - allow-end : Punctuation may hang outside the end edge of all lines if the punctuation does not otherwise fit prior to justification\n - force-end : Punctuation may hang outside the end edge of all lines. If justification is enabled on this line, then it will force the punctuation to hang\n - initial : Sets this property to its default value. Read about initial\n - inherit : Inherits this property from its parent element. Read about inherit"
+
+			},
+			"height":{
+				"Description": "Sets the height of an element", 
+				"Usage":"div.a {\nheight: auto;\nborder: 1px solid black;\n}",
+				"Possible Values":"height: auto|length|initial|inherit;"
+			},
+			"hyphens":{
+				"Description": "Sets how to split words to improve the layout of paragraphs", 
+				"Usage":"div.a {\n-webkit-hyphens: none;\n-ms-hyphens: none;\nhyphens: none;\n}",
+				"Possible Values":"\n - none : Words are not hyphenated\n -  manual : Default. Words are only hyphenated at &hyphen; or &shy; (if needed)\n - auto : Words are hyphenated where the algorithm is deciding (if needed)"
+			},
+			"@import":{
+				"Description": "Allows you to import a style sheet into another style sheet", 
+				"Usage":"\n-import 'navigation.css'; /* Using a string */\nor\n@import url('navigation.css'); /* Using a url */",
+				"Possible Values":"\n - url|string : A url or a string representing the location of the resource to import. The url may be absolute or relative\n - list-of-mediaqueries : A comma-separated list of media queries conditioning the application of the CSS rules defined in the linked URL"
+			},	
+			"isolation":{
+				"Description": "Defines whether an element must create a new stacking content", 
+				"Usage":"#e {\nisolation: isolate;\n}",
+				"Possible Values":"auto|isolate|initial|inherit;"
+			},
+			"justify-content":{
+				"Description": "Specifies the alignment between the items inside a flexible container when the items do not use all available space", 
+				"Usage":"div {\ndisplay: flex;\njustify-content: center;\n}}",
+				"Possible Values":"\n - flex-start : Default value. Items are positioned at the beginning of the container \n - flex-end : Items are positioned at the end of the container \n - center Items : are positioned at the center of the container \n - space-between : Items are positioned with space between the lines \n - space-around : Items are positioned with space before, between, and after the lines \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"@keyframes":{
+				"Description": "Specifies the animation code", 
+				"Usage":"@keyframes mymove {\nfrom {top: 0px;}\nto {top: 200px;}\n}",
+				"Possible Values":"\n - animationname : Required. Defines the name of the animation.\n - keyframes-selector Required. Percentage of the animation duration.\n Note: You can have many keyframes-selectors in one animation.\n - css-styles : Required. One or more legal CSS style properties;"
+			},
+			"left":{
+				"Description": "Specifies the left position of a positioned element", 
+				"Usage":"div.c {\nposition: absolute;\nleft: 150px;\nwidth: 200px;\nheight: 120px;\nborder: 3px solid green;\n}",
+				"Possible Values":"left: auto|length|initial|inherit;"
+			},
+			"letter-spacing":{
+				"Description": "Increases or decreases the space between characters in a text", 
+				"Usage":"h1 {\nletter-spacing: 3px;\n}",
+				"Possible Values":"normal|length|initial|inherit; "
+			},
+			"line-height":{
+				"Description": "Sets the line height", 
+				"Usage":"div.a {\nline-height: normal;\n}",
+				"Possible Values":"\n - normal : A normal line height. This is default \n - number : A number that will be multiplied with the current font-size to set the line height \n - length : A fixed line height in px, pt, cm, etc. \n - % : A line height in percent of the current font size \n - initial : Sets this property to its default value. Read about initial" 
+			},
+			"list-style":{
+				"Description": "Sets all the properties for a list in one declaration", 
+				"Usage":"ul {\nlist-style: square inside url('sqpurple.gif');\n}",
+				"Possible Values":"\n - list-style-type : Specifies the type of list-item marker. Default value is 'disc'\n - list-style-position : Specifies where to place the list-item marker. Default value is 'outside'\n - list-style-image : Specifies the type of list-item marker. Default value is 'none'"
+			},
+			"list-style-image":{
+				"Description": "Specifies an image as the list-item marker", 
+				"Usage":"ul {\nlist-style-image: url('sqpurple.gif');\n}",
+				"Possible Values":"list-style-image: none|url|initial|inherit;"
+			},
+			"list-style-position":{
+				"Description": "Specifies the position of the list-item markers (bullet points)", 
+				"Usage":"ul.a {\nlist-style-position: outside;\n}",
+				"Possible Values":"list-style-position: inside|outside|initial|inherit;"
+			},
+			"list-style-type":{
+				"Description": "Specifies the type of list-item marker", 
+				"Usage":"ul {\nlist-style: square inside url('sqpurple.gif');\n}",
+				"Possible Values":"\n - disc : Default value. The marker is a filled circle \n - armenian : The marker is traditional Armenian numbering \n - circle : The marker is a circle \n - cjk-ideographic : The marker is plain ideographic numbers \n - decimal : The marker is a number \n - decimal-leading-zero : The marker is a number with leading zeros (01, 02, 03, etc.) \n - georgian : The marker is traditional Georgian numbering \n - hebrew : The marker is traditional Hebrew numbering \n - hiragana : The marker is traditional Hiragana numbering \n - hiragana-iroha : The marker is traditional Hiragana iroha numbering \n - katakana : The marker is traditional Katakana numbering \n - katakana-iroha : The marker is traditional Katakana iroha numbering \n - lower-alpha : The marker is lower-alpha (a, b, c, d, e, etc.) \n - lower-greek : The marker is lower-greek \n - lower-latin : The marker is lower-latin (a, b, c, d, e, etc.) \n - lower-roman : The marker is lower-roman (i, ii, iii, iv, v, etc.) \n - none No marker is shown \n - square The marker is a square \n - upper-alpha : The marker is upper-alpha (A, B, C, D, E, etc.) \n - upper-greek : The marker is upper-greek \n - upper-latin : The marker is upper-latin (A, B, C, D, E, etc.) \n - upper-roman : The marker is upper-roman (I, II, III, IV, V, etc.)"
+			},
+			"margin":{
+				"Description": "Sets all the margin properties in one declaration", 
+				"Usage":"p {\nmargin: 35px;\n}",
+				"Possible Values":"margin: length(px,%,cm,em,etc)|auto|initial|inherit;"
+			},
+			"margin-left":{
+				"Description": "Sets the left margin of an element", 
+				"Usage":"p {\nmargin-left: 35px;\n}",
+				"Possible Values":"margin-left: length(px,%,cm,em,etc)|auto|initial|inherit;"
+			},
+			"margin-right":{
+				"Description": "Sets the right margin of an element", 
+				"Usage":"p {\nmargin-right: 35px;\n}",
+				"Possible Values":"margin-right: length(px,%,cm,em,etc)|auto|initial|inherit;"
+			},
+			"margin-top":{
+				"Description": "Sets the top margin of an element", 
+				"Usage":"p {\nmargin-top: 35px;\n}",
+				"Possible Values":"margin-top: length(px,%,cm,em,etc)|auto|initial|inherit;"
+			},
+			"margin-bottom":{
+				"Description": "Sets the bottom margin of an element", 
+				"Usage":"p {\nmargin-bottom : 35px;\n}",
+				"Possible Values":"margin-botom: length(px,%,cm,em,etc)|auto|initial|inherit;"
+			},
+			"max-height":{
+				"Description": "Sets the maximum height of an element", 
+				"Usage":"p.ex1 {\nmax-height: 50px;\n}",
+				"Possible Values":"max-height: none|length|initial|inherit;"
+			},
+			"max-width":{
+				"Description": "Sets the maximum width of an element", 
+				"Usage":"p.ex1 {\nmax-width: 50px;\n}",
+				"Possible Values":"max-width: none|length|initial|inherit;"
+			},
+			"@media":{
+				"Description": "Sets the style rules for different media types/devices/sizes", 
+				"Usage":"@media only screen and (max-width: 600px) {\nbody {\nbackground-color: lightblue;\n}\n}",
+				"Possible Values":"\n * Media Types : \n - all : Default. Used for all media type devices\n - print : Used for printers\n - screen Used for computer screens, tablets, smart-phones etc.\n - speech Used for screenreaders that 'reads' the page out loud \n * Media features \n any-hover : Does any available input mechanism allow the user to hover over elements? (added in Media Queries Level 4)\n - any-pointer : Is any available input mechanism a pointing device, and if so, how accurate is it? (added in Media Queries Level 4)\n - aspect-ratio : The ratio between the width and the height of the viewport\n - color : The number of bits per color component for the output device\n - color-gamut : The approximate range of colors that are supported by the user agent and output device (added in Media Queries Level 4)\n - color-index : The number of colors the device can display\n - grid : Whether the device is a grid or bitmap\n - height : The viewport height\n - hover : Does the primary input mechanism allow the user to hover over elements? (added in Media Queries Level 4)\n - inverted-colors : Is the browser or underlying OS inverting colors? (added in Media Queries Level 4)\n - light-level : Current ambient light level (added in Media Queries Level 4)\n - max-aspect-ratio : The maximum ratio between the width and the height of the display area\n - max-color : The maximum number of bits per color component for the output device\n - max-color-index : The maximum number of colors the device can display\n - max-height : The maximum height of the display area, such as a browser window\n - max-monochrome : The maximum number of bits per 'color' on a monochrome (greyscale) device\n - max-resolution : The maximum resolution of the device, using dpi or dpcm\n - max-width : The maximum width of the display area, such as a browser window\n - min-aspect-ratio : The minimum ratio between the width and the height of the display area\n - min-color : The minimum number of bits per color component for the output device\n - min-color-index : The minimum number of colors the device can display\n - min-height : The minimum height of the display area, such as a browser window\n - min-monochrome : The minimum number of bits per 'color' on a monochrome (greyscale) device\n - min-resolution : The minimum resolution of the device, using dpi or dpcm\n - min-width : The minimum width of the display area, such as a browser window\n - monochrome : The number of bits per 'color' on a monochrome (greyscale) device\n - orientation : The orientation of the viewport (landscape or portrait mode)\n - overflow-block : How does the output device handle content that overflows the viewport along the block axis (added in Media Queries Level 4)\n - overflow-inline : Can content that overflows the viewport along the inline axis be scrolled (added in Media Queries Level 4)\n - pointer : Is the primary input mechanism a pointing device, and if so, how accurate is it? (added in Media Queries Level 4)\n - resolution : The resolution of the output device, using dpi or dpcm\n - scan : The scanning process of the output device\n - scripting : Is scripting (e.g. JavaScript) available? (added in Media Queries Level 4)\n - update : How quickly can the output device modify the appearance of the content (added in Media Queries Level 4)\n - width : The viewport width"
+			},
+			"min-height":{
+				"Description": "Sets the minimum height of an element", 
+				"Usage":"p.ex1 {\nmin-height: 50px;\n}",
+				"Possible Values":"min-height: none|length|initial|inherit;"
+			},
+			"min-width":{
+				"Description": "Sets the minimum width  of an element", 
+				"Usage":"p.ex1 {\nmin-width: 50px;\n}",
+				"Possible Values":"min-height: none|length|initial|inherit;"
+			},
+			"mix-blend-mode":{
+				"Description": "Specifies how an element's content should blend with its direct parent background", 
+				"Usage":".container {\nbackground-color: red;\n}\n",
+				"Possible Values":"\n - normal : This is default. Sets the blending mode to normal \n- multiply : Sets the blending mode to multiply\n - screen Sets the blending mode to screen\n - overlay : Sets the blending mode to overlay\n -darken Sets the blending mode to darken\n - lighten : Sets the blending mode to lighten\n - color-dodge : Sets the blending mode to color-dodge\n - color-burn : Sets the blending mode to color-burn\n - difference : Sets the blending mode to difference\n - exclusion : Sets the blending mode to exclusion\n - hue Sets the blending mode to hue\n - saturation : Sets the blending mode to saturation\n - color : Sets the blending mode to color\n - luminosity : Sets the blending mode to luminosity"
+			},
+			"object-fit":{
+				"Description": "Specifies how the contents of a replaced element should be fitted to the box established by its used height and width", 
+				"Usage":"img.a {\nwidth: 200px;\nheight: 400px;\nobject-fit: cover;\n}",
+				"Possible Values":"\n - fill : This is default. The replaced content is sized to fill the element's content box. If necessary, the object will be stretched or squished to fit \n - contain : The replaced content is scaled to maintain its aspect ratio while fitting within the element's content box \n - cover : The replaced content is sized to maintain its aspect ratio while filling the element's entire content box. The object will be clipped to fit \n - none : The replaced content is not resized \n - scale-down The content is sized as if none or contain were specified (would result in a smaller concrete object size)"
+			},
+			"object-position":{
+				"Description": "Specifies the alignment of the replaced element inside its box", 
+				"Usage":"img.a {\nwidth: 200px;\nheight: 400px;\nobject-fit: none;\nobject-position: 5px 10%;\nborder: 5px solid red;\n}",
+				"Possible Values":"object-fit: position(left,right or center)|initial|inherit;"
+			},
+			"opacity":{
+				"Description": "Sets the opacity level for an element", 
+				"Usage":"div {\nopacity: 0.5;\n}",
+				"Possible Values":"opacity: number(from 0 to 1) |initial|inherit;"
+			},
+			"order":{
+				"Description": "Sets the order of the flexible item, relative to the rest", 
+				"Usage":"div#blue{order: 2;}",
+				"Possible Values":"number|initial|inherit;"
+			},
+			"outline":{
+				"Description": "A shorthand property for the outline-width, outline-style, and the outline-color properties", 
+				"Usage":"h2 {\noutline: 5px dotted green;\n}",
+				"Possible Values":"\n - outline-width : Specifies the width of outline\n - outline-style : Specifies the style of the outline\n - outline-color Specifies the color of the outline"
+			},
+			"outline-color":{
+				"Description": "Sets the color of an outline", 
+				"Usage":"div {outline-color: coral;}",
+				"Possible Values":"outline-color: invert|color|initial|inherit;"
+			},
+			"outline-offset":{
+				"Description": "Offsets an outline, and draws it beyond the border edge", 
+				"Usage":"div {\noutline: 4px solid red;\noutline-offset: 15px;\n}",
+				"Possible Values":"outline-offset: length|initial|inherit;"
+			},
+			"outline-style":{
+				"Description": "Sets the style of an outline", 
+				"Usage":"div {outline-style: dotted;}",
+				"Possible Values":"\n - none : Specifies no outline. This is default \n - hidden : Specifies a hidden outline \n - dotted : Specifies a dotted outline \n - dashed Specifies a dashed outline \n - solid Specifies a solid outline \n - double Specifies a double outliner \n - groove Specifies a 3D grooved outline. The effect depends on the outline-color value \n - ridge Specifies a 3D ridged outline. The effect depends on the outline-color value\n - inset Specifies a 3D inset outline. The effect depends on the outline-color value \n - outset Specifies a 3D outset outline. The effect depends on the outline-color value;"
+			},
+			"outline-width":{
+				"Description": "Specifies what happens if content overflows an element's box", 
+				"Usage":"div {outline-width: thick;}",
+				"Possible Values":"\n - medium : Specifies a medium outline. This is default \n - thin : Specifies a thin outline \n - thick : Specifies a thick outline \n - length : Allows you to define the thickness of the outline. Read about length units \n - initial : Sets this property to its default value. Read about initial \n - inherit : Inherits this property from its parent element. Read about inherit"
+			},
+			"overflow":{
+				"Description": "Specifies what happens if content overflows an element's box", 
+				"Usage":"div.ex1 {\noverflow: scroll;\n}\n",
+				"Possible Values":"\n - visible The overflow is not clipped. It renders outside the element's box. This is default \n - hidden The overflow is clipped, and the rest of the content will be invisible \n - scroll The overflow is clipped, but a scroll-bar is added to see the rest of the content \n - auto If overflow is clipped, a scroll-bar should be added to see the rest of the content"
+			},
+			"overflow-wrap":{
+				"Description": "Specifies whether or not the browser may break lines within words in order to prevent overflow (when a string is too long to fit its containing box)"
+			},
+			"overflow-x":{
+				"Description": "Specifies whether or not to clip the left/right edges of the content, if it overflows the element's content area", 
+				"Usage":"div.ex1 {\noverflow-x: scroll;\n}\n",
+				"Possible Values":"\n-Value : Description Play it\n - visible : The content is not clipped, and it may be rendered outside the left and right edges. This is default \n - hidden : The content is clipped - and no scrolling mechanism is provided \n - scroll The content is clipped and a scrolling mechanism is provided \n - auto Should cause a scrolling mechanism to be provided for overflowing boxes"
+			},
+			"overflow-y":{
+				"Description":"Specifies whether or not to clip the top/bottom edges of the content, if it overflows the element's content area", 
+				"Usage":"div.ex1 {\noverflow-y: scroll;\n}\n",
+				"Possible Values":"\n - Value : Description Play it\n - visible : The content is not clipped, and it may be rendered outside the left and right edges. This is default \n - hidden The content is clipped - and no scrolling mechanism is provided \n - scroll The content is clipped and a scrolling mechanism is provided \n - auto Should cause a scrolling mechanism to be provided for overflowing boxes"
+			},
+			"padding":{
+				"Description":"A shorthand property for all the padding-* properties", 
+				"Usage":"p {\npadding: 35px;\n}\n",
+				"Possible Values":"\n - length : Specifies the padding in px, pt, cm, etc. Default value is 0. Read about length units \n - % :Specifies the padding in percent of the width of the containing element"
+			},
+			"padding-bottom":{
+				"Description":"Sets the bottom padding of an element", 
+				"Usage":"p.ex1 {\npadding-bottom: 25px;\n}",
+				"Possible Values":"padding-bottom: length|initial|inherit;"
+			},
+			"padding-left":{
+				"Description":"Sets the left padding of an element", 
+				"Usage":"p.ex1 {\npadding-left: 25px;\n",
+				"Possible Values":"padding-left: length|initial|inherit;"
+			},
+			"padding-right":{
+				"Description":"Sets the right padding of an element", 
+				"Usage":"p.ex1 {\npadding-right: 25px;\n",
+					"Possible Values":"padding-right: length|initial|inherit;"
+			},
+			"padding-top":{
+				"Description":"Sets the top padding of an element", 
+				"Usage":"p.ex1 {\npadding-top: 25px;\n",
+				"Possible Values":"padding-top: length|initial|inherit;"
+			},
+			"page-break-after":{
+				"Description":"Sets the page-breake behavior after an element", 
+				"Usage":"@media print {\nfooter {page-break-after: always;}\n}\n",
+				"Possible Values":"\n - auto : Default. Automatic page-break\n - always : Always insert a page-break after the element\n - avoid : Avoid a page-break after the element (if possible)\n - left : Insert page-break after the element so that the next page is formatted as a left page\n - right : Insert page-break after the element so that the next page is formatted as a right page;"
+			},
+			"page-break-before":{
+				"Description":"Sets the page-breake behavior before an element", 
+				"Usage":"p.ex1 {\npadding-top: 25px;\n",
+			"Possible Values":"\n - auto : Default. Automatic page-break\n - always : Always insert a page-break after the element\n - avoid : Avoid a page-break after the element (if possible)\n - left : Insert page-break after the element so that the next page is formatted as a left page\n - right : Insert page-break after the element so that the next page is formatted as a right page;"
+			},
+			"page-break-inside":{
+				"Description":"Sets the page-breake behavior inside an element", 
+				"Usage":"p.ex1 {\npadding-top: 25px;\n",
+				"Possible Values":"\n -auto : Default. Automatic page-break\n -always : Always insert a page-break after the element\n - avoid Avoid a page-break after the element(if possible)\n - left : Insert page-break after the element so that the next page is formatted as a left page\n - right : Insert page-break after the element so that the next page is formatted as a right page;"
+			},
+			"perspective":{
+				"Description":"Gives a 3D-positioned element some perspective", 
+				"Usage":"#div1 {\n-webkit-perspective: 100px; /* Safari 4-8 */\nperspective: 100px;\n}",
+				"Possible Values":"perspective: length|none;"
+			},
+			"perspective-origin":{
+				"Description":"Defines at which position the user is looking at the 3D-positioned element", 
+				"Usage":"#div1 {\n-webkit-perspective: 100px; /* Safari 4-8 */\n-webkit-perspective-origin: left; /* Safari 4-8 */\nperspective: 100px;\nperspective-origin: left;\n}",
+				"Possible Values":"perspective-origin: x-axis y-axis|initial|inherit;"
+			},
+			"pointer-events":{
+				"Description":"Defines whether or not an element reacts to pointer events", 
+				"Usage":"div.ex1 {\npointer-events: none;\n}",
+				"Possible Values":"pointer-events: auto|none;"
+			},
+			"position":{
+				"Description":"Specifies the type of positioning method used for an element (static, relative, absolute or fixed)", 
+				"Usage":"h2 {\nposition: absolute;\nleft: 100px;\n top: 150px;\n}",
+				"Possible Values":"\n - static : Default value. Elements render in order, as they appear in the document flow \n - absolute : The element is positioned relative to its first positioned (not static) ancestor element \n - fixed : The element is positioned relative to the browser window : \n - relative : The element is positioned relative to its normal position, so 'left:20px' adds 20 pixels to the element's LEFT position \n - sticky : The element is positioned based on the user's scroll position\n A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it 'sticks' in place (like position:fixed).\n Note: Not supported in IE/Edge 15 or earlier. Supported in Safari from version 6.1 with a -webkit- prefix."
+			},
+			"quotes":{
+				"Description":"Sets the type of quotation marks for embedded quotations", 
+				"Usage":"#a {\nquotes: \"'\" \"'\";\n}",
+				"Possible Values":"quotes: none|string|initial|inherit;"
+			},
+			"resize":{
+				"Description":"Defines if (and how) an element is resizable by the user", 
+				"Usage":"div {\nresize: both;\noverflow: auto;\n}",
+				"Possible Values":"\n -none: Default value. The user cannot resize the element \n - both : The user can resize both the height and width of the element\n - horizontal : The user can resize the width of the element \n - vertical : The user can resize the height of the element"
+			},
+			"right":{
+				"Description":"Specifies the right position of a positioned element", 
+				"Usage":"div.absolute {\nposition: absolute;\nright: 150px;\nwidth: 200px;\nheight: 120px;\nborder: 3px solid green;\n} ",
+				"Possible Values":"right: auto|length|initial|inherit;"
+			},
+			"scroll-behavior":{
+				"Description":"Specifies whether to smoothly animate the scroll position in a scrollable box, instead of a straight jump", 
+				"Usage":"html {\nscroll-behavior: smooth;\n} ",
+				"Possible Values":"scroll-behavior: auto|smooth|initial|inherit;"
+			},
+			"tab-size":{
+				"Description":"Specifies the width of a tab character", 
+				"Usage":"pre {tab-size: 16;}",
+				"Possible Values":"tab-size: number|length|initial|inherit;"
+			},
+			"table-layout":{
+				"Description":"Defines the algorithm used to lay out table cells, rows, and columns", 
+				"Usage":"table.a {\ntable-layout: fixed;\nwidth: 180px; \n}\n",
+				"Possible Values":"table-layout: auto|fixed|initial|inherit;"
+			},
+			"text-align":{
+				"Description":"Specifies the horizontal alignment of text", 
+				"Usage":"div.a {\ntext-align: center;\n}",
+				"Possible Values":"text-align: left|right|center|justify|initial|inherit;"
+			},
+			"text-align-last":{
+				"Description":"Describes how the last line of a block or a line right before a forced line break is aligned when text-align is 'justify'", 
+				"Usage":"div.a {\ntext-align: justify;\n /* For Edge */\ntext-align-last: right;\n}",
+				"Possible Values":"text-align-last: auto|left|right|center|justify|start|end|initial|inherit;"
+			},
+			"text-decoration":{
+				"Description":"Specifies the decoration added to text", 
+				"Usage":"h1 {\ntext-decoration: overline;\n}",
+				"Possible Values":"\n - text-decoration-line : Sets the kind of text decoration to use (like underline, overline, line-through)\n - text-decoration-color : Sets the color of the text decoration\n - text-decoration-style : Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)"
+			},
+			"text-decoration-color":{
+				"Description":"Specifies the color of the text-decoration", 
+				"Usage":"p {\ntext-decoration: underline;\ntext-decoration-color: red;\n}",
+				"Possible Values":"text-decoration-color: color|initial|inherit;"
+			},
+			"text-decoration-line":{
+				"Description":"Specifies the type of line in a text-decoration", 
+				"Usage":"div.a {\ntext-decoration-line: overline;\n}",
+				"Possible Values":"text-decoration-line: none|underline|overline|line-through|initial|inherit;"
+			},
+			"text-decoration-style":{
+				"Description":"Specifies the style of the line in a text decoration", 
+				"Usage":"div.a {\ntext-decoration-line: underline;\ntext-decoration-style: solid;\n}",
+				"Possible Values":"text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;"
+			},
+			"text-indent":{
+				"Description":"Specifies the indentation of the first line in a text-block", 
+				"Usage":"div.a {\ntext-indent: 50px;\n}",
+				"Possible Values":"text-indent: length|initial|inherit;"
+			},
+			"text-justify":{
+				"Description":"Specifies the justification method used when text-align is 'justify'", 
+				"Usage":"div {\ntext-align: justify;\ntext-justify: inter-word;\n}",
+				"Possible Values":"\n -auto : The browser determines the justification algorithm\n - inter-word : Increases/Decreases the space between words \n - inter-character : Increases/Decreases the space between characters \n - none : Disables justification methods"
+			},
+			"text-overflow":{
+				"Description":"Specifies what should happen when text overflows the containing element", 
+				"Usage":"div {\nwhite-space: nowrap; \noverflow: hidden;\ntext-overflow: ellipsis;\n}",
+				"Possible Values":"\n - clip : Default value. The text is clipped and not accessible \n - ellipsis Render an ellipsis ('...') to represent the clipped text \n - string Render the given string to represent the clipped text"
+			},
+			"text-shadow":{
+				"Description":"Adds shadow to text", 
+				"Usage":"h1 {\ntext-shadow: 2px 2px #ff0000;\n}",
+				"Possible Values":"\n - h-shadow : Required. The position of the horizontal shadow. Negative values are allowed \n - v-shadow : Required. The position of the vertical shadow. Negative values are allowed \n - blur-radius Optional. The blur radius.Default value is 0 \n - color : Optional.The color of the shadow. Look at CSS Color Values for a complete list of possible color values \n- none : Default value. No shadow"
+			},
+			"text-transform":{
+				"Description":"Controls the capitalization of text", 
+				"Usage":"div.a {\ntext-transform: uppercase;\n}",
+				"Possible Values":"none : No capitalization. The text renders as it is. This is default \n - capitalize : Transforms the first character of each word to uppercase \n - uppercase Transforms all characters to uppercase \n - lowercase Transforms all characters to lowercase"
+			},
+			"top":{
+				"Description":"Specifies the top position of a positioned element", 
+				"Usage":"div {\nposition: absolute;\ntop: 50px;\nborder: 3px solid green;\n}",
+				"Possible Values":"top: auto|length|initial|inherit;"
+			},
+			"transform":{
+				"Description":"Applies a 2D or 3D transformation to an element", 
+				"Usage":"div.a {\ntransform: rotate(20deg);\n}",
+				"Possible Values":"\n - none : Defines that there should be no transformation *\n - matrix(n,n,n,n,n,n) : Defines a 2D transformation, using a matrix of six values\n - matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) Defines a 3D transformation, using a 4x4 matrix of 16 values \n - translate(x,y) : Defines a 2D translation \n -  translate3d(x,y,z) : Defines a 3D translation \n - translateX(x) : Defines a translation, using only the value for the X-axis \n - translateY(y) Defines a translation, using only the value for the Y-axis \n -  translateZ(z) Defines a 3D translation, using only the value for the Z-axis \n - scale(x,y) Defines a 2D scale transformation \n -  scale3d(x,y,z) Defines a 3D scale transformation \n -  scaleX(x) Defines a scale transformation by giving a value for the X-axis \n -  scaleY(y) Defines a scale transformation by giving a value for the Y-axis \n -  scaleZ(z) Defines a 3D scale transformation by giving a value for the Z-axis \n -  rotate(angle) : Defines a 2D rotation, the angle is specified in the parameter \n -  rotate3d(x,y,z,angle) : Defines a 3D rotation \n -  rotateX(angle) : Defines a 3D rotation along the X-axis \n -  rotateY(angle) Defines a 3D rotation along the Y-axis\n -  rotateZ(angle) Defines a 3D rotation along the Z-axis \n -  skew(x-angle,y-angle) Defines a 2D skew transformation along the X- and the Y-axis \n -  skewX(angle) Defines a 2D skew transformation along the X-axis \n - skewY(angle) Defines a 2D skew transformation along the Y-axis \n - perspective(n) Defines a perspective view for a 3D transformed element"
+			},
+			"transform-origin":{
+				"Description":"Allows you to change the position on transformed elements", 
+				"Usage":"div {\ntransform: rotate(45deg);\ntransform-origin: 20% 40%;\n}}",
+				"Possible Values":"transform-origin: x-axis y-axis z-axis|initial|inherit;"
+			},
+			"transform-style":{
+				"Description":"Specifies how nested elements are rendered in 3D spacet", 
+				"Usage":"div {\ntransform: rotateY(60deg);\ntransform-style: preserve-3d;\n}",
+				"Possible Values":"transform-style: flat|preserve-3d|initial|inherit;"
+			},
+			"transition":{
+				"Description":"A shorthand property for all the transition-* properties", 
+				"Usage":"div {\nwidth: 100px;\n transition: width 2s;\n}",
+				"Possible Values":"\n - transition-property Specifies the name of the CSS property the transition effect is for\n - transition-duration Specifies how many seconds or milliseconds the transition effect takes to complete\n - transition-timing-function : Specifies the speed curve of the transition effect\n - transition-delay Defines when the transition effect will start"
+			},
+			"transition-delay":{
+				"Description":"Specifies when the transition effect will start", 
+				"Usage":"div {transition-delay: 2s;}",
+				"Possible Values":"transition-delay: time|initial|inherit;"
+			},
+			"transform-duration":{
+				"Description":"Specifies how many seconds or milliseconds a transition effect takes to complete", 
+				"Usage":"div {\ntransition-duration: 5s;\n}",
+				"Possible Values":"transition-duration: time|initial|inherit;"
+			},
+			"transition-proprety":{
+				"Description":"Specifies the name of the CSS property the transition effect is for", 
+				"Usage":"div {\ntransition-property: width;\n}",
+				"Possible Values":"transition-property: none|all|property|initial|inherit;"
+			},
+			"transition-timing-function":{
+				"Description":"Specifies the speed curve of the transition effect", 
+				"Usage":"div {\ntransition-timing-function: linear;\n}",
+				"Possible Values":"\n - ease : Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1))\n - linear : Specifies a transition effect with the same speed from start to end (equivalent to cubic-bezier(0,0,1,1))\n - ease-in : Specifies a transition effect with a slow start (equivalent to cubic-bezier(0.42,0,1,1))\n - ease-out : Specifies a transition effect with a slow end (equivalent to cubic-bezier(0,0,0.58,1))\n - ease-in-out : Specifies a transition effect with a slow start and end (equivalent to cubic-bezier(0.42,0,0.58,1))\n - step-start : Equivalent to steps(1, start)\n - step-end : Equivalent to steps(1, end)\n - steps(int,start|end) : Specifies a stepping function, with two parameters. The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0). The second parameter, which is optional, is either the value 'start' or 'end', and specifies the point at which the change of values occur within the interval. If the second parameter is omitted, it is given the value 'end'\n - cubic-bezier(n,n,n,n) : Define your own values in the cubic-bezier function. Possible values are numeric values from 0 to 1"
+			},
+			"unicode-bidi":{
+				"Description":"Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document", 
+				"Usage":"div {\ndirection: rtl;\nunicode-bidi: bidi-override;\n}",
+				"Possible Values":"\n - normal : The element does not open an additional level of embedding. This is default \n - embed For inline elements, this value opens an additional level of embedding \n - bidi-override For inline elements, this creates an override. For block elements, this creates an override for inline-level descendants not within another block element \n - isolate The element is isolated from its siblings \n - isolate-override \n - plaintext "
+			},
+			"user-select":{
+				"Description":"Specifies whether the text of an element can be selected", 
+				"Usage":"div {\n-webkit-user-select: none; /* Safari 3.1+ */\n-moz-user-select: none; /* Firefox 2+ */\n-ms-user-select: none; /* IE 10+ */\nuser-select: none; /* Standard syntax */\n}",
+				"Possible Values":"user-select: auto|none|text|all;"
+			},
+			"vertical-align":{
+				"Description":"Sets the vertical alignment of an element", 
+				"Usage":"img.a {\nvertical-align: baseline;\n}",
+				"Possible Values":"\n - baseline : The element is aligned with the baseline of the parent. This is default \n - length : Raises or lower an element by the specified length. Negative values are allowed. Read about length units \n -  % : Raises or lower an element in a percent of the 'line-height' property. Negative values are allowed \n - sub : The element is aligned with the subscript baseline of the parent \n - super : The element is aligned with the superscript baseline of the parent \n - top : The element is aligned with the top of the tallest element on the line \n - text-top : The element is aligned with the top of the parent element's font \n - middle : The element is placed in the middle of the parent element \n - bottom : The element is aligned with the lowest element on the line \n - text-bottom The element is aligned with the bottom of the parent element's font"
+			},
+			"visibility":{
+				"Description":"Specifies whether or not an element is visible", 
+				"Usage":"h2.a {\nvisibility: visible;\n}",
+				"Possible Values":"visibility: visible|hidden|collapse|initial|inherit;"
+			},
+			"white-space":{
+				"Description":"Specifies how white-space inside an element is handled", 
+				"Usage":"p.b {\nwhite-space: normal;\n}",
+				"Possible Values":"\n -normal : Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary. This is default \n - nowrap : Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered \n - pre : Whitespace is preserved by the browser. Text will only wrap on line breaks. Acts like the <pre> tag in HTML  \n - pre-line : Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary, and on line breaks \n - pre-wrap : Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks"
+			},
+			"width":{
+				"Description":"Sets the width of an element", 
+				"Usage":"div.a {width: auto;border: 1px solid black;}",
+				"Possible Values":"width: auto|value|initial|inherit;"
+			},
+			"word-break":{
+				"Description":"pecifies how words should break when reaching the end of a line", 
+				"Usage":"p.a {\nword-break: break-all;\n}",
+				"Possible Values":"\n - normal Default value. Uses default line break rules\n - break-all : To prevent overflow, word may be broken at any character\n - keep-all : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as value 'normal'\n - break-word : To prevent overflow, word may be broken at arbitrary points"
+			},
+			"word-spacing":{
+				"Description":"Increases or decreases the space between words in a text", 
+				"Usage":"p { \nword-spacing: 30px;\n}",
+				"Possible Values":"word-spacing: normal|length|initial|inherit;"
+			},
+			"white-wrap":{
+				"Description":"Allows long, unbreakable words to be broken and wrap to the next line", 
+				"Usage":"div {\n word-wrap: break-word;\n}",
+				"Possible Values":"word-wrap: normal|break-word|initial|inherit;"
+			},
+			"z-index":{
+				"Description":"The z-index property specifies the stack order of an element.An element with greater stack order is always in front of an element with a lower stack order.", 
+				"Usage":"img {\nposition: absolute;\nleft: 0px;\ntop: 0px;\nz-index: -1;\n}",
+				"Possible Values":"z-index: auto|number|initial|inherit;"
+			},
+			"functions":{
+				"Description":"CSS functions are used as a value for various CSS properties.", 
+				"Functions":"\n- attr() : Returns the value of an attribute of the selected element\n- calc() : Allows you to perform calculations to determine CSS property values\n - cubic-bezier() : Defines a Cubic Bezier curve\n- hsl() : Defines colors using the Hue-Saturation-Lightness model (HSL)\n-  hsla() : Defines colors using the Hue-Saturation-Lightness-Alpha model (HSLA)\n- linear-gradient() : Sets a linear gradient as the background image. Define at least two colors (top to bottom)\n- radial-gradient() : Sets a radial gradient as the background image. Define at least two colors (center to edges)\n- repeating-linear-gradient() : Repeats a linear gradient\n- repeating-radial-gradient() : Repeats a radial gradient\n- rgb() : Defines colors using the Red-Green-Blue model (RGB)\n- rgba() : Defines colors using the Red-Green-Blue-Alpha model (RGBA)\n-  var() : Inserts the value of a custom property"
+			},
+			"selectors":{
+				"Description":"In CSS, selectors are patterns used to select the element(s) you want to style",
+				"Selectors":"\n - .class Selects all elements with class=\"intro\"\n - #id Selects the element with id=\"firstname\"\n - * Selects all elements\n - element Selects all <p> elements\n -element,element Selects all <div> elements and all <p> elements\n -element element Selects all <p> elements inside <div> elements\n - element>element Selects all <p> elements where the parent is a <div> element\n - element+element Selects all <p> elements that are placed immediately after <div> elements\n - element1~element2 Selects every <ul> element that are preceded by a <p> element\n - [attribute] Selects all elements with a target attribute\n - [attribute=value] Selects all elements with target=\"_blank\"\n - [attribute~=value] Selects all elements with a title attribute containing the word \"flower\"\n - [attribute|=value] Selects all elements with a lang attribute value starting with \"en\"\n - [attribute^=value] Selects every <a> element whose href attribute value begins with \"https\"\n -  attribute$=value] Selects every <a> element whose href attribute value ends with \".pdf\"\n - [attribute*=value] Selects every <a> element whose href attribute value contains the substring \"w3schools\"\n - :active  Selects the active link\n - ::after Insert something after the content of each <p> element\n - ::before Insert something before the content of each <p> element\n - :checked Selects every checked <input> element\n - :default Selects the default <input> element\n - :disabled Selects every disabled <input> element\n - :empty Selects every <p> element that has no children (including text nodes)\n - :enabled : Selects every enabled <input> element\n - :first-child Selects every <p> element that is the first child of its parent\n - ::first-letter Selects the first letter of every <p> element\n - ::first-line Selects the first line of every <p> element\n - :first-of-type Selects every <p> element that is the first <p> element of its parent\n - :focus Selects the input element which has focus\n - :hover Selects links on mouse over\n - :in-range Selects input elements with a value within a specified range\n - :indeterminate Selects input elements that are in an indeterminate state\n - :invalid Selects all input elements with an invalid value\n - :lang(language) Selects every <p> element with a lang attribute equal to \"it\" (Italian)\n - :last-child Selects every <p> element that is the last child of its parent\n - :last-of-type  Selects every <p> element that is the last <p> element of its parent\n - :link Selects all unvisited links\n - :not(selector) Selects every element that is not a <p> element\n - :nth-child(n) Selects every <p> element that is the second child of its parent\n - :nth-last-child(n) Selects every <p> element that is the second child of its parent, counting from the last child\n - :nth-last-of-type(n) Selects every <p> element that is the second <p> element of its parent, counting from the last child\n - :nth-of-type(n) Selects every <p> element that is the second <p> element of its parent\n -:only-of-type Selects every <p> element that is the only <p> element of its parent\n - :only-child Selects every <p> element that is the only child of its parent\n - :optional Selects input elements with no \"required\" attribute\n - :out-of-range Selects input elements with a value outside a specified range\n - ::placeholder Selects input elements with placeholder text\n - :read-only Selects input elements with the 'readonly' attribute specified\n - :read-write Selects input elements with the \"readonly\" attribute NOT specified\n - :required Selects input elements with the \"required\" attribute specified\n - :root Selects the document's root element\n - ::selection Selects the portion of an element that is selected by a user\n - :target Selects the current active #news element (clicked on a URL containing that anchor name)\n - :valid  Selects all input elements with a valid value\n - :visited Selects all visited links"
+			}
+
+}

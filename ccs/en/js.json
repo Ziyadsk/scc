@@ -1,0 +1,716 @@
+{
+	"Array":{
+		"Description":"The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.",
+		"Example(s)":"\n - Create an Array\n var fruits = ['Apple', 'Banana'];\nconsole.log(fruits.length);\n\nAccess (index into) an Array item\nvar first = fruits[0];\n // Apple\nvar last = fruits[fruits.length - 1];\n// Banana\nLoop over an Array\n\nfruits.forEach(function(item, index, array) {\nconsole.log(item, index);\n});\n // Apple 0 \n Banana 1\n - Add to the end of an Array\n var newLength = fruits.push('Orange');\n // ['Apple', 'Banana', 'Orange']\n - Remove from the end of an Array\n var last = fruits.pop(); // remove Orange (from the end)// ['Apple', 'Banana'];\n Remove from the front of an Array\n var first = fruits.shift(); // remove Apple from the front\n // ['Banana'];\n - Add to the front of an Array\nvar newLength = fruits.unshift('Strawberry') // add to the front\n// ['Strawberry', 'Banana'];\n -Find the index of an item in the Array\n fruits.push('Mango');\n // ['Strawberry', 'Banana', 'Mango']\n var pos = fruits.indexOf('Banana');\n // 1\n - Remove an item by index position\n var removedItem = fruits.splice(pos, 1); // this is how to remove an item\n // ['Strawberry', 'Mango']\n - Remove items from an index position\n var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];\n console.log(vegetables); \n // ['Cabbage', 'Turnip', 'Radish', 'Carrot']\n var pos = 1, n = 2;\n var removedItems = vegetables.splice(pos, n); \n // this is how to remove items, n defines the number of items to be removed,\n // from that position(pos) onward to the end of array.\n console.log(vegetables); \n // ['Cabbage', 'Carrot'] (the original array is changed)\n console.log(removedItems); \n // ['Turnip', 'Radish']\n - Copy an Array\n var shallowCopy = fruits.slice(); // this is how to make a copy\n // ['Strawberry', 'Mango']"
+	},
+	"array.concat":{
+		"Description":"The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+		"Usage":"var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])",
+        "Example(s)":"var alpha = ['a', 'b', 'c'];\nvar numeric = [1, 2, 3];\nalpha.concat(numeric);\n// result in ['a', 'b', 'c', 1, 2, 3]"
+    },
+    "array.fill":{
+		"Description":"The fill() method fills all the elements of an array from a start index to an end index with a static value. The end index is not included.",
+		"Usage":"arr.fill(value[, start[, end]])",
+        "Example(s)":"\n[1, 2, 3].fill(4);   // [4, 4, 4]\n[1, 2, 3].fill(4, 1);            // [1, 4, 4]\n[1, 2, 3].fill(4, 1, 2);         // [1, 4, 3]\n[1, 2, 3].fill(4, 1, 1);         // [1, 2, 3]\n[1, 2, 3].fill(4, 3, 3);         // [1, 2, 3]\n[1, 2, 3].fill(4, -3, -2);       // [4, 2, 3]\n[1, 2, 3].fill(4, NaN, NaN);     // [1, 2, 3]\n[1, 2, 3].fill(4, 3, 5);         // [1, 2, 3]\nArray(3).fill(4);                // [4, 4, 4]"
+    },
+    "array.filter":{
+		"Description":"The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+		"Usage":"var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])",
+        "Example(s)":"function isBigEnough(value) {\nreturn value >= 10;\n}\nvar filtered = [12, 5, 8, 130, 44].filter(isBigEnough);\n// filtered is [12, 130, 44]"
+    },
+    "array.find":{
+		"Description":"The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.",
+		"Usage":"arr.find(callback[, thisArg])",
+        "Example(s)":"var inventory = [\n{name: 'apples', quantity: 2},\n{name: 'bananas', quantity: 0},\n{name: 'cherries', quantity: 5}\n];\nfunction isCherries(fruit) { \nreturn fruit.name === 'cherries';\n}\nconsole.log(inventory.find(isCherries)); \n// { name: 'cherries', quantity: 5 } \n}"
+
+	},
+	"array.foreach":{
+		"Description":"The forEach() method executes a provided function once for each array element.",
+		"Usage":"arr.forEach(function callback(currentValue[, index[, array]]) {\n\n    //your iterator\n}[, thisArg]);",
+        "Example(s)":"function logArrayElements(element, index, array) {\nconsole.log('a[' + index + '] = ' + element);\n}\n\n// Notice that index 2 is skipped since there is no item at\n// that position in the array.\n[2, 5, , 9].forEach(logArrayElements);\n// logs:\n// a[0] = 2\n// a[1] = 5\n// a[3] = 9"
+
+	},
+	"array.from":{
+		"Description":"The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.",
+		"Usage":"Array.from(arrayLike[, mapFn[, thisArg]])",
+        "Example(s)":"Array.from('foo'); \n// ['f', 'o', 'o']\n"
+	},
+		"array.includes":{
+		"Description":"The includes() method determines whether an array includes a certain element, returning true or false as appropriate.",
+		"Usage":"arr.includes(searchElement[, fromIndex])",
+        "Example(s)":"function logArrayElements(element, index, array) {\nconsole.log('a[' + index + '] = ' + element);\n}\n\n// Notice that index 2 is skipped since there is no item at\n// that position in the array.\n[2, 5, , 9].forEach(logArrayElements);\n// logs:\n// a[0] = 2\n// a[1] = 5\n// a[3] = 9"
+
+	},
+		"array.indexOf":{
+		"Description":"The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
+		"Usage":"arr.indexOf(searchElement[, fromIndex])",
+        "Example(s)":"var array = [2, 9, 9];\narray.indexOf(2);     // 0\narray.indexOf(7);     // -1\narray.indexOf(9, 2);  // 2\narray.indexOf(2, -1); // -1\narray.indexOf(2, -3); // 0"
+
+	},
+		"array.join":{
+		"Description":"The join() method joins all elements of an array (or an array-like object) into a string and returns this string.",
+		"Usage":"arr.join([separator])",
+        "Example(s)":"var a = ['Wind', 'Rain', 'Fire'];\na.join();      // 'Wind,Rain,Fire'\na.join(', ');  // 'Wind, Rain, Fire'\na.join(' + '); // 'Wind + Rain + Fire'\na.join('');    // 'WindRainFire'"
+	},
+	"array.keys":{
+		"Description":"The keys() method returns a new Array Iterator object that contains the keys for each index in the array.",
+		"Usage":"arr.keys()",
+        "Example(s)":"var arr = ['a', , 'c'];\nvar sparseKeys = Object.keys(arr);\nvar denseKeys = [...arr.keys()];\nconsole.log(sparseKeys); // ['0', '2']\nconsole.log(denseKeys);  // [0, 1, 2]"
+	},
+	"array.length":{
+		"Description":"The length property of an object which is an instance of type Array sets or returns the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.",
+		"Usage":"arr.length",
+        "Example(s)":"var clothing = ['shoes', 'shirts', 'socks', 'sweaters'];\nconsole.log(clothing.length);\n// expected output: 4\n"
+	},
+	"array.map":{
+		"Description":"The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
+		"Usage":"var new_array = arr.map(function callback(currentValue[, index[, array]]) {\n// Return element for new_array\n}[, thisArg])",
+        "Example(s)":"var numbers = [1, 4, 9];\nvar roots = numbers.map(Math.sqrt);\n// roots is now [1, 2, 3]\n// numbers is still [1, 4, 9]"
+	},
+	"array.of":{
+		"Description":"The Array.of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.",
+		"Usage":"Array.of(element0[, element1[, ...[, elementN]]])",
+        "Example(s)":"Array.of(1);         // [1]\nArray.of(1, 2, 3);   // [1, 2, 3]\nArray.of(undefined); // [undefined]"
+	},
+	"array.pop":{
+		"Description":"The pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
+		"Usage":"arr.pop()",
+        "Example(s)":"var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];\nvar popped = myFish.pop();\nconsole.log(myFish); // ['angel', 'clown', 'mandarin' ] \nconsole.log(popped); // 'sturgeon'"
+	},
+	"array.push":{
+		"Description":"The push() method adds one or more elements to the end of an array and returns the new length of the array.",
+		"Usage":"arr.push(element1[, ...[, elementN]])",
+        "Example(s)":"var sports = ['soccer', 'baseball'];\nvar total = sports.push('football', 'swimming');\nconsole.log(sports); // ['soccer', 'baseball', 'football', 'swimming']\nconsole.log(total);  // 4"
+	},
+	"array.reduce":{
+		"Description":"The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
+		"Usage":"arr.reduce(callback[, initialValue])",
+        "Example(s)":"var maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );\nvar maxCallback2 = ( max, cur ) => Math.max( max, cur );\n// reduce() without initialValue\n[ { x: 22 }, { x: 42 } ].reduce( maxCallback ); // 42\n[ { x: 22 }            ].reduce( maxCallback ); // { x: 22 }\n[                      ].reduce( maxCallback ); // TypeError\n// map/reduce; better solution, also works for empty or larger arrays\n[ { x: 22 }, { x: 42 } ].map( el => el.x )\n                        .reduce( maxCallback2, -Infinity );"
+	},
+	"array.reverse":{
+		"Description":"The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.",
+		"Usage":"arr.reverse()",
+        "Example(s)":"const a = [1, 2, 3];\nconsole.log(a); // [1, 2, 3]\na.reverse();\nconsole.log(a); // [3, 2, 1]"
+	},
+	"array.shift":{
+		"Description":"The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+		"Usage":"arr.shift()",
+        "Example(s)":"var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];\nconsole.log('myFish before:', JSON.stringify(myFish));\n// myFish before: ['angel', 'clown', 'mandarin', 'surgeon']\nvar shifted = myFish.shift(); \nconsole.log('myFish after:', myFish); \n// myFish after: ['clown', 'mandarin', 'surgeon']"
+	},
+	"array.slice":{
+		"Description":"The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.",
+		"Usage":"arr.slice([begin[, end]])",
+        "Example(s)":"var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];\nvar citrus = fruits.slice(1, 3);\n// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']\n// citrus contains ['Orange','Lemon']"
+	},
+	"array.some":{
+		"Description":"The some() method tests whether at least one element in the array passes the test implemented by the provided function.",
+		"Usage":"arr.some(callback[, thisArg])",
+        "Example(s)":"function isBiggerThan10(element, index, array) {\nreturn element > 10;\n}\n[2, 5, 8, 1, 4].some(isBiggerThan10);  // false\n[12, 5, 8, 1, 4].some(isBiggerThan10); // true"
+	},
+	"array.sort":{
+		"Description":"The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.",
+		"Usage":"arr.sort([compareFunction])",
+        "Example(s)":"var numbers = [4, 2, 5, 1, 3];\nnumbers.sort(function(a, b) {\nreturn a - b;\n});\nconsole.log(numbers);\n// [1, 2, 3, 4, 5]"
+	},
+	"array.splice":{
+		"Description":"The splice() method changes the contents of an array by removing existing elements and/or adding new elements.",
+		"Usage":"array.splice(start[, deleteCount[, item1[, item2[, ...]]]])",
+        "Example(s)":"var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];\nvar removed = myFish.splice(3, 1);\n// removed is ['mandarin']\n// myFish is ['angel', 'clown', 'drum', 'sturgeon'] "
+	},
+	"array.toString":{
+		"Description":"The toString() method returns a string representing the specified array and its elements.",
+		"Usage":"arr.toString()",
+        "Example(s)":"var array1 = [1, 2, 'a', '1a'];\nconsole.log(array1.toString());\n// expected output: '1,2,a,1a'\n"
+	},
+	"array.unshift":{
+		"Description":"The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.",
+		"Usage":"arr.unshift(element1[, ...[, elementN]])",
+        "Example(s)":"var arr = [1, 2];\narr.unshift(0); // result of call is 3, the new array length\n// arr is [0, 1, 2]\narr.unshift(-2, -1); // = 5\n// arr is [-2, -1, 0, 1, 2]\narr.unshift([-3]);\n// arr is [[-3], -2, -1, 0, 1, 2]"
+	},
+	"array.values":{
+		"Description":"The values() method returns a new Array Iterator object that contains the values for each index in the array.",
+		"Usage":"arr.values()",
+        "Example(s)":"var arr = ['w', 'y', 'k', 'o', 'p'];\nvar iterator = arr.values();\nfor (let letter of iterator) {\nconsole.log(letter);\n}"
+
+	},
+
+
+	"function.bind":{
+		"Description":"The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.",
+		"Usage":"function.bind(thisArg[, arg1[, arg2[, ...]]])",
+        "Example(s)":"\nthis.x = 9;    // this refers to global 'window' object here in the browser\nvar module = {\nx: 81,\ngetX: function() { return this.x; }\n};\nmodule.getX(); // 81\nvar retrieveX = module.getX;\nretrieveX();  \n// returns 9 - The function gets invoked at the global scope\n// Create a new function with 'this' bound to module\n// New programmers might confuse the\n// global var x with module's property x\nvar boundGetX = retrieveX.bind(module);\nboundGetX(); // 81"
+
+	},
+	"function.apply":{
+		"Description":"he apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).",
+		"Usage":"function.apply(thisArg, [argsArray])",
+        "Example(s)":"var array = ['a', 'b'];\nvar elements = [0, 1, 2];\narray.push.apply(array, elements);\nconsole.info(array); // ['a', 'b', 0, 1, 2]"
+
+	},
+	"function.call":{
+		"Description":"The call() method calls a function with a given this value and arguments provided individually.",
+		"Usage":"function.call(thisArg, arg1, arg2, ...)",
+        "Example(s)":"function Product(name, price) {\nthis.name = name;\nthis.price = price;\n}\nfunction Food(name, price) {\nProduct.call(this, name, price);\nthis.category = 'food';\n}\nfunction Toy(name, price) {\nProduct.call(this, name, price);\nthis.category = 'toy';\n}\nvar cheese = new Food('feta', 5);\nvar fun = new Toy('robot', 40);"
+     },
+	"function.name":{
+		"Description":"A Function object's read-only name property indicates the function's name as specified when it was created, or 'anonymous' for functions created anonymously.",
+		"Usage":"function.name;",
+        "Example(s)":"function doSomething() {}doSomething.name; // 'doSomething'"
+
+	},
+	"function.length":{
+		"Description":"The length property indicates the number of arguments expected by the function.",
+		"Usage":"arr.values()",
+        "Example(s)":"console.log(Function.length); /* 1 */\nconsole.log((function()        {}).length); /* 0 */\nconsole.log((function(a)       {}).length); /* 1 */\nconsole.log((function(a, b)    {}).length); /* 2 etc. */\nconsole.log((function(...args) {}).length); \n// 0, rest parameter is not counted\nconsole.log((function(a, b = 1, c) {}).length);\n// 1, only parameters before the first one with \n// a default value is counted"
+
+	},
+	"function.toString":{
+		"Description":"The toString() method returns a string representing the source code of the function.",
+		"Usage":"arr.values()",
+        "Example(s)":"function sum(a, b) {\nreturn a + b;\n}\nconsole.log(sum.toString());\n// expected output: 'function sum(a, b) {\n//                     return a + b;\n//                   }'\n"
+
+	},
+	"generator.next":{
+		"Description":"The next() method returns an object with two properties done and value. You can also provide a parameter to the next method to send a value to the generator.",
+		"Usage":"gen.next(value);",
+        "Example(s)":"function* gen() { \nyield 1;\nyield 2;\nyield 3;\n}\n\nvar g = gen(); // 'Generator { }'\ng.next();      // 'Object { value: 1, done: false }'\ng.next();      // 'Object { value: 2, done: false }'\ng.next();      // 'Object { value: 3, done: false }'\ng.next();      // 'Object { value: undefined, done: true }'"
+
+	},
+	"generator.return":{
+		"Description":"The return() method returns the given value and finishes the generator.",
+		"Usage":"gen.return(value)",
+        "Example(s)":"function* gen() { \nyield 1;\nyield 2;\nyield 3;\n}\nvar g = gen();\ng.next();        // { value: 1, done: false }\ng.return('foo'); // { value: \"foo\", done: true }\ng.next();        // { value: undefined, done: true }"
+
+},
+	"generator.throw":{
+		"Description":"The throw() method resumes the execution of a generator by throwing an error into it and returns an object with two properties done and value.",
+		"Usage":"gen.throw(exception)",
+        "Example(s)":"function* gen() {\nwhile(true) {\ntry {\nyield 42;\n} catch(e) {\nconsole.log('Error caught!');\n}\n}\n}\nvar g = gen();\ng.next();\n// { value: 42, done: false }\ng.throw(new Error('Something went wrong'));\n// \"Error caught!\"\n// { value: 42, done: false }"
+
+	},
+	"console.dir":{
+		"Description":"Displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects.In other words, console.dir is the way to see all the properties of a specified JavaScript object in console by which the developer can easily get the properties of the object.",
+		"Usage":"console.dir(object);"
+	},
+	"console.log":{
+		"Description":"Outputs a message to the Web Console.",
+		"Usage":"console.log(obj1 [, obj2, ..., objN]);\nconsole.log(msg [, subst1, ..., substN]);"
+	},
+	"console.info":{
+		"Description":"Outputs an informational message to the Web Console. In Firefox and Chrome, a small \"i\" icon is displayed next to these items in the Web Console's log.",
+		"Usage":"console.info(obj1 [, obj2, ..., objN]);\nconsole.info(msg [, subst1, ..., substN]);"
+	},
+	
+	"console.time":{
+		"Description":"Starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call console.timeEnd() with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started.",
+		"Usage":"Starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call console.timeEnd() with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started."
+	},
+	"console.warn":{
+		"Description":"Outputs a warning message to the Web Console.",
+		"Usage":"console.warn(obj1 [, obj2, ..., objN]);\nconsole.warn(msg [, subst1, ..., substN]);"
+
+	},
+	"console.clear":{
+		"Description":"Outputs a warning message to the Web Console.",
+		"Usage":"console.clear();"
+		
+	},
+	"console.count":{
+		"Description":"Logs the number of times that this particular call to count() has been called. This function takes an optional argument label.",	
+		"Usage":"console.count([label]);",
+		"Example(s)":"var user = \"\";\nfunction greet() {\nconsole.count();\nreturn \"hi \" + user;\n}\nuser = \"bob\";\ngreet();\nuser = \"alice\";\ngreet();\ngreet();\nconsole.count();\nConsole output will look something like this:\n\"default: 1\"\n\"default: 2\"\n\"default: 3\"\n\"default: 1"
+	},
+	"console.error":{
+		"Description":"Outputs an error message to the Web Console.",	
+		"Usage":"console.error(obj1 [, obj2, ..., objN]);\nconsole.error(msg [, subst1, ..., substN]);\nconsole.exception(obj1 [, obj2, ..., objN]);\nconsole.exception(msg [, subst1, ..., substN]);"
+	},
+	"console.group":{
+		"Description":"Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called.",	
+		"Usage":"console.group([label]);",
+		"Example(s)":"console.log(\"This is the outer level\");\nconsole.group();\nconsole.log('Level 2');\nconsole.group();\nconsole.log('Level 3');\nconsole.warn('More of level 3');\nconsole.groupEnd();\nconsole.log('Back to level 2');\nconsole.groupEnd();\nconsole.log('Back to the outer level');"
+	},
+	"console.table":{
+		"Description":"Displays tabular data as a table.\nThis function takes one mandatory argument data, which must be an array or an object, and one additional optional parameter columns.",	
+		"Usage":"console.table([\"apples\", \"oranges\", \"bananas\"]);"
+	},
+	"console.time":{
+		"Description":"Starts a timer you can use to track how long an operation takes. You give each timer a unique name, and may have up to 10,000 timers running on a given page. When you call console.timeEnd() with the same name, the browser will output the time, in milliseconds, that elapsed since the timer was started.",	
+		"Usage":"console.time(label);"
+	},
+	"console.trace":{
+		"Description":"Outputs a stack trace to the Web Console.",	
+		"Usage":"console.trace();",
+		"Example(s)":"function foo() {\nfunction bar() {\nconsole.trace();\n}\nbar();\n}\nfoo();"
+	},
+	"window.alert":{
+		"Description":"The Window.alert() method displays an alert dialog with the optional specified content and an OK button.",	
+		"Usage":"window.alert(message);",
+		"Example(s)":"window.alert(\"Hello world!\");"
+	},
+	"window.blur":{
+		"Description":"Shifts focus away from the window.",	
+		"Usage":"window.blur();"
+	},
+	"window.close":{
+		"Description":"The Window.close() method closes the current window, or the window on which it was called.\nThis method is only allowed to be called for windows that were opened by a script using the window.open() method. If the window was not opened by a script, an error similar to this one appears in the console: Scripts may not close windows that were not opened by script.",	
+		"Usage":"window.close();",
+		"Example(s)":"var openedWindow;\nfunction openWindow() {\nopenedWindow = window.open('moreinfo.htm');\n}\nfunction closeOpenedWindow() {\nopenedWindow.close();\n}"
+	},
+	"window.confirm":{
+		"Description":"The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK and Cancel.",	
+		"Usage":"result = window.confirm(message);",
+		"Example(s)":"if (window.confirm(\"Do you really want to leave?\")) { \n window.open(\"exit.html\", \"Thanks for Visiting!\");\n}"
+	},
+		"window.console":{
+		"Description":"The Window.console read-only property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users.",
+		"Usage":"var consoleObj = window.console;",
+		"Example(s)":"console.log(\"An error occurred while loading the content\");"
+	},
+		"window.crypto":{
+		"Description":"The Window.crypto read-only property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services.",
+		"Usage":"var cryptoObj = window.crypto || window.msCrypto; // for IE 11"
+		
+	},
+		"window.document":{
+		"Description":"window.document returns a reference to the document contained in the window.",	
+		"Usage":"doc = window.document;",
+		"Example(s)":"<!DOCTYPE html>\n<html>\n<head>   \n<title>Hello, World!</title>\n</head>\n<body>\n<script type=\"text/javascript\">   \nvar doc = window.document;\nconsole.log(doc.title); // Hello, World!\n</script>\n</body>\n</html>"
+	},
+		"window.focus":{
+		"Description":"window.focus() ",	
+		"Usage":"if (clicked) { window.focus(); }"
+	},
+			"window.fullScreen":{
+		"Description":"This property indicates whether the window is displayed in full screen mode or not. It is only reliable in Gecko 1.9 (Firefox 3) and later, see the Notes below.",	
+		"Usage":"isInFullScreen = windowRef.fullScreen;",
+		"Example(s)":"if (window.fullScreen) {\n// it's fullscreen!\n}\nelse {\n// not fullscreen!\n}"
+	},
+			"window.history":{
+		"Description":"The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).",	
+		"Usage":"var historyObj = window.history;",
+		"Example(s)":"history.back();     // equivalent to clicking back button\nhistory.go(-1);     // equivalent to history.back();"
+	},
+				"window.length":{
+		"Description":"Returns the number of frames (either <frame> or <iframe> elements) in the window.",	
+		"Usage":"framesCount = window.length;",
+		"Example(s)":"if (window.length) {\n// this is a document with subframes\n}"
+	},
+				"window.localStorage":{
+		"Description":"The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions. localStorage is similar to sessionStorage, except that while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when the page session ends — that is, when the page is closed.\nIt should be noted that data stored in either localStorage or sessionStorage is specific to the protocol of the page.",	
+		"Usage":"myStorage = window.localStorage;",
+		"Example(s)":"localStorage.setItem('myCat', 'Tom');"
+	},
+	"window.location":{
+		"Description":"The Window.location read-only property returns a Location object with information about the current location of the document.\nThough Window.location is a read-only Location object, you can also assign a DOMString to it. This means that you can work with location as if it were a string in most cases: location = 'http://www.example.com' is a synonym of location.href = 'http://www.example.com'.",	
+		"Usage":"var oldLocation = location;\nlocation = newLocation;\",\n\"Example(s)\":\"if (window.length) {\n// this is a document with subframes\n}"
+	},
+	"window.minimize":{
+		"Description":"Sets a window to minimized state (a way to undo it programatically is by calling window.moveTo())."
+
+	},
+	"window.name":{
+		"Description":"Gets/sets the name of the window.",	
+		"Usage":"string = window.name;\nwindow.name = string;",
+		"Example(s)":"window.name = \"lab_view\";"
+	},
+	"window.open":{
+		"Description":"The Window interface's open() method loads the specified resource into the browsing context (window, <iframe> or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context.",	
+		"Usage":"var window = window.open(url, windowName, [windowFeatures]);",
+		"Example(s)":"var windowObjectReference;\nvar strWindowFeatures = \"menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes\";\nfunction openRequestedPopup() {\nwindowObjectReference = window.open(\"http://www.cnn.com/\", \"CNN_WindowName\", strWindowFeatures);\n}"
+	},
+	"window.parent":{
+		"Description":"A reference to the parent of the current window or subframe.\nIf a window does not have a parent, its parent property is a reference to itself.\nWhen a window is loaded in an <iframe>, <object>, or <frame>, its parent is the window with the element embedding the window.",	
+		"Usage":"string = \"parentWindow = window.parent; ",
+		"Example(s)":"if (window.parent != window.top) {\n// we're deeper than one down\n}"
+	},
+		"window.performance":{
+		"Description":"The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API.",	
+		"Usage":"performanceData = window.performance;"
+	},
+		"window.print":{
+		"Description":"Opens the Print Dialog to print the current document.",
+		"Usage":"window.print() "
+	},
+			"window.prompt":{
+		"Description":"The Window.prompt() displays a dialog with an optional message prompting the user to input some text.",
+		"Usage":"result = window.prompt(message, default);",
+		"Example(s)":"var sign = prompt(\"What's your sign?\");\nif (sign.toLowerCase() == \"scorpio\") {\nalert(\"Wow! I'm a Scorpio too!\");\n}\n// there are many ways to use the prompt feature\nvar sign = window.prompt(); // open the blank prompt window\nvar sign = prompt();       //  open the blank prompt window\nvar sign = window.prompt('Are you feeling lucky'); // open the window with Text \"Are you feeling lucky\"\nvar sign = window.prompt('Are you feeling lucky', 'sure'); // open the window with Text \"Are you feeling lucky\" and default value \"sure\""
+	},
+			"window.scroll":{
+		"Description":"Scrolls the window to a particular place in the document.",
+		"Usage":"window.scroll(x-coord, y-coord)\nwindow.scroll(options)",
+		"Example(s)":"window.scroll({\ntop: 1000,\nbehavior: \"smooth\"\n});"
+	},
+			"window.scrollX":{
+		"Description":"The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property.",
+		"Usage":"var x = window.scrollX;",
+		"Example(s)":"if (window.scrollX > 400) {\nwindow.scroll(0,0);\n}"
+	},		
+	"window.scrollY":{
+		"Description":"The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled horizontally from the scrollX property.",
+		"Usage":"var y = window.scrollY;",
+		"Example(s)":"if (window.scrollY) {\nwindow.scroll(0, 0);  // reset the scroll position to the top left of the document.\n}\nwindow.scrollByPages(1);"
+	},
+	"window.self":{
+		"Description":"The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self).",
+		"Usage":"var w = window.self;  // w === window",
+		"Example(s)":"if (window.parent.frames[0] != window.self) {\n// this window is not the first frame in the list\n"
+
+	},
+	"window.status":{
+		"Description":"Sets the text in the status bar at the bottom of the browser or returns the previously set text.\nThis property does not work in default configuration of Firefox and some other browsers: setting window.status has no effect on the text displayed in the status bar. To allow scripts to change the the status bar text, the user must set the dom.disable_window_status_change preference to false in the about:config screen.",
+		"Usage":"window.status = string;\nvar value = window.status;"
+
+	},
+	"window.stop":{
+		"Description":"This method stops window loading.",
+		"Usage":"window.stop() "
+
+	},
+	"window.top":{
+		"Description":"Returns a reference to the topmost window in the window hierarchy.",
+		"Usage":"var topWindow = window.top;"
+	},
+	"document.dir":{
+		"Description":"The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right.",
+		"Usage":"dirStr = document.dir;\ndocument.dir = dirStr;"
+	},
+		"document.URL":{
+		"Description":"The URL read-only property of the Document interface returns the document location as a string.",
+		"Usage":"var string = document.URL ;",
+		"Example(s)":"document.getElementById(\"url\").textContent = document.URL;"
+	},
+		"document.body":{
+		"Description":"Returns the <body> or <frameset> node of the current document, or null if no such element exists.",
+		"Usage":"var topWindow = window.top;",
+		"Example(s)":"// in HTML: <body id=\"oldBodyElement\"></body>\nalert(document.body.id); // \"oldBodyElement\"\nvar aNewBodyElement = document.createElement(\"body\");\naNewBodyElement.id = \"newBodyElement\";\ndocument.body = aNewBodyElement;\nalert(document.body.id); // \"newBodyElement\""
+	},
+		"document.head":{
+		"Description":"The head read-only property of the Document interface returns the <head> element of the current document.",
+		"Usage":"var objRef = document.head;",
+		"Example(s)":"<!doctype html>\n<head id=\"my-document-head\">\n<title>Example: using document.head</title>\n</head>\n<script>\nvar theHead = document.head;\nconsole.log(theHead.id); // \"my-document-head\";\nconsole.log( theHead === document.querySelector(\"head\") ); // true\n</script>\n"
+	},
+		"document.open":{
+		"Description":"The Document.open() method opens a document for writing.",
+		"Usage":"document.open();",
+		"Example(s)":"// In this example, the document contents are \n// overwritten as the document \n// is reinitialized on open(). \ndocument.write(\"<html><p>remove me</p></html>\"); \ndocument.open(); \n// document is empty."
+	},
+			"document.close":{
+		"Description":"The document.close() method finishes writing to a document, opened with document.open().",
+		"Usage":"document.close();",
+		"Example(s)":"// open a document to write to it.\n// write the content of the document.\n// close the document.\ndocument.open();\ndocument.write(\"<p>The one and only content.</p>\");\ndocument.close();"
+	},
+			"document.forms":{
+		"Description":"The forms read-only property of the Document interface returns an HTMLCollection) listing all the <form> elements contained in the document.",
+		"Usage":"collection = document.forms;",
+		"Example(s)":"var selectForm = document.forms[index];\nvar selectFormElement = document.forms[index].elements[index];"
+	},	
+		"document.title":{
+		"Description":"The document.title property gets or sets the current title of the document.",
+		"Usage":"var docTitle = document.title;",
+		"Example(s)":"<!DOCTYPE html>\n<html>\n<head>\n<title>Hello World!</title> \n</head>\n<body>\n<script>\nalert(document.title); // displays \"Hello World!\"\ndocument.title = \"Goodbye World!\";\nalert(document.title); // displays \"Goodbye World!\"\n</script>\n</body>\n</html>"
+	},
+		"document.hidden":{
+		"Description":"The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not.",
+		"Usage":"var boolean = document.hidden",
+		"Example(s)":"document.addEventListener(\"visibilitychange\", function() {\nconsole.log( document.hidden );\n// Modify behavior...\n});"
+	},
+		"document.write":{
+		"Description":"Writes a string of text to a document stream opened by document.open().",
+		"Usage":"document.write(markup);",
+		"Example(s)":"<html>\n<head>\n<title>write example</title>\n <script>\nfunction newContent() {\nalert(\"load new content\");\ndocument.open();\ndocument.write(\"<h1>Out with the old - in with the new!</h1>\");\ndocument.close();\n}\n</script>\n</head>\n<body onload=\"newContent();\">\n<p>Some original document content.</p>\n</body>\n</html>"
+	},
+		"document.cookie":{
+		"Description":"Get and set the cookies associated with the current document",
+		"Usage":"allCookies = document.cookie;",
+		"Example(s)":"document.cookie = \"name=oeschger\";\ndocument.cookie = \"favorite_food=tripe\";\nfunction alertCookie() {\nalert(document.cookie);\n}"
+	},
+		"document.location":{
+		"Description":"The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.\nThough Document.location is a read-only Location object, you can also assign a DOMString to it. This means that you can work with document.location as if it were a string in most cases: document.location = 'http://www.example.com' is a synonym of document.location.href = 'http://www.example.com'.\nTo retrieve just the URL as a string, the read-only document.URL property can also be used.\nIf the current document is not in a browsing context, the returned value is null.",
+		"Usage":"locationObj = document.location\ndocument.location = 'http://www.mozilla.org' // Equivalent to document.location.href = 'http://www.mozilla.org'",
+		"Example(s)":"dump(document.location); "
+	},
+		"document.readyState":{
+		"Description":"The Document.readyState property of a document describes the loading state of the document.",
+		"Usage":"var string = document.readyState;",
+		"Example(s)":"switch (document.readyState) {\ncase \"loading\":\n// The document is still loading.\nbreak;\ncase \"interactive\":\n// The document has finished loading. We can now access the DOM elements.\n// But sub-resources such as images, stylesheets and frames are still loading.\nvar span = document.createElement(\"span\");\nspan.textContent = \"A <span> element.\";\ndocument.body.appendChild(span);\nbreak;\ncase \"complete\":\n// The page is fully loaded.\nconsole.log(\"The first CSS rule is: \" + document.styleSheets[0].cssRules[0].cssText);\nbreak;\n}"
+	},
+	"constructor":{
+		"Description":"The constructor method is a special method for creating and initializing an object created within a class.",
+		"Usage":"constructor([arguments]) { ... }",
+		"Example(s)":"class Square extends Polygon {\nconstructor(length) {\n// Here, it calls the parent class' constructor with lengths\n// provided for the Polygon's width and height\n   super(length, length);\n// Note: In derived classes, super() must be called before you\n// can use 'this'. Leaving this out will cause a reference error.\nthis.name = 'Square';\n}\nget area() {\nreturn this.height * this.width;\n}\nset area(value) {\nthis.area = value;\n} \n}"
+	},
+	"element.querySelector":{
+		"Description":"Returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors.",
+		"Usage":"element = baseElement.querySelector(selectors);",
+		"Example(s)":"var baseElement = document.querySelector(\"p\");\ndocument.getElementById(\"output\").innerHTML =\n (baseElement.querySelector(\"div span\").innerHTML);"
+	},
+	"document.getElementById":{
+		"Description":"The Document method getElementById() returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.If you need to get access to an element which doesn't have an ID, you can use querySelector() to find the element using any selector.",
+		"Usage":"var element = document.getElementById(id);",
+		"Example(s)":"function changeColor(newColor) {\nvar elem = document.getElementById('para');\nelem.style.color = newColor;\n}"
+	},
+	"document.getElementsByClassName":{
+		"Description":"Returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.",
+		"Usage":"var elements = document.getElementsByClassName(names); // or:\nvar elements = rootElement.getElementsByClassName(names);",
+		"Example(s)":"document.getElementsByClassName('test')"
+	},
+		"document.getElementsByName":{
+		"Description":"Returns an HTMLCollection of elements with the given tag name. The complete document is searched, including the root node. The returned HTMLCollection is live, meaning that it updates itself automatically to stay in sync with the DOM tree without having to call document.getElementsByTagName() again.",
+		"Usage":"var elements = document.getElementsByTagName(name);",
+		"Example(s)":"<!DOCTYPE html>\n<html lang=\"en\">\n<title>Example: using document.getElementsByName</title>\n<form name=\"up\"></form>\n<div name=\"down\"></div>\n<script>\nvar up_names = document.getElementsByName(\"up\");\nconsole.log(up_names[0].tagName); // displays \"FORM\"\n</script>\n</html>"
+	},
+		"document.getElementsByTagName":{
+		"Description":"Returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.",
+		"Usage":"elements = document.getElementsByName(name)",
+		"Example(s)":"<!DOCTYPE html>\n<html lang=\"en\">\n<title>Example: using document.getElementsByName</title>\n<form name=\"up\"></form>\n<div name=\"down\"></div>\n<script>\nvar up_names = document.getElementsByName(\"up\");\nconsole.log(up_names[0].tagName); // displays \"FORM\"\n</script>\n</html>"
+	},
+	"screen.height":{
+		"Description":"Returns the height of the screen in pixels..",
+		"Usage":"iHeight = window.screen.height",
+		"Example(s)":"if (window.screen.availHeight !== window.screen.height) {\n// something is occupying some screen real estate!\n}"
+	},
+	"screen.width":{
+		"Description":"Returns the width of the screen.",
+		"Usage":"// crude way to check that the screen is at least 1024x768 \n if (window.screen.width >= 1024 && window.screen.height >= 768) {// resolution is 1024x768 or above}",
+		"Example(s)":"if (window.screen.availHeight !== window.screen.height) {\n// something is occupying some screen real estate!\n}"
+	},
+	"screen.height":{
+		"Description":"Returns the height of the screen in pixels..",
+		"Usage":"iHeight = window.screen.height",
+		"Example(s)":"if (window.screen.availHeight !== window.screen.height) {\n// something is occupying some screen real estate!\n}"
+	},
+	"string.charAt":{
+		"Description":"The String object's charAt() method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.",
+		"Usage":"character = str.charAt(index)",
+		"Example(s)":"var sentence = 'The quick brown fox jumped over the lazy dog.';\nvar index = 4;\nconsole.log('The character at index ' + index + ' is ' + sentence.charAt(index));\n// expected output: \"The character at index 4 is q\""
+		},
+			"string.concat":{
+		"Description":"The concat() method concatenates the string arguments to the calling string and returns a new string.",
+		"Usage":"str.concat(string2[, string3, ..., stringN])",
+		"Example(s)":"var str1 = 'Hello';\nvar str2 = 'World';\nconsole.log(str1.concat(' ', str2));\n// expected output: \"Hello World\"\nconsole.log(str2.concat(', ', str1));\n// expected output: \"World, Hello\""
+	},
+	"string.endsWith":{
+		"Description":"The endsWith() method determines whether a string ends with the characters of a specified string, returning true or false as appropriate.",
+		"Usage":"str.endsWith(searchString[, length])",
+		"Example(s)":"const str1 = 'Cats are the best!';\nconsole.log(str1.endsWith('best', 17));\n// expected output: true\nconst str2 = 'Is this a question';\nconsole.log(str2.endsWith('?'));\n// expected output: false\n"
+	},
+	"string.includes":{
+		"Description":"The includes() method determines whether one string may be found within another string, returning true or false as appropriate.",
+		"Usage":"str.includes(searchString[, position])",
+		"Example(s)":"var sentence = 'The quick brown fox jumped over the lazy dog.';\nvar word = 'fox';\nconsole.log('The word \"' + word + (sentence.includes(word)? '\" is' : '\" is not') + ' in the sentence');\n// expected output: \"The word \"fox\" is in the sentence"
+	},
+	"string.indexOf":{
+		"Description":"The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.",
+		"Usage":"str.indexOf(searchValue[, fromIndex])",
+		"Example(s)":"'Blue Whale'.indexOf('Blue');     // returns  0\n'Blue Whale'.indexOf('Blute');    // returns -1\n'Blue Whale'.indexOf('Whale', 0); // returns  5\n'Blue Whale'.indexOf('Whale', 5); // returns  5\n'Blue Whale'.indexOf('Whale', 7); // returns -1"
+	},
+	"string.length":{
+		"Description":"The length property of a String object indicates the length of a string, in UTF-16 code units.",
+		"Usage":"str.length",
+		"Example(s)":"var x = 'Mozilla';\nvar empty = '';\nconsole.log('Mozilla is ' + x.length + ' code units long');\n/* \"Mozilla is 7 code units long\" */\nconsole.log('The empty string has a length of ' + empty.length);\n/* \"The empty string has a length of 0\" */"
+	},
+		"string.match":{
+		"Description":"The match() method retrieves the matches when matching a string against a regular expression.",
+		"Usage":"str.match(regexp)",
+		"Example(s)":"var str = 'For more information, see Chapter 3.4.5.1';\nvar re = /see (chapter \\d+(\\.\\d)*)/i;\nvar found = str.match(re);\nconsole.log(found);"
+	},
+		"string.raw":{
+		"Description":"The static String.raw() method is a tag function of template literals, similar to the r prefix in Python or the @ prefix in C# for string literals (yet there is a difference: see explanations in this issue). It's used to get the raw string form of template strings, that is, substitutions (e.g. ${foo}) are processed, but escapes (e.g. \n) are not.",
+		"Usage":"String.raw(callSite, ...substitutions)\nString.raw`templateString`",
+		"Example(s)":"String.raw`Hi\n${2+3}!`;// 'Hi\n5!', the character after 'Hi'// is not a newline character,// '\\' and 'n' are two characters."
+	},
+		"string.replace":{
+		"Description":"The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match.\nNote: The original string will remain unchanged.",
+		"Usage":"str.replace(regexp|substr, newSubstr|function)",
+		"Example(s)":"var str = 'Twas the night before Xmas...';\nvar newstr = str.replace(/xmas/i, 'Christmas');\nconsole.log(newstr);  // Twas the night before Christmas..."
+	},
+		"string.search":{
+		"Description":"The search() method executes a search for a match between a regular expression and this String object.",
+		"Usage":"str.search(regexp)",
+		"Example(s)":"var str = \"hey JudE\";\nvar re = /[A-Z]/g;\nvar re2 = /[.]/g;\nconsole.log(str.search(re)); // returns 4, which is the index of the first capital letter \"J\"\nconsole.log(str.search(re2)); // returns -1 cannot find '.' dot punctuation"
+	},
+		"string.slice":{
+		"Description":"The slice() method extracts a section of a string and returns it as a new string, without modifying the original string..",
+		"Usage":"str.slice(beginIndex[, endIndex])",
+		"Example(s)":"var str1 = 'The morning is upon us.', // the length of str1 is 23.\nstr2 = str1.slice(1, 8),\nstr3 = str1.slice(4, -2),\nstr4 = str1.slice(12),\nstr5 = str1.slice(30);\nconsole.log(str2); // OUTPUT: he morn\nconsole.log(str3); // OUTPUT: morning is upon u\nconsole.log(str4); // OUTPUT: is upon us.\nconsole.log(str5); // OUTPUT: \"\" "
+	},
+		"string.split":{
+		"Description":"The split() method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split.",
+		"Usage":"str.split([separator[, limit]])",
+		"Example(s)":"// removing spaces from a string \nvar names = 'Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ';\nconsole.log(names);\nvar re = /\\s*;\\s*/;\nvar nameList = names.split(re);\nconsole.log(nameList);"
+	},
+		"string.startsWith":{
+		"Description":"The startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.",
+		"Usage":"str.startsWith(searchString[, position])",
+		"Example(s)":"const str1 = 'Saturday night plans';\nconsole.log(str1.startsWith('Sat'));\n// expected output: true\nconsole.log(str1.startsWith('Sat', 3));\n// expected output: false"
+	},
+		"string.substring":{
+		"Description":"The substring() method returns the part of the string between the start and end indexes, or to the end of the string.",
+		"Usage":"str.substring(indexStart[, indexEnd])",
+		"Example(s)":"var str = 'Mozilla';\nconsole.log(str.substring(1, 3));\n// expected output: \"oz\"\nconsole.log(str.substring(2));\n// expected output: \"zilla\"\n"
+	},
+		"string.toLowerCase":{
+		"Description":"The toLowerCase() method returns the calling string value converted to lower case.",
+		"Usage":"str.toLowerCase()",
+		"Example(s)":"var sentence = 'The quick brown fox jumped over the lazy dog.';\nconsole.log(sentence.toLowerCase());\n// expected output: \"the quick brown fox jumped over the lazy dog\""
+	},
+		"string.toString":{
+		"Description":"The toString() method returns a string representing the specified object.",
+		"Usage":"str.toString()",
+		"Example(s)":"var x = new String('Hello world');\nconsole.log(x.toString()); \n// logs 'Hello world'"
+	},
+		"string.toUpperCase":{
+		"Description":"The toUpperCase() method returns the calling string value converted to uppercase (the value will be converted to a string if it isn't one).",
+		"Usage":"str.toUpperCase()",
+		"Example(s)":"var sentence = 'The quick brown fox jumped over the lazy dog.';\nconsole.log(sentence.toUpperCase());\n// expected output: \"THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG.\""
+	},
+		"string.trim":{
+		"Description":"The trim() method removes whitespace from both ends of a string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).",
+		"Usage":"str.trim()",
+		"Example(s)":"var greeting = '   Hello world!   ';\nconsole.log(greeting);\n// expected output: \"   Hello world!   \";\nconsole.log(greeting.trim());\n// expected output: \"Hello world!\";\n"
+		
+	},
+		"string.valueOf":{
+		"Description":"The valueOf() method returns the primitive value of a String object.",
+		"Usage":"str.valueOf()",
+		"Example(s)":"var x = new String('Hello world');\nconsole.log(x.valueOf()); // Displays 'Hello world'"
+	},
+		"JSON.parse":{
+		"Description":"The JSON.parse() method parses a JSON string, constructing the JavaScript value or object described by the string. An optional reviver function can be provided to perform a transformation on the resulting object before it is returned..",
+		"Usage":"JSON.parse(text[, reviver])",
+		"Example(s)":"JSON.parse('{}');              // {}\nJSON.parse('true');            // true\nJSON.parse('\"foo\"');           // \"foo\"\nJSON.parse('[1, 5, \"false\"]'); // [1, 5, \"false\"]\nJSON.parse('null');            // null"
+	},
+		"string.valueOf":{
+		"Description":"The JSON.stringify() method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.",
+		"Usage":"JSON.stringify(value[, replacer[, space]])",
+		"Example(s)":"console.log(JSON.stringify({ x: 5, y: 6 }));\n// expected output: \"{\"x\":5,\"y\":6}\"\nconsole.log(JSON.stringify([new Number(3), new String('false'), new Boolean(false)]));\n// expected output: \"[3,\"false\",false]\""
+	},
+		"Number.isNaN":{
+		"Description":"The Number.isNaN() method determines whether the passed value is NaN and its type is Number. It is a more robust version of the original, global isNaN().",
+		"Usage":"Number.isNaN(value)",
+		"Example(s)":"function typeOfNaN(x) {\nif (Number.isNaN(x)) {\nreturn 'Number NaN';\n}\nif (isNaN(x)) {\nreturn 'NaN';\n}\n}\nconsole.log(typeOfNaN('100F'));\n// expected output: \"NaN\"\nconsole.log(typeOfNaN(NaN));\n// expected output: \"Number NaN\"\n"
+		
+	},
+		"Number.isInteger":{
+		"Description":"The Number.isInteger() method determines whether the passed value is an integer.",
+		"Usage":"Number.isInteger(value)",
+		"Example(s)":"function fits(x, y) {\nif (Number.isInteger(y / x)) {\nreturn 'Fits!';\n}\nreturn 'Does NOT fit!';\n}\nconsole.log(fits(5, 10));\n// expected output: \"Fits!\"\nconsole.log(fits(5, 11));\n// expected output: \"Does NOT fit!\"\n"
+	},
+		"Number.MAX_VALUE":{
+		"Description":"The Number.MAX_VALUE property represents the maximum numeric value representable in JavaScript.",
+		"Usage":"Number.MAX_VALUE",
+		"Example(s)":"function multiply(x, y) {\nif (x * y > Number.MAX_VALUE) {\nreturn (\"Process as Infinity\");\n}\nreturn (x * y);\n}\nconsole.log(multiply(1.7976931348623157e+308, 1));\n// expected output: 1.7976931348623157e+308\nconsole.log(multiply(1.7976931348623157e+308, 2));\n// expected output: \"Process as Infinity\"\n"
+	},
+		"Number.MIN_VALUE":{
+		"Description":"The Number.MIN_VALUE property represents the smallest positive numeric value representable in JavaScript.",
+		"Usage":"JSON.stringify(value[, replacer[, space]])",
+		"Example(s)":"function multiply(x, y) {\nif (x * y < Number.MIN_VALUE) {\nreturn \"Process as -Infinity\";\n}\nreturn (x * y);\n}\nconsole.log(multiply(5e-324, 1));\n// expected output: 5e-324\nconsole.log(multiply(-1.7976931348623157e+308, 2));\n// expected output: Process as -Infinity\n"
+	},
+	"Number.NAN":{
+		"Description":"The Number.NaN property represents Not-A-Number. Equivalent of NaN.",
+		"Usage":"Number.isInteger(value)",
+		"Example(s)":"function clean(x) {\nif (x === Number.NaN) {\n// can never be true\nreturn null;\n}\nif (isNaN(x)) {\nreturn 0;\n}\n}\nconsole.log(clean(Number.NaN));\n// expected output: 0\n"
+	},
+		"Number.parseFloat":{
+		"Description":"The Number.parseFloat() method parses a string argument and returns a floating point number. This method behaves identically to the global function parseFloat() and is part of ECMAScript 2015 (its purpose is modularization of globals).",
+		"Usage":"Number.parseFloat(string)",
+		"Example(s)":"function circumference(r) {\nif (Number.isNaN(Number.parseFloat(r))) {\nreturn 0;\n}\nreturn parseFloat(r) * 2.0 * Math.PI ;\n}\nconsole.log(circumference('4.567abcdefgh'));\n// expected output: 28.695307297889173\nconsole.log(circumference('abcdefgh'));\n// expected output: 0"
+	},
+		"Number.parseInt":{
+		"Description":"The Number.parseInt() method parses a string argument and returns an integer of the specified radix or base.",
+		"Usage":"Number.parseInt(string,[ radix ])",
+		"Example(s)":"function roughScale(x, base) {\nvar parsed = Number.parseInt(x, base);\nif (Number.isNaN(parsed)) {\nreturn 0;\n}\nreturn parsed * 100;\n}\nconsole.log(roughScale(' 0xF', 16));\n// expected output: 1500\nconsole.log(roughScale('321', 2));\n// expected output: 0"
+	},
+		"Number.toString":{
+		"Description":"The toString() method returns a string representing the specified Number object.",
+		"Usage":"numObj.toString([radix])",
+		"Example(s)":"function hexColour(c) {\nif (c < 256) {\nreturn Math.abs(c).toString(16);\n}\nreturn 0;\n}\nconsole.log(hexColour(233));\n// expected output: \"e9\"\nconsole.log(hexColour('11'));\n// expected output: \"b\"\n"
+	},
+	
+	"Number.valueOf":{
+		"Description":"The valueOf() method returns the wrapped primitive value of a Number object.",
+		"Usage":"numObj.valueOf()",
+		"Example(s)":"var numObj = new Number(42);\nconsole.log(typeof numObj);\n// expected output: \"object\"\nvar num = numObj.valueOf();\nconsole.log(num);\n// expected output: 42\nconsole.log(typeof num);\n// expected output: \"number\"\n"
+	},
+	"Math.abs":{
+		"Description":"The Math.abs() function returns the absolute value of a number, that is",
+		"Usage":"Math.abs(x)",
+		"Example(s)":"vfunction difference(a, b) {\nreturn Math.abs(a - b);\n}\nconsole.log(difference(3, 5));\n// expected output: 2\nconsole.log(difference(5, 3));\n// expected output: 2\nconsole.log(difference(1.23456, 7.89012));\n// expected output: 6.6555599999999995\n"
+	},
+		"Math.floor":{
+		"Description":"The Math.floor() function returns the largest integer less than or equal to a given number.",
+		"Usage":"Math.floor(x)",
+		"Example(s)":"Math.floor( 45.95); //  45\nMath.floor( 45.05); //  45\nMath.floor(  4   ); //   4\nMath.floor(-45.05); // -46 \nMath.floor(-45.95); // -46"
+	},
+		"Math.log":{
+		"Description":"The Math.log() function returns the natural logarithm (base e) of a number, that is",
+		"Usage":"Math.log(x)",
+		"Example(s)":"Math.log(-1); // NaN, out of rangeMath.log(0);  // -Infinity\nMath.log(1);  // 0\nMath.log(10); // 2.302585092994046"
+	},
+		"Math.max":{
+		"Description":"The Math.max() function returns the largest of zero or more numbers.",
+		"Usage":"Math.max([value1[, value2[, ...]]]))",
+		"Example(s)":"Math.max(10, 20);   //  20\nMath.max(-10, -20); // -10\nMath.max(-10, 20);  //  20"
+	},
+		"Math.min":{
+		"Description":"The static function Math.min() returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one.",
+		"Usage":"Math.min([value1[, value2[, ...]]])",
+		"Example(s)":"console.log(Math.min(2, 3, 1));\n// expected output: 1\nconsole.log(Math.min(-2, -3, -1));\n// expected output: -3\nvar array1 = [2, 3, 1];\nconsole.log(Math.min(...array1));\n// expected output: 1\n"
+	},
+		"Math.pow":{
+		"Description":"The Math.pow() function returns the base to the exponent power .",
+		"Usage":"Math.pow(base, exponent)",
+		"Example(s)":"console.log(Math.pow(7, 3));\n// expected output: 343\nconsole.log(Math.pow(4, 0.5));\n// expected output: 2\nconsole.log(Math.pow(7, -2));\n// expected output: 0.02040816326530612\n//   "
+	},
+		"Math.round":{
+		"Description":"The Math.round() function returns the value of a number rounded to the nearest integer.",
+		"Usage":"Math.round(x)",
+		"Example(s)":"console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));\n// expected output: 6 6 5\nconsole.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));\n// expected output: -5 -5 -6\n"
+	},
+		"Math.random":{
+		"Description":"The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.",
+		"Usage":"Math.random()",
+		"Example(s)":"function getRandomInt(max) {\nreturn Math.floor(Math.random() * Math.floor(max));\n}\nconsole.log(getRandomInt(3));\n// expected output: 0, 1 or 2\nconsole.log(getRandomInt(1));\n// expected output: 0\nconsole.log(Math.random());\n// expected output: a number between 0 and 1\n"
+	},
+		"Math.sqrt":{
+		"Description":"The Math.sqrt() function returns the square root of a number, that is",
+		"Usage":"Math.sqrt(x)",
+		"Example(s)":"function calcHypotenuse(a, b) {\nreturn(Math.sqrt((a * a) + (b * b)));\n}\nconsole.log(calcHypotenuse(3, 4));\n// expected output: 5\n\nconsole.log(calcHypotenuse(5, 12));\n// expected output: 13\n\nconsole.log(calcHypotenuse(0, 0));\n// expected output: 0\n"
+	},
+		"date.getDate":{
+		"Description":"The getDate() method returns the day of the month for the specified date according to local time.",
+		"Usage":"dateObj.getDate()",
+		"Example(s)":"var Xmas95 = new Date('December 25, 1995 23:15:30');\nvar day = Xmas95.getDate();\nconsole.log(day); // 25"
+	},
+		"date.getFullYear":{
+		"Description":"The getFullYear() method returns the year of the specified date according to local time.\nUse this method instead of the getYear() method.",
+		"Usage":"dateObj.getFullYear()",
+		"Example(s)":"var moonLanding = new Date('July 20, 69 00:20:18');\nconsole.log(moonLanding.getFullYear());\n// expected output: 1969\n"
+	},
+		"date.getHours":{
+		"Description":"The getHours() method returns the hour for the specified date, according to local time.",
+		"Usage":"dateObj.getHours()",
+		"Example(s)":"var birthday = new Date('March 13, 08 04:20');\nconsole.log(birthday.getHours());\n// expected output: 4"
+	},
+		"date.getMinutes":{
+		"Description":"The getMinutes() method returns the minutes in the specified date according to local time.",
+		"Usage":"dateObj.getMinutes()",
+		"Example(s)":"var birthday = new Date('March 13, 08 04:20');\nconsole.log(birthday.getMinutes());\n// expected output: 20"
+	},
+		"date.getMonth":{
+		"Description":"The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year).",
+		"Usage":"dateObj.getMonth()",
+		"Example(s)":"var moonLanding = new Date('July 20, 69 00:20:18');\nconsole.log(moonLanding.getMonth()); // (January gives 0)\n// expected output: 6"
+	},
+		"date.getTime":{
+		"Description":"The getTime() method returns the numeric value corresponding to the time for the specified date according to universal time.",
+		"Usage":"dateObj.getTime()",
+		"Example(s)":"var moonLanding = new Date('July 20, 69 00:20:18 GMT+00:00');\n// milliseconds since Jan 1, 1970, 00:00:00.000 GMT\nconsole.log(moonLanding.getTime());\n// expected output: -14254782000"
+	},
+	    "Date.now":{
+		"Description":"The Date.now() method returns the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC.",
+		"Usage":"dateObj.getTime()",
+		"Example(s)":"// this example takes 2 seconds to run\nvar start = Date.now();\nconsole.log(\"starting timer...\");\n// expected output: starting timer...\nsetTimeout(function() {\nvar millis = Date.now() - start;\nconsole.log(\"seconds elapsed = \" + Math.floor(millis/1000));\n// expected output : seconds elapsed = 2\n}, 2000);\n"
+	}
+}
