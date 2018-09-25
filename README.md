@@ -6,15 +6,18 @@ A Great cheat sheet and a quick reference command line tool for HTML, CSS and JS
 `./install.sh`
 
 ## Usage
-``` scc [-h]  [-html [HTML] | -css [CSS] | -js [JS] | [-rand {html,css,js}
+```shell
+scc [-h]  [-html [HTML] | -css [CSS] | -js [JS] | [-rand {html,css,js}
 ```
 ## Examples
-```scc -js array.map
+```shell
+scc -js array.map
 ```
 ![map](https://github.com/Ziyadsk/scc/blob/master/screenshots/map.png)
 
 - Check for available propreties/methods 
-``` scc -css
+```shell
+scc -css
 ```
 (image cropped to fit screen)
 ![available](https://github.com/Ziyadsk/scc/blob/master/screenshots/available.png)
@@ -22,13 +25,15 @@ A Great cheat sheet and a quick reference command line tool for HTML, CSS and JS
 ### Get random proprety/method
 
 -- CSS example
-``` scc -rand css 
+```shell
+scc -rand css 
 ``` 
 
 ![randomcss](https://github.com/Ziyadsk/scc/blob/master/screenshots/randomcss.png)
 
 -- JS example
-``` scc -rand js 
+```shell
+scc -rand js 
 ``` 
 
 ![randomjs](https://github.com/Ziyadsk/scc/blob/master/screenshots/randomjs.png)
