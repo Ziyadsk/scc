@@ -15,7 +15,7 @@ scc -js array.map
 ```
 ![map](https://github.com/Ziyadsk/scc/blob/master/screenshots/map.png)
 
-- Check for available propreties/methods 
+### Check for available propreties/methods 
 ```shell
 scc -css
 ```
@@ -24,14 +24,15 @@ scc -css
 
 ### Get random proprety/method
 
--- CSS example
+#### CSS example
+
 ```shell
 scc -rand css 
 ``` 
 
 ![randomcss](https://github.com/Ziyadsk/scc/blob/master/screenshots/randomcss.png)
 
--- JS example
+#### JS example
 ```shell
 scc -rand js 
 ``` 
