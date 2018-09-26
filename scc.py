@@ -89,7 +89,7 @@ elif arg.html != "scc_empty":
 # css part
 if not arg.css:
 
-	with open(f"{home}/scc./ccs/en/css.json") as file:
+	with open(f"{home}/.scc/ccs/en/css.json") as file:
 		data = json.load(file)
 		for key in data:
 			os.system(f'echo {key}')
