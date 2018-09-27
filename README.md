@@ -7,7 +7,7 @@ A Great cheat sheet and a quick reference command line tool for HTML, CSS and JS
 
 ## Usage
 ```shell
-scc [-h]  [-html [HTML] | -css [CSS] | -js [JS] | [-rand {html,css,js}
+scc [-h]  [ -html [HTML] | -css [CSS] | -js [JS] ] | [-rand {html,css,js}]
 ```
 ## Examples
 ```shell
