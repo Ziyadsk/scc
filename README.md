@@ -17,7 +17,7 @@ scc -js array.map
 
 ### Check for available propreties/methods 
 ```shell
-scc -css
+scc -css | column 
 ```
 (image cropped to fit screen)
 ![available](https://github.com/Ziyadsk/scc/blob/master/screenshots/available.png)

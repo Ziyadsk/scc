@@ -6,7 +6,7 @@ import json
 import webbrowser 
 import random 
 home = os.path.expanduser("~")
-parser = argparse.ArgumentParser(description="SCC - Super Cheat Cheet") 
+parser = argparse.ArgumentParser(description="SCC - Commandline Cheat Sheet") 
 parser.add_argument('--export',choices=["html"],default=None)
 group = parser.add_mutually_exclusive_group()
 
@@ -22,7 +22,7 @@ def sep():
 	print('\u001b[33;1m-\u001b[0m'*60)
 
 
-
+# random 
 if arg.rand != None:
 	with open(f"{home}/.scc/ccs/en/{arg.rand}.json") as file :
 		data = json.load(file)
@@ -67,7 +67,7 @@ if not arg.html:
 			print('Done.')
 			exit()
 		for key in data:
-			os.system(f'echo {key}')
+			print(f"{key}")
 elif arg.html != "scc_empty":
 	try:
 		with open(f"{home}/.scc/ccs/en/html.json") as file:
@@ -92,7 +92,7 @@ if not arg.css:
 	with open(f"{home}/.scc/ccs/en/css.json") as file:
 		data = json.load(file)
 		for key in data:
-			os.system(f'echo {key}')
+			print(key)
 
 elif arg.css != 'scc_empty':
 	try:
@@ -110,7 +110,7 @@ if not arg.js:
 	with open(f"{home}/.scc/ccs/en/js.json") as file:
 		data = json.load(file)
 		for key in data:
-			os.system(f'echo {key}')
+			print(key)
 elif arg.js != 'scc_empty':
 	try:
 		with open(f"{home}/.scc/ccs/en/js.json") as file:
@@ -129,10 +129,5 @@ elif arg.js != 'scc_empty':
 				print("possible values : ")
 				for i in lkeys:
 					print(i)
-			# if lkeys :
-			# 	print("do you mean this : ")
-			# 	for i in lkeys :
-			# 		print(key)
 		except Exception :
 			pass 
-	
