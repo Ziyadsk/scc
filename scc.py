@@ -30,11 +30,10 @@ if arg.rand != None:
 		sep()
 		print(key)
 		sep()
-		for k in data[key]:
+		for k, v in data[key].items():
 			if k == "Attribute(s)":
 				break 
-			print(f"\033[4;33m{k}\033[0m :",
-					f'{data[key][k]}')
+			print(f"\033[4;33m{k}\033[0m :{v}")
 
 
 
@@ -66,23 +65,21 @@ if not arg.html:
 			webbrowser.open_new_tab("exported-scc.html")
 			print('Done.')
 			exit()
-		for key in data:
-			print(f"{key}")
+		print("\n".join(data))
 elif arg.html != "scc_empty":
 	try:
 		with open(f"{home}/.scc/ccs/en/html.json") as file:
 			data = json.load(file)
-			for key in data[arg.html.rstrip()]:
+			for key, val in data[arg.html.rstrip()].items():
 				if key == "Attribute(s)":
 					sep()
 					print("--- Attributes ---".rjust(40))
 					sep() 
-					for elem in data[arg.html][key]:
-						print(f'\033[4;33m• {elem}\u001b[0m : {data[arg.html][key][elem]}')
+					for elem, info in val.items():
+						print(f'\033[4;33m• {elem}\u001b[0m : {info}')
 					sep()
 					exit()	
-				print(f'\033[4;33m{key}\u001b[0m : ',
-						f'{data[arg.html][key]}')
+				print(f'\033[4;33m{key}\u001b[0m : {val}')
 	except KeyError:
 		print("this tag doesnt exist")
 
@@ -91,16 +88,13 @@ if not arg.css:
 
 	with open(f"{home}/.scc/ccs/en/css.json") as file:
 		data = json.load(file)
-		for key in data:
-			print(key)
-
+		print("\n".join(data))
 elif arg.css != 'scc_empty':
 	try:
 		with open(f"{home}/.scc/ccs/en/css.json") as file:
 			data = json.load(file)
-			for key in data[arg.css.rstrip()]:
-				print(f"\033[4;33m{key}\033[0m :",
-					f'{data[arg.css][key]}')
+			for key, val in data[arg.css.rstrip()].items():
+				print(f"\033[4;33m{key}\033[0m :{val}")
 	except KeyError:
 		print("The CSS proprety that you requested doesn't exist/isnt't indexed ")
 
@@ -109,25 +103,22 @@ elif arg.css != 'scc_empty':
 if not arg.js:
 	with open(f"{home}/.scc/ccs/en/js.json") as file:
 		data = json.load(file)
-		for key in data:
-			print(key)
+		print("\n".join(data))
 elif arg.js != 'scc_empty':
 	try:
 		with open(f"{home}/.scc/ccs/en/js.json") as file:
 			data = json.load(file)
-			for key in data[arg.js.rstrip()]:
-				print(f"\033[4;33m{key}\033[0m :",
-					f'{data[arg.js][key]}')
+			for key, val in data[arg.js.rstrip()].items():
+				print(f"\033[4;33m{key}\033[0m : {val}")
 	except KeyError:
-		print(f"{arg.js} Not found")
+		print(f"'{arg.js}' Not found")
 		try : 
 			lkeys = []
-			for key in data :
+			for key in data:
 				if arg.js.split('.')[0] == key.split('.')[0]:
 					lkeys.append(key)
-			if lkeys[0]:
+			if lkeys:
 				print("possible values : ")
-				for i in lkeys:
-					print(i)
+				print("\n".join(lkeys))
 		except Exception :
 			pass 
