@@ -47,18 +47,17 @@ if not arg.html:
 		print("exporting to html ...")
 		html_output = '<html><head><title>SCC-HTML CHEAT CHEET</title></head><body><style>body{ max-width:100vw ; font-family:"roboto","open sans" , "ubuntu" ,"sans-serif";background-color:#fff;color:#666; }#tag{font-size:1.2em ; color:#006688 ; background-color:#ddd ;display:inline-block ;  border-radius:10px ; padding:0.7em ;  } .xmp_tags{ padding:10px ;border-radius:5px ;word-wrap: break-word;font-family:monospace } .xmp_tags:first-child()::before{ content: "Tag : " ;}#wrapper{background-color:#eee;padding:1em ;border-radius:10px ; margin:0.5em auto ; max-width:95vw ;word-wrap: break-word; overflow:auto ; }h1{text-align:center; }</style><h1>SCC - HTML Cheat Cheet</h1>'
 		key_elem = ""
-		for tag in data:
+		for tag, tag_val in data.items():
 			key_elem += f"<div id='wrapper'><span id='tag'>{tag}</span>"
-			for desc in data[tag]:
-				if desc == list(data[tag])[0]:
+			for desc, desc_val in tag_val.items():
+				if desc == list(tag_val)[0]:
 					continue
 				if desc == "Attribute(s)":
 					key_elem += "--- Attributes ---"
-					attrs = data[tag][desc]
-					for attr in attrs:
-						key_elem += f"<xmp class='xmp_tags'>{attr}:{data[tag][desc][attr]}</xmp>"
+					for attr, attr_val in desc_val.items():
+						key_elem += f"<xmp class='xmp_tags'>{attr}:{attr_val}</xmp>"
 					continue
-				key_elem += f"<xmp class='xmp_tags'>{data[tag][desc]}</xmp>"
+				key_elem += f"<xmp class='xmp_tags'>{desc_val}</xmp>"
 			key_elem += "</div>"
 		html_output += key_elem
 
