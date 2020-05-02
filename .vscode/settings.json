@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "[Tokyo Night]": {
+            "terminal.ansiBlack": "#006699",
+            "terminal.ansiBrightBlack": "#FFFFFF",
+            "terminal.ansiYellow": "#000"
+        },
+        "activityBar.background": "#61030C",
+        "titleBar.activeBackground": "#880411",
+        "titleBar.activeForeground": "#FFFBFC"
+    }
+}
